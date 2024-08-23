@@ -183,5 +183,3 @@ console.log("A lista está vazia?", lista.isEmpty())
 
 // Imprime o tamanho atual da lista.
 console.log("Tamanho da lista?", lista.getSize())
-
-//Testando módulo 02
