@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Declaração do tipo de documento como HTML5 e define o idioma principal da página como português do Brasil -->
+
+<head>
+    <title>Página Principal</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8, que suporta a maioria dos caracteres usados mundialmente -->
+
+    <meta name="keywords" content="Web Development, HTML, CSS e JavaScript">
+    <!-- Adiciona palavras-chave relacionadas ao conteúdo da página para ajudar em motores de busca -->
+
+    <meta name="author" content="Perna Longa">
+    <!-- Indica o autor do conteúdo da página -->
+
+    <meta name="description" content="Este site trata de conteúdos introdutórios do desenvolvimento web">
+    <!-- Adiciona uma breve descrição da página, útil para motores de busca -->
+
+    <style>
+       /* Estilização para os links */
+       a {
+        font-weight: bold; /* Deixa o texto do link em negrito */
+        color: brown; /* Define a cor inicial dos links como marrom */
+        border: 2px dashed; /* Adiciona uma borda tracejada de 2px ao redor dos links */
+       }
+
+       a:link {
+        color: aqua; /* Define a cor dos links não visitados como azul claro */
+       }
+
+       a:visited {
+        color: blueviolet; /* Define a cor dos links visitados como violeta */
+       }
+
+       a:hover {
+        color: blue; /* Muda a cor do link para azul quando o mouse passa sobre ele */
+        text-decoration: none; /* Remove o sublinhado padrão do link */
+        background-color: #6d6d6d; /* Altera a cor de fundo para cinza escuro quando o mouse está sobre o link */
+       }
+
+       a:active {
+        color: black; /* Muda a cor do link para preto enquanto ele está sendo clicado */
+       }
+
+       /* Estilização para os parágrafos */
+       p {
+        background-color: black; /* Define a cor de fundo do parágrafo como preto */
+        color: white; /* Define a cor do texto do parágrafo como branco */
+        text-align: justify; /* Alinha o texto de forma justificada */
+        letter-spacing: normal; /* Define o espaçamento entre as letras como normal */
+        word-spacing: 20px; /* Aumenta o espaçamento entre as palavras para 20 pixels */
+        text-transform: uppercase; /* Transforma todo o texto em letras maiúsculas */
+       }
+
+       /* Estilização para listas não ordenadas */
+       ul {
+        list-style-type: none; /* Remove os marcadores padrão dos itens da lista */
+        border: 1px solid #000; /* Adiciona uma borda preta de 1px ao redor da lista */
+        margin-bottom: 50px; /* Adiciona uma margem inferior de 50px à lista */
+       }
+
+       li {
+        margin-bottom: 10px; /* Adiciona uma margem inferior de 10px a cada item da lista */
+       }
+
+       /* Estilização para listas ordenadas */
+       ol {
+        list-style-type: upper-latin; /* Define o estilo dos números da lista como letras maiúsculas (A, B, C, etc.) */
+        border: 1px solid black; /* Adiciona uma borda preta de 1px ao redor da lista ordenada */
+        padding-top: 10px; /* Adiciona um espaçamento interno de 10px na parte superior da lista */
+       }
+
+       /* Estilização para tabelas */
+       table {
+        border: 2px solid; /* Adiciona uma borda de 2px ao redor da tabela */
+        width: 100%; /* Define a largura da tabela como 100% do elemento pai */
+        text-align: center; /* Centraliza o texto dentro das células da tabela */
+       }
+
+       th, td {
+        border: 1px solid orange; /* Adiciona uma borda laranja de 1px ao redor das células (tanto cabeçalhos quanto dados) */
+       }
+    </style>
+</head>
+
+<body>
+    <!-- O corpo do documento, onde o conteúdo da página é exibido -->
+
+    <nav>
+        <a href="https://www.google.com">Página Principal</a>
+        <a href="sobre-nos.html">Sobre nós</a>
+        <!-- Links de navegação para a página principal e a página 'Sobre nós' -->
+    </nav>
+
+    <hr>
+    <!-- Adiciona uma linha horizontal para separar os conteúdos -->
+
+    <header>
+        <h1>Bem-vindo ao nosso site.</h1>
+        <!-- Título principal da página -->
+        <h2 style="background-color: blue;">Bem-vindo ao nosso site.</h2>
+        <!-- Subtítulo com fundo azul -->
+        <h2>Bem-vindo ao nosso site.</h2>
+        <!-- Outro subtítulo sem estilo adicional -->
+        <h3>Bem-vindo ao nosso site.</h3>
+        <!-- Subtítulo de menor hierarquia -->
+    </header>
+
+    <hr>
+    <!-- Linha horizontal para separar o cabeçalho do restante do conteúdo -->
+
+    <section>
+        <!-- Seção contendo parágrafos de texto -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facilis praesentium itaque beatae omnis quam
+            sequi? Ullam vero ducimus earum at corporis commodi aperiam placeat, aliquam blanditiis! Voluptatibus,
+            pariatur non.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facilis praesentium itaque beatae omnis quam
+            sequi? Ullam vero ducimus earum at corporis commodi aperiam placeat, aliquam blanditiis! Voluptatibus,
+            pariatur non.
+        </p>
+
+        <p>
+            Fórmula Química: H<sub>2</sub>O
+            <!-- Exemplo de uso de subscrito para fórmulas químicas -->
+            Exemplo de expoente: x<sup>2</sup>
+            <!-- Exemplo de uso de sobrescrito para expoentes -->
+        </p>
+    </section>
+
+    <hr>
+    <!-- Linha horizontal para separar as seções -->
+
+    <section>
+        <!-- Seção contendo abreviações, citações, e texto estilizado -->
+        <p>Uma <abbr title="Application Programming Interface">API</abbr> permite que diferentes softwares se comuniquem.</p>
+        <!-- Uso da tag <abbr> para adicionar uma descrição ao termo API -->
+
+        <blockquote cite="https://www.google.com">
+            O Google é um navegador de desktop com excelente performance
+            <!-- Citação com a fonte mencionada no atributo cite -->
+        </blockquote>
+
+        <p><cite>The Starry Night</cite> por Vincent Van Gogh. Pintada em 1889.</p>
+        <!-- Uso da tag <cite> para referenciar o título de uma obra artística -->
+
+        <p>A famosa citação da peça Hamlet de Shakespeare - <q>Ser ou não ser</q></p>
+        <!-- Uso da tag <q> para uma citação curta dentro de uma frase -->
+
+        <p>Este texto tem <strong>ênfase</strong> na palavra ênfase.</p>
+        <!-- Uso da tag <strong> para dar ênfase forte (negrito) -->
+
+        <p>Este texto tem <em>emphasis</em> na palavra ênfase.</p>
+        <!-- Uso da tag <em> para dar ênfase leve (itálico) -->
+
+        <p>Este texto tem uma palavra destaco <u>underline</u></p>
+        <!-- Uso da tag <u> para sublinhar texto -->
+
+        <p>Este texto tem uma palavra <s>incorreta</s></p>
+        <!-- Uso da tag <s> para marcar texto incorreto ou deletado -->
+    </section>
+
+    <hr>
+    <!-- Linha horizontal para separar as seções -->
+
+    <section>
+        <h3>Navegação do site</h3>
+        <!-- Título da subseção -->
+
+        <ul>
+            <li>Página principal</li>
+            <li>Sobre nós</li>
+            <li>Newsletter</li>
+            <!-- Lista não ordenada com itens de navegação -->
+        </ul>
+
+        <h2>FAQ</h2>
+        <!-- Título da subseção de FAQ -->
+
+        <ol>
+            <li>O que é HTML?</li>
+            <li>Como o CSS funciona?</li>
+            <li>Para que serve o JS?</li>
+            <!-- Lista ordenada com perguntas frequentes -->
+        </ol>
+    </section>
+
+    <hr>
+    <!-- Linha horizontal para separar as seções -->
+
+    <section>
+        <!-- Seção contendo uma tabela de produtos -->
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <!-- Cabeçalho da tabela com três colunas: Produto, Descrição, e Preço -->
+            </tr>
+            <tr>
+                <td>Notebook</td>
+                <td>Notebook Gamer com uma RTX 4070</td>
+                <td>R$ 1000</td>
+                <!-- Linha da tabela com informações sobre um produto (Notebook) -->
+            </tr>
+            <tr>
+                <td>Playstation 5</td>
+                <td>Console super divertido da Sony</td>
+                <td>R$ 1200</td>
+                <!-- Linha da tabela com informações sobre um produto (Playstation 5) -->
+            </tr>
+            <tr>
+                <td>Bicicleta</td>
+                <td>Caloi 10 fantástica</td>
+                <td>R$ 300</td>
+                <!-- Linha da tabela com informações sobre um produto (Bicicleta) -->
+            </tr>
+            <tr>
+                <td colspan="3">Total: R$ 2.500</td>
+                <!-- Linha final da tabela que abrange as três colunas e mostra o total -->
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+    <!-- Linha horizontal para separar as seções -->
+
+    <section>
+        <h2>Login</h2>
+        <!-- Título da seção de login -->
+
+        <form>
+            <label for="nomeUsuario">Nome de Usuário:</label>
+            <input type="text">
+            <!-- Campo de texto para o nome de usuário -->
+
+            <br><br>
+            <!-- Quebras de linha para espaçamento -->
+
+            <label for="senha">Senha:</label>
+            <input type="password">
+            <!-- Campo de senha para o usuário inserir sua senha -->
+        </form>
+    </section>
+
+    <hr>
+    <!-- Linha horizontal para separar as seções -->
+
+    <footer>
+        <h2>Rodapé da página</h2>
+        <!-- Título da seção de rodapé -->
+
+        &lt;Aprendendo HTML&gt;
+        <!-- Texto "Aprendendo HTML" escapado para exibir os sinais de menor e maior -->
+
+        <p>Desenvolvido por Jaques &copy;</p>
+        <!-- Texto no rodapé indicando o autor e o símbolo de copyright -->
+    </footer>
+</body>
+
+<!-- 
+    Crie um arquivo HTML com head, header, nav, section, footer, parágrafos, listas e tabelas.
+    Modifiquem a fonte do parágrafo.
+
+    Formulário de registro de usuário.
+-->
+</html>
