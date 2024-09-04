@@ -1,48 +1,64 @@
-body {
+/* Estilos aplicados ao corpo (body) da página.
+   Define a fonte padrão, altura da linha para melhor leitura,
+   e remove margens e espaçamentos padrão. Também define uma cor de fundo
+   e a cor do texto padrão. */
+   body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #000;
+    background-color: #f4f4f9; /* Cor de fundo leve, quase branca */
+    color: #000; /* Cor do texto: preto */
 }
 
+/* Estilos para a tag dl (Lista de Definição).
+   Adiciona margens e preenchimento para espaço ao redor,
+   define uma cor de fundo azul claro e uma borda esquerda azul mais escura. */
 dl {
     margin: 20px;
     padding: 10px;
-    background-color: #99c5d9;
-    border-left: 5px solid #0059b3;
+    background-color: #99c5d9; /* Cor de fundo azul claro */
+    border-left: 5px solid #0059b3; /* Borda esquerda azul escura */
 }
 
+/* Estilos para a tag dt (Termo de Definição na Lista de Definição).
+   Aumenta o peso da fonte (negrito), define o tamanho da fonte e
+   adiciona margem superior para espaçamento entre os itens. */
 dt {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2em; /* Tamanho da fonte levemente maior */
     margin-top: 5px;
 }
 
+/* Estilos para a tag dd (Descrição do Termo).
+   Aplica um estilo itálico ao texto e muda a cor do texto para um tom de azul. */
 dd {
     font-style: italic;
-    color: #004080;
+    color: #004080; /* Cor azul escura */
 }
 
+/* Estilos para a lista não ordenada (ul) com a classe "listaNaoOrdenada".
+   Remove o estilo padrão dos marcadores, adiciona margens e preenchimento para espaçamento.
+   Define uma borda ao redor, muda a fonte e aplica uma cor de fundo azul claro. */
 ul.listaNaoOrdenada {
-    list-style-type: none;
+    list-style-type: none; /* Remove os marcadores da lista */
     margin: 20px;
     padding: 20px;
-    border: 1px solid #004080;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #99c5d9;
+    border: 1px solid #004080; /* Borda azul ao redor */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Muda a fonte */
+    background-color: #99c5d9; /* Fundo azul claro */
 }
 
+/* Estilos para os itens da lista não ordenada (li) dentro da ul com a classe "listaNaoOrdenada".
+   Adiciona espaçamento inferior e um preenchimento à esquerda. */
 ul.listaNaoOrdenada li {
-  margin-bottom: 10px;
-  padding-left: 10px;  
+    margin-bottom: 10px; /* Espaçamento inferior entre os itens da lista */
+    padding-left: 10px;  /* Espaçamento à esquerda nos itens */
 }
 
+/* Estilos para um ul aninhado dentro de uma ol (lista ordenada).
+   Muda a cor do texto para azul e o fundo para um tom de verde amarelado. */
 ol > ul {
-    color: blue;
-    background-color: yellowgreen;
+    color: blue; /* Texto azul */
+    background-color: yellowgreen; /* Fundo verde amarelado */
 }
-
-
-

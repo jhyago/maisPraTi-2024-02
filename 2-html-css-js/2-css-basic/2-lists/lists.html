@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define o conjunto de caracteres da página -->
     <meta charset="UTF-8">
+    <!-- Define o título da página -->
     <title>Listas</title>
+    <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="lists.css">
 </head>
 <body>
+    <!-- Parágrafo explicativo sobre o propósito da lista -->
     <p>A seguinte lista visa elucidar questões referentes a características de produtos de tecnologia</p>
 
+    <!-- Lista de definição (dl) usada para descrever termos e definições -->
     <dl>
+        <!-- Título do item da lista, o termo que será definido -->
         <dt>Video-game</dt>
+        <!-- Definição do termo anterior -->
         <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores maiores illo similique sed! Necessitatibus atque ipsum tempora odio.</dd>
     
+        <!-- Outro termo a ser definido -->
         <dt>Computador de mesa</dt>
+        <!-- Definição do termo anterior -->
         <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores maiores illo similique sed! Necessitatibus atque ipsum tempora odio.</dd>
 
+        <!-- Outro termo a ser definido -->
         <dt>Modem</dt>
+        <!-- Definição do termo anterior -->
         <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores maiores illo similique sed! Necessitatibus atque ipsum tempora odio.</dd>
     </dl>
 
+    <!-- Lista não ordenada (ul) com classe para aplicar estilos personalizados -->
     <ul class="listaNaoOrdenada">
+        <!-- Itens da lista, cada um representando um livro -->
         <li>A Revolta de Atlas</li>
         <li>Sherlock Holmes</li>
     </ul>
 
+    <!-- Lista ordenada (ol), onde os itens têm uma ordem numérica -->
     <ol>
+        <!-- Primeiro item da lista, que contém uma lista aninhada -->
         <li>Tolkien
+            <!-- Lista não ordenada aninhada dentro do item anterior -->
             <ul>
                 <li>Senhor dos Anéis</li>
                 <li>Árvore e Folha</li>
             </ul>
         </li>
+        <!-- Lista não ordenada fora do contexto, possivelmente por erro de estruturação -->
         <ul>
+            <!-- Itens sem relação direta com a lista ordenada -->
             <li>Nárnia</li>
-                
             <li>Batman - Piada Mortal</li>
         </ul>
     </ol>
-
-
-<!-- 
-    Crie uma lista não ordenada (<ul>) com 5 itens de sua escolha.
-    Use CSS para:
-
-    Alterar a cor do texto dos itens para azul.
-    Mudar a cor de fundo dos itens para cinza claro.
-    Aplicar uma borda arredondada de 5px em cada item.
-    Quando o usuário passar o mouse sobre um item (:hover), mude a cor de fundo para um tom mais escuro de cinza e a cor do texto para branco.
-    O último item da lista deve ter uma cor de texto diferente (verde) e um estilo de fonte itálico.
-
-    Faça com que a lista ocupe toda a largura da tela e centralize o texto dos itens. 
--->
 </body>
 </html>
