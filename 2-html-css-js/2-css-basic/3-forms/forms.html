@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <form>
+        <h1>Cadastro de Evento</h1>
+
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuEmail@gmail.com">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <label for="confirme-senha">Confirme sua senha:</label>
+        <input type="password" id="confirme-senha" name="confirme-senha">
+
+        <label for="genero">Gênero:</label>
+        <select name="genero" id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+        <br>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" name="data-nascimento">
+
+        <label for="pais">País:</label>
+        <select name="pais" id="pais">
+            <option value=""></option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguai">Uruguai</option>
+        </select>
+        <br>
+
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+            <option value=""></option>
+            <option value="Ceará">Ceará</option>
+            <option value="Amapá">Amapá</option>
+            <option value="Mato Grosso">Mato Grosso</option>
+        </select>
+        <br>
+
+        <fieldset>
+            <legend>Preferências de Comunicação</legend>
+            <input type="checkbox" id="email-novidades" name="email-novidades" value="email-novidades">
+            <label class="inline-label" for="email-novidades">Receber atualizações por email</label><br>
+            
+            <input type="checkbox" id="sms-novidades" name="sms-novidades" value="sms-novidades">
+            <label class="inline-label" for="sms-novidades">Receber atualizações por SMS</label><br>
+        </fieldset>
+
+        <label for="foto-perfil">Foto de perfil:</label>
+        <input type="file" name="foto-perfil" id="foto-perfil">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
+
+
+
+Crie um formulário de cadastro para um site de e-commerce. O formulário deve conter os seguintes campos:
+
+    Nome completo (campo de texto)
+    Endereço de e-mail (campo de e-mail)
+    Senha (campo de senha)
+    Selecione seu país (menu dropdown)
+    Gênero (botões de rádio)
+    Aceitar os termos de serviço (checkbox)
+
+Estilize o formulário para que:
+
+    O botão de envio fique destacado ao passar o mouse (efeito hover).
+    O formulário tenha uma largura de 400px e esteja centralizado na tela.
+
+Dicas:
+
+    Utilize <form>, <input>, <select> e <textarea>.
+    Use margin, padding e hover para melhorar a estilização.
