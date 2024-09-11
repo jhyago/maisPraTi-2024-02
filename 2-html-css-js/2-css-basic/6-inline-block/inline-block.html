@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inline, block, inline-block</title>
+    <title>Inline, Block, Inline-Block</title>
+
+    <style>
+        /* Exemplo de elementos com display block */
+        .block {
+            display: block; /* O elemento ocupa toda a largura disponível e inicia em uma nova linha */
+            border: 1px solid blue; /* Adiciona uma borda azul ao redor do elemento */
+            padding: 10px; /* Adiciona espaço interno ao redor do conteúdo */
+            margin-bottom: 10px; /* Adiciona espaço abaixo do elemento */
+        }
+
+        /* Exemplo de elementos com display inline */
+        .inline {
+            display: inline; /* O elemento ocupa apenas a largura do seu conteúdo e não força uma nova linha */
+            border: 1px solid green; /* Adiciona uma borda verde ao redor do elemento */
+            padding: 5px; /* Adiciona espaço interno ao redor do conteúdo */
+        }
+
+        /* Exemplo de elementos com display inline-block */
+        .inline-block {
+            display: inline-block; /* O elemento ocupa apenas a largura do seu conteúdo, mas permite definir altura e largura */
+            border: 1px solid red; /* Adiciona uma borda vermelha ao redor do elemento */
+            padding: 10px; /* Adiciona espaço interno ao redor do conteúdo */
+            margin-right: 10px; /* Adiciona espaço à direita do elemento */
+        }
+
+        /* Adiciona um pouco de estilo adicional para a página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+            line-height: 1.5; /* Define o espaçamento entre linhas para melhor legibilidade */
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Elementos block -->
+    <div class="block">Este é um elemento block</div>
+    <!-- O <div> é um elemento block que ocupa toda a largura disponível e inicia em uma nova linha -->
+
+    <p class="block">Este é um elemento block</p>
+    <!-- O <p> (parágrafo) é um elemento block que também ocupa toda a largura disponível e inicia em uma nova linha -->
+
+    <h1 class="block">Este é um elemento block</h1>
+    <!-- O <h1> (título) é um elemento block que ocupa toda a largura disponível e inicia em uma nova linha -->
+
+    <!-- Elementos inline -->
+    <span class="inline">Este é um elemento inline</span>
+    <!-- O <span> é um elemento inline que ocupa apenas a largura do seu conteúdo e não força uma nova linha -->
+
+    <a href="#" class="inline">Este é um link inline</a>
+    <!-- O <a> (link) é um elemento inline que ocupa apenas a largura do seu conteúdo e não força uma nova linha -->
+
+    <strong class="inline">Este é um elemento inline</strong>
+    <!-- O <strong> é um elemento inline que ocupa apenas a largura do seu conteúdo e não força uma nova linha -->
+
+    <!-- Elementos inline-block -->
+    <span class="inline-block">Este é um elemento inline-block</span>
+    <!-- O <span> com display inline-block combina características de block e inline, permitindo definir altura e largura sem forçar uma nova linha -->
+
+    <span class="inline-block">Outro elemento inline-block</span>
+    <!-- Outro <span> com display inline-block para mostrar como múltiplos elementos inline-block podem ser alinhados horizontalmente -->
 </body>
 </html>

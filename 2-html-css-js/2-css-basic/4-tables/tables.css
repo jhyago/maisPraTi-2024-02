@@ -1,47 +1,65 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #dee3e8;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes principal e alternativas */
+    line-height: 1.6; /* Define o espaçamento entre linhas para melhor legibilidade */
+    padding: 20px; /* Adiciona um preenchimento interno ao redor do conteúdo do corpo */
+    background-color: #dee3e8; /* Define a cor de fundo do corpo da página */
+    color: #333; /* Define a cor principal do texto */
 }
 
 table {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Faz a tabela ocupar 100% da largura disponível */
+    margin-bottom: 20px; /* Adiciona um espaçamento inferior entre a tabela e o próximo elemento */
+    background-color: #fff; /* Define a cor de fundo da tabela como branco */
+    border-radius: 8px; /* Arredonda os cantos da tabela */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor da tabela para um efeito de elevação */
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 12px 15px;
-    text-align: left;
+    border: 1px solid #ddd; /* Adiciona uma borda cinza clara ao redor das células da tabela */
+    padding: 12px 15px; /* Adiciona um espaçamento interno para as células */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 th {
-    background-color: #007bff;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: #007bff; /* Define a cor de fundo dos cabeçalhos das tabelas como azul */
+    color: #fff; /* Define a cor do texto dos cabeçalhos como branco */
+    text-transform: uppercase; /* Transforma o texto dos cabeçalhos em letras maiúsculas */
+    font-weight: bold; /* Deixa o texto dos cabeçalhos em negrito */
 }
 
 td:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Muda a cor de fundo da célula quando o mouse passa por cima */
 }
 
 caption {
-    font-weight: bold;
-    padding: 10px;
-    font-size: 1.2em;
-    color: #007bff; 
-    background-color: #f1f1f1;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
-    margin-bottom: 10px;
+    font-weight: bold; /* Deixa o texto da legenda em negrito */
+    padding: 10px; /* Adiciona um preenchimento interno à legenda */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte da legenda */
+    color: #007bff; /* Define a cor do texto da legenda como azul */
+    background-color: #f1f1f1; /* Define a cor de fundo da legenda */
+    border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores da legenda */
+    text-align: center; /* Centraliza o texto da legenda */
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior à legenda */
 }
 
-tbody tr:nth-child(even){
-    background-color: #166b99;
+tbody tr:nth-child(even) {
+    background-color: #166b99; /* Define uma cor de fundo diferente para linhas pares para melhorar a visualização */
+}
+
+/* Melhoria: Estilos personalizados para tabelas específicas */
+.tabela-simples td {
+    background-color: #e9ecef; /* Cor de fundo personalizada para a tabela simples */
+}
+
+.tabela-clubes th.header-rank, .tabela-clubes th.header-clube {
+    background-color: #6c757d; /* Cor de fundo diferente para cabeçalhos da tabela de clubes */
+    color: white; /* Texto branco para os cabeçalhos da tabela de clubes */
+}
+
+#tabela-tecnica td.especificacao {
+    background-color: #f8f9fa; /* Cor de fundo clara para especificações técnicas */
+}
+
+#tabela-tecnica td.detalhe {
+    background-color: #e9ecef; /* Cor de fundo ligeiramente diferente para os detalhes técnicos */
 }

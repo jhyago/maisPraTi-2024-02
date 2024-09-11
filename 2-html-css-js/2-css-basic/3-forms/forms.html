@@ -1,69 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o tipo de documento e o idioma como português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forms.css">
-    <title>Formulários</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo compatibilidade com caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva, ajustando a largura conforme o dispositivo -->
+    <link rel="stylesheet" href="forms.css"> <!-- Linka o arquivo CSS externo chamado forms.css para estilização -->
+    <title>Formulários</title> <!-- Define o título da página que será exibido na aba do navegador -->
 </head>
 <body>
-    <form>
-        <h1>Cadastro de Evento</h1>
+    <form> <!-- Início do formulário -->
+        <h1>Cadastro de Evento</h1> <!-- Título do formulário -->
 
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome">
+        <label for="nome">Nome Completo:</label> <!-- Rótulo para o campo de nome completo -->
+        <input type="text" id="nome" name="nome"> <!-- Campo de texto para o usuário inserir o nome completo -->
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="seuEmail@gmail.com">
+        <label for="email">E-mail:</label> <!-- Rótulo para o campo de e-mail -->
+        <input type="email" id="email" name="email" placeholder="seuEmail@gmail.com"> <!-- Campo de entrada para o email com um exemplo de placeholder -->
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha">
+        <label for="senha">Senha:</label> <!-- Rótulo para o campo de senha -->
+        <input type="password" id="senha" name="senha"> <!-- Campo de entrada para senha, o conteúdo será mascarado -->
 
-        <label for="confirme-senha">Confirme sua senha:</label>
-        <input type="password" id="confirme-senha" name="confirme-senha">
+        <label for="confirme-senha">Confirme sua senha:</label> <!-- Rótulo para confirmação de senha -->
+        <input type="password" id="confirme-senha" name="confirme-senha"> <!-- Campo para o usuário confirmar sua senha -->
 
-        <label for="genero">Gênero:</label>
-        <select name="genero" id="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Outro</option>
+        <label for="genero">Gênero:</label> <!-- Rótulo para o campo de seleção de gênero -->
+        <select name="genero" id="genero"> <!-- Menu suspenso para escolher o gênero -->
+            <option value="masculino">Masculino</option> <!-- Opção de gênero masculino -->
+            <option value="feminino">Feminino</option> <!-- Opção de gênero feminino -->
+            <option value="outro">Outro</option> <!-- Opção para outro gênero -->
         </select>
-        <br>
+        <br> <!-- Quebra de linha após o campo de gênero -->
 
-        <label for="data-nascimento">Data de Nascimento:</label>
-        <input type="date" id="data-nascimento" name="data-nascimento">
+        <label for="data-nascimento">Data de Nascimento:</label> <!-- Rótulo para a data de nascimento -->
+        <input type="date" id="data-nascimento" name="data-nascimento"> <!-- Campo para selecionar uma data -->
 
-        <label for="pais">País:</label>
-        <select name="pais" id="pais">
-            <option value=""></option>
-            <option value="Brasil">Brasil</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Uruguai">Uruguai</option>
+        <label for="pais">País:</label> <!-- Rótulo para o campo de seleção de país -->
+        <select name="pais" id="pais"> <!-- Menu suspenso para escolher o país -->
+            <option value=""></option> <!-- Opção em branco -->
+            <option value="Brasil">Brasil</option> <!-- Opção Brasil -->
+            <option value="Argentina">Argentina</option> <!-- Opção Argentina -->
+            <option value="Uruguai">Uruguai</option> <!-- Opção Uruguai -->
         </select>
-        <br>
+        <br> <!-- Quebra de linha após o campo de país -->
 
-        <label for="estado">Estado:</label>
-        <select name="estado" id="estado">
-            <option value=""></option>
-            <option value="Ceará">Ceará</option>
-            <option value="Amapá">Amapá</option>
-            <option value="Mato Grosso">Mato Grosso</option>
+        <label for="estado">Estado:</label> <!-- Rótulo para o campo de seleção de estado -->
+        <select name="estado" id="estado"> <!-- Menu suspenso para escolher o estado -->
+            <option value=""></option> <!-- Opção em branco -->
+            <option value="Ceará">Ceará</option> <!-- Opção Ceará -->
+            <option value="Amapá">Amapá</option> <!-- Opção Amapá -->
+            <option value="Mato Grosso">Mato Grosso</option> <!-- Opção Mato Grosso -->
         </select>
-        <br>
+        <br> <!-- Quebra de linha após o campo de estado -->
 
-        <fieldset>
-            <legend>Preferências de Comunicação</legend>
-            <input type="checkbox" id="email-novidades" name="email-novidades" value="email-novidades">
-            <label class="inline-label" for="email-novidades">Receber atualizações por email</label><br>
-            
-            <input type="checkbox" id="sms-novidades" name="sms-novidades" value="sms-novidades">
-            <label class="inline-label" for="sms-novidades">Receber atualizações por SMS</label><br>
+        <fieldset> <!-- Agrupa as opções de preferências de comunicação -->
+            <legend>Preferências de Comunicação</legend> <!-- Título do grupo de opções -->
+            <input type="checkbox" id="email-novidades" name="email-novidades" value="email-novidades"> <!-- Caixa de seleção para receber novidades por e-mail -->
+            <label class="inline-label" for="email-novidades">Receber atualizações por email</label><br> <!-- Rótulo inline para a caixa de seleção -->
+
+            <input type="checkbox" id="sms-novidades" name="sms-novidades" value="sms-novidades"> <!-- Caixa de seleção para receber novidades por SMS -->
+            <label class="inline-label" for="sms-novidades">Receber atualizações por SMS</label><br> <!-- Rótulo inline para a caixa de seleção -->
         </fieldset>
 
-        <label for="foto-perfil">Foto de perfil:</label>
-        <input type="file" name="foto-perfil" id="foto-perfil">
+        <label for="foto-perfil">Foto de perfil:</label> <!-- Rótulo para o campo de upload de foto -->
+        <input type="file" name="foto-perfil" id="foto-perfil"> <!-- Campo de upload de arquivo para a foto de perfil -->
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Cadastrar</button> <!-- Botão de envio do formulário com o texto "Cadastrar" -->
     </form>
 </body>
 </html>

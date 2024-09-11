@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida</title>
+    <style>
+        /* Define o tamanho da fonte base para rem */
+        html {
+            font-size: 16px; /* 1rem será igual a 16px */
+        }
+
+        header {
+            border: 10px solid blue; /* Usando pixels (px) para a borda */
+            padding: 1rem; /* Espaçamento interno usando rem */
+            font-size: 1.5rem; /* Tamanho da fonte usando rem */
+            /* 1rem é igual ao tamanho da fonte definido no elemento root (html) */
+        }
+
+        .boxPai {
+            width: 300px; /* Largura fixa em pixels */
+            border: 1px solid blue; /* Borda usando pixels */
+            padding: 1em; /* Espaçamento interno usando em */
+            /* 1em é igual ao tamanho da fonte do elemento atual */
+            /* O tamanho da fonte do elemento boxPai é herdado do elemento pai */
+        }
+
+        .box {
+            border: 1px solid black; /* Borda usando pixels */
+            font-size: 30px; /* Tamanho da fonte em pixels */
+            /* A largura é especificada em unidades diferentes para comparação:
+               % - porcentagem do elemento pai
+               vh - altura da janela de visualização
+               vw - largura da janela de visualização
+               vmin - a menor dimensão entre a altura e a largura da janela de visualização
+               */
+            width: 50vmin; /* 50% da menor dimensão da janela de visualização */
+            height: 10vh; /* 10% da altura da janela de visualização */
+            /* width: 10vw; */ /* 10% da largura da janela de visualização */
+            /* width: 50%; */ /* 50% da largura do elemento pai (boxPai) */
+        }
+
+        p {
+            font-size: 2rem; /* Tamanho da fonte usando rem */
+            line-height: 1.5; /* Altura da linha usando unidade relativa ao tamanho da fonte */
+            padding: 1em; /* Espaçamento interno usando em */
+            /* 1rem é igual ao tamanho da fonte do elemento root (html) */
+            /* 1em é relativo ao tamanho da fonte do elemento atual (p) */
+        }
+
+        footer {
+            border: 2px solid green; /* Borda usando pixels */
+            padding: 2rem; /* Espaçamento interno usando rem */
+            font-size: 1rem; /* Tamanho da fonte usando rem */
+            /* 1rem é igual ao tamanho da fonte definido no elemento root (html) */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Exemplo de Unidades de Medida
+    </header>
+
+    <main>
+        <div class="boxPai">
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ipsam!</p>
+            </div>
+        </div>
+           
+    </main>
+
+    <footer>
+        Rodapé
+    </footer>
+</body>
+</html>

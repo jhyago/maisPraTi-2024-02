@@ -1,58 +1,58 @@
 form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    max-width: 400px; /* Define a largura máxima do formulário para 400px, garantindo que ele não se expanda mais que isso. */
+    margin: auto; /* Centraliza o formulário horizontalmente na página. */
+    padding: 20px; /* Adiciona um preenchimento interno de 20px ao redor do conteúdo do formulário. */
+    border: 1px solid #ccc; /* Define uma borda sólida de 1px ao redor do formulário, com uma cor cinza clara (#ccc). */
+    border-radius: 10px; /* Arredonda os cantos da borda do formulário em 10px. */
+    background-color: #f9f9f9; /* Define a cor de fundo do formulário como cinza muito claro (#f9f9f9). */
 }
 
 h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto do título (h1) dentro do formulário. */
+    font-size: 24px; /* Define o tamanho da fonte do título para 24px. */
+    margin-bottom: 20px; /* Adiciona um espaçamento inferior de 20px abaixo do título. */
 }
 
 label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    display: block; /* Faz com que os rótulos (label) sejam exibidos como blocos, ocupando toda a largura disponível. */
+    margin-top: 10px; /* Adiciona um espaçamento superior de 10px entre o rótulo e o elemento anterior. */
+    font-weight: bold; /* Deixa o texto do rótulo em negrito. */
 }
 
 .inline-label {
-    display: inline;
+    display: inline; /* Faz com que os rótulos com a classe 'inline-label' sejam exibidos de forma inline, permitindo que eles fiquem ao lado de outros elementos. */
 }
 
 input, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%; /* Define a largura dos campos de entrada (input) e caixas de seleção (select) para 100% do espaço disponível. */
+    padding: 10px; /* Adiciona um preenchimento interno de 10px dentro dos campos de entrada e seleção. */
+    margin-top: 10px; /* Adiciona um espaçamento superior de 10px entre o campo e o elemento anterior. */
+    border: 1px solid #ccc; /* Define uma borda sólida de 1px ao redor dos campos, com cor cinza clara (#ccc). */
+    border-radius: 5px; /* Arredonda os cantos dos campos em 5px. */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda estejam incluídos na largura e altura totais do elemento. */
 }
 
 button {
-    width: 100%;
-    padding: 15px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    width: 100%; /* Define a largura do botão para 100% do espaço disponível. */
+    padding: 15px; /* Adiciona um preenchimento interno de 15px dentro do botão. */
+    background-color: #4caf50; /* Define a cor de fundo do botão como verde (#4caf50). */
+    color: white; /* Define a cor do texto do botão como branca. */
+    border: none; /* Remove qualquer borda ao redor do botão. */
+    border-radius: 5px; /* Arredonda os cantos do botão em 5px. */
+    cursor: pointer; /* Altera o cursor para o formato de mão quando o mouse passar sobre o botão, indicando que é clicável. */
+    font-size: 16px; /* Define o tamanho da fonte do texto dentro do botão para 16px. */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Muda a cor de fundo do botão para um tom de verde mais escuro (#45a049) quando o mouse passa por cima. */
 }
 
 fieldset {
-    border: none;
-    margin-top: 15px;
+    border: none; /* Remove qualquer borda ao redor do elemento fieldset. */
+    margin-top: 15px; /* Adiciona um espaçamento superior de 15px entre o fieldset e o elemento anterior. */
 }
 
 input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
+    width: auto; /* Define a largura das caixas de seleção (checkbox) para o tamanho automático, não seguindo a largura de 100%. */
+    margin-right: 10px; /* Adiciona um espaçamento à direita de 10px entre a caixa de seleção e o texto adjacente. */
 }

@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
     <style>
+        /* Estilo para uma imagem circular com borda e sombra */
         #yoshi {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            box-shadow: 5px 5px 15px;
-            opacity: 0.7;
-            background-color: rgba(255, 255, 255, 0.3);
+            max-width: 100%; /* A imagem não ultrapassa a largura do contêiner pai */
+            height: auto; /* Mantém a proporção da imagem */
+            border: 1px solid #ccc; /* Borda cinza clara ao redor da imagem */
+            border-radius: 50%; /* Faz a imagem ser circular */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra da imagem com cor preta e leve transparência */
+            opacity: 0.7; /* Define a opacidade da imagem para 70% */
+            background-color: rgba(255, 255, 255, 0.3); /* Cor de fundo branca com 30% de opacidade */
         }
 
+        /* Estilo semelhante para outra imagem circular */
         #img-circular {
             max-width: 100%;
             height: auto;
             border: 1px solid #ccc;
             border-radius: 50%;
-            box-shadow: 5px 5px 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
             opacity: 0.7;
             background-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* Estilo para uma figura com legenda */
         figure.foto-legenda {
-            border: 8px solid white;
-            box-shadow: 1px 1px 4px black;
-            width: 40%;
-            height: 40%;
-        }        
-    </style>
-    <title>Images</title>
+            border: 8px solid white; /* Borda branca ao redor da imagem e legenda */
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra leve e preta */
+            width: 80%; /* Largura da figura é 80% do contêiner pai */
+            max-width: 600px; /* Limita a largura máxima da figura */
+            margin: 20px auto; /* Centraliza a figura e adiciona margem superior e inferior */
+            padding: 10px; /* Espaçamento interno ao redor da imagem e legenda */
+            text-align: center; /* Centraliza o texto da legenda */
+        }
 
+        /* Estilo para a legenda da figura */
+        figcaption {
+            font-size: 1rem; /* Tamanho da fonte da legenda */
+            color: #333; /* Cor do texto da legenda */
+        }
+    </style>
 </head>
 <body>
+    <!-- Imagem circular com borda e sombra -->
     <img id="yoshi" src="../../images/yoshi.png" alt="Yoshi, amigo do Mário">
 
-    <img id="img-circular" src="https://via.placeholder.com/600x400" alt="imagem de exemplo">
+    <!-- Outra imagem circular com borda e sombra -->
+    <img id="img-circular" src="https://via.placeholder.com/600x400" alt="Imagem de exemplo">
 
-    <figure class="the-witcher">
-        <img src="https://i.pinimg.com/originals/3a/e9/c6/3ae9c6abae43aaa733a92e02504239d8.jpg"  alt="Geralt de Rívia, Cirilla Riannon e Yennefer de Vengerberg" title="The Witcher">
-
+    <!-- Figura com imagem e legenda -->
+    <figure class="foto-legenda">
+        <img src="https://i.pinimg.com/originals/3a/e9/c6/3ae9c6abae43aaa733a92e02504239d8.jpg" alt="Geralt de Rívia, Cirilla Riannon e Yennefer de Vengerberg" title="The Witcher">
         <figcaption>Geralt de Rívia, Cirilla Riannon e Yennefer de Vengerberg</figcaption>
     </figure>
 </body>
