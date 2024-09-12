@@ -1,0 +1,48 @@
+div p {
+    color: blue;
+}
+
+ul > li {
+    list-style: none;
+}
+
+h1 + p {
+    margin-bottom: 10px;
+}
+
+h1 ~ p {
+    color: purple;
+} 
+
+a:visited {
+
+}
+
+p::before {
+    content: "Seu nome";
+    color: aqua;
+}
+
+p::first-letter {
+
+}
+
+p::first-line {
+
+}
+
+li:nth-child(2){
+    color: green;
+}
+
+tr:nth-child(even){
+
+}
+
+button:not(.primary){
+    color: chartreuse;
+}
+
+button:active {
+    
+}

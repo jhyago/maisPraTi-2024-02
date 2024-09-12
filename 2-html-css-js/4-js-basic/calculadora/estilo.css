@@ -1,0 +1,79 @@
+  /* Estilos gerais para a página */
+  body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+/* Estilo da tabela que contém a calculadora */
+table {
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo dos botões da calculadora */
+.botao {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    background-color: #f1f3f4;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #333;
+}
+
+.botao:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.botao:active {
+    background-color: #d1d1d1;
+    transform: scale(1);
+}
+
+/* Estilo específico para botões de operação */
+.botao-operacao {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.botao-operacao:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do campo de entrada da tela */
+.resultado {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Ajusta o layout para dispositivos móveis */
+@media (max-width: 600px) {
+    .botao {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    .resultado {
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
