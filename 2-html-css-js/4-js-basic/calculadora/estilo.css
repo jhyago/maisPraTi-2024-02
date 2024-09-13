@@ -1,79 +1,40 @@
-  /* Estilos gerais para a página */
-  body {
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
+    background-color: #f0f0f0;
     margin: 0;
 }
 
-/* Estilo da tabela que contém a calculadora */
 table {
     border-collapse: collapse;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
 
-/* Estilo dos botões da calculadora */
-.botao {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5em;
+.resultado {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
     border: none;
+    text-align: right;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
+.botao {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
     cursor: pointer;
-    background-color: #f1f3f4;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
 .botao:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
-}
-
-.botao:active {
-    background-color: #d1d1d1;
-    transform: scale(1);
-}
-
-/* Estilo específico para botões de operação */
-.botao-operacao {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.botao-operacao:hover {
-    background-color: #45a049;
-}
-
-/* Estilo do campo de entrada da tela */
-.resultado {
-    width: 100%;
-    height: 60px;
-    font-size: 2em;
-    text-align: right;
-    border: none;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    color: #333;
-    border-radius: 15px 15px 0 0;
-}
-
-/* Ajusta o layout para dispositivos móveis */
-@media (max-width: 600px) {
-    .botao {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2em;
-    }
-
-    .resultado {
-        height: 50px;
-        font-size: 1.5em;
-    }
+    background-color: #eaeaea;
 }
