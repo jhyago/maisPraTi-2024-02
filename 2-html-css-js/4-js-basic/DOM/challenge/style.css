@@ -1,0 +1,47 @@
+/* O seletor body aplica estilos a toda a página. */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão para o texto do site. É uma lista de fontes para fallback: caso a primeira não seja encontrada, usa-se a seguinte. */
+    background-color: #f4f4f4; /* Define a cor de fundo da página para um tom claro de cinza (#f4f4f4). */
+    padding: 20px; /* Adiciona um espaço interno (padding) de 20px ao redor de todo o conteúdo da página. */
+}
+
+/* O seletor h1 aplica estilos ao título principal da página. */
+h1 {
+    color: #333; /* Define a cor do texto do título h1 para um tom escuro de cinza. */
+    text-align: center; /* Centraliza o texto do título na página. */
+}
+
+/* O seletor button aplica estilos a todos os botões da página. */
+button {
+    margin: 5px; /* Adiciona um espaçamento externo (margem) de 5px ao redor de cada botão, separando-o de outros elementos. */
+    padding: 10px 20px; /* Define o espaço interno (padding) dentro do botão: 10px no topo e na parte inferior, 20px nas laterais. */
+    background-color: #28a745; /* Define a cor de fundo do botão para um tom de verde (#28a745). */
+    color: white; /* Define a cor do texto do botão como branco. */
+    border: none; /* Remove as bordas padrão dos botões. */
+    cursor: pointer; /* Altera o cursor para um ponteiro (mãozinha) quando o mouse passa sobre o botão, indicando que é clicável. */
+    border-radius: 5px; /* Adiciona um arredondamento de 5px nos cantos do botão. */
+}
+
+/* Aplica o efeito hover, ou seja, quando o usuário passa o mouse sobre o botão. */
+button:hover {
+    background-color: #218838; /* Muda a cor de fundo do botão para um tom mais escuro de verde (#218838) quando o mouse passa por cima dele. */
+}
+
+/* O seletor ul aplica estilos à lista não ordenada (ul). */
+ul {
+    list-style-type: none; /* Remove os marcadores padrão (bolinhas) da lista. */
+    padding: 0; /* Remove o padding padrão que vem nas listas não ordenadas. */
+}
+
+/* Aplica estilos aos itens individuais da lista (li). */
+ul li {
+    background-color: #ccc; /* Define a cor de fundo de cada item da lista para um cinza claro (#ccc). */
+    margin: 5px; /* Adiciona um espaçamento externo de 5px ao redor de cada item da lista. */
+    padding: 10px; /* Adiciona um espaçamento interno de 10px dentro de cada item da lista. */
+    border: 5px; /* Aqui o valor da propriedade "border" está incorreto, pois deveria ser especificada a largura, tipo e cor da borda. Por exemplo: `border: 1px solid #000;` para uma borda sólida de 1px de espessura e preta. */
+}
+
+/* Aplica estilos alternados aos itens pares da lista (nth-child(even) significa "n-ésimo filho par"). */
+ul li:nth-child(even) {
+    background-color: #bbb; /* Altera a cor de fundo dos itens pares para um tom mais escuro de cinza (#bbb). */
+}

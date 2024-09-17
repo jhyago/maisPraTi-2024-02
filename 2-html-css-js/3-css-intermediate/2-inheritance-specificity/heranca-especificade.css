@@ -1,0 +1,106 @@
+/* Herança básica em CSS */
+
+/* Definindo a cor azul para todos os <p> na página */
+p {
+    color: blue;
+}
+
+/* Definindo uma cor de fundo para todos os <div>, que será herdada por seus filhos, incluindo <p> */
+div {
+    background-color: lightgray;
+}
+
+/* Aqui, os <p> herdam a cor azul do seletor p e, como estão dentro de um <div>, herdam a cor de fundo do <div> */
+
+/* Mas, podemos aumentar a especificidade e mudar esse comportamento */
+
+/* Usando a classe .highlight para sobrescrever a cor do texto de parágrafos dentro de uma div */
+div p.highlight {
+    color: red;
+}
+
+/* A especificidade aumentou com a combinação de div e p.highlight, então o parágrafo com a classe 'highlight'
+   terá a cor vermelha, substituindo o azul herdado */
+
+/* Especificidade: quanto mais específico for o seletor, maior será sua prioridade */
+
+
+/* Especificidade básica: A regra mais geral para todos os <p> */
+p {
+    color: blue;
+}
+
+/* Mais específico: um <p> dentro de um <div> */
+div p {
+    color: green;
+}
+
+/* Ainda mais específico: um <p> dentro de um <div> com a classe 'container' */
+div.container p {
+    color: purple;
+}
+
+/* O mais específico: um <p> dentro de um <div> com a classe 'container' e a classe 'highlight' no parágrafo */
+/* Nesse caso, o parágrafo com as classes 'highlight' e 'container' aplicará a cor laranja, pois essa regra é mais específica */
+div.container p.highlight {
+    color: orange;
+}
+
+
+
+
+
+/* Aplicando !important, que força uma regra CSS a ter a maior prioridade */
+
+/* Mesmo que haja outra regra com mais especificidade, o !important prevalece */
+p {
+    color: blue !important;
+}
+
+/* Tentando sobrescrever com uma cor amarela, mas o !important na regra azul impede essa mudança */
+p {
+    color: yellow;
+}
+
+/* Aqui, o <p> será azul, pois a regra com !important tem prioridade sobre qualquer outra regra,
+   independentemente da especificidade. */
+
+/* Se tentarmos adicionar outra regra com !important, a mais recente ganha */
+p {
+    color: yellow !important;
+}
+
+/* Agora, o <p> será amarelo, pois a última regra com !important sobrescreve a anterior */
+
+
+/* Definindo a cor do corpo da página. Todos os elementos filhos herdarão essa cor, a menos que seja sobrescrita */
+body {
+    color: black;
+}
+
+/* Todos os <p> herdarão a cor preta, pois não há outra regra que a substitua */
+p {
+    font-size: 16px; /* Tamanho de fonte não é herdado, então você precisa especificá-lo */
+}
+
+/* Especificidade: o seletor mais específico aqui sobrescreve a cor herdada */
+.container p {
+    color: green;
+}
+
+/* O <p> dentro de .container será verde, enquanto outros <p> herdarão a cor preta do <body> */
+
+
+/* 
+    Considerações Finais sobre Especificidade:
+
+    Especificidade é calculada com base no tipo de seletor:
+        Seletor de elemento (ex: p) tem menor especificidade.
+        Seletor de classe (ex: .container) tem mais especificidade que o de elemento.
+        Seletor de ID (ex: #main) tem ainda mais especificidade.
+        Seletor inline (ex: style="color:red;") tem prioridade máxima.
+
+    A ordem importa: quando dois seletores têm a mesma especificidade, o último declarado "ganha".
+
+    !important sobrepõe tudo, mas deve ser usado com cuidado para evitar confusão na manutenção do CSS. 
+*/

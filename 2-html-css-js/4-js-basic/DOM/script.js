@@ -1,23 +1,23 @@
-let titulo = document.getElementById('titulo')
+let title = document.getElementById('title')
 
-titulo.textContent = "Aula de JS básico"
+title.textContent = "Aula de JS básico"
 
-titulo.innerHTML = "Mudei o conteúdo do título novamente"
+title.innerHTML = "Mudei o conteúdo do título novamente"
 
-titulo.style.color = "blue"
+title.style.color = "blue"
 
-let botao = document.getElementById('botao')
+let button = document.getElementById('button')
 
-botao.addEventListener('click', () => {
+button.addEventListener('click', () => {
     alert('Você clicou no botão!')
 })
 
-let novoParagrafo = document.createElement('p')
+let newParagraph = document.createElement('p')
 
-novoParagrafo.innerHTML = "Este é um parágrafo criado via JS"
+newParagraph.innerHTML = "Este é um parágrafo criado via JS"
 
-document.body.appendChild(novoParagrafo)
+document.body.appendChild(newParagraph)
 
-let paragrafo = document.querySelector('.paragrafo')
+let paragraph = document.querySelector('.paragraph')
 
-paragrafo.remove()
+paragraph.remove()

@@ -1,0 +1,131 @@
+/* Seleciona todos os <p> que estão dentro de um <div> e define a cor do texto como azul */
+div p {
+    color: blue;
+}
+
+/* Remove o estilo de lista (como marcadores) de todos os <li> que são filhos diretos de <ul> */
+ul > li {
+    list-style: none;
+}
+
+/* Adiciona uma margem inferior de 10px ao <p> que imediatamente segue um <h1> */
+h1 + p {
+    margin-bottom: 10px;
+}
+
+/* Define a cor do texto como roxo para todos os <p> que são irmãos de <h1> */
+h1 ~ p {
+    color: purple;
+} 
+
+/* Seleciona links que já foram visitados */
+/* Atualmente vazio, você pode adicionar estilos como cor diferente para links visitados */
+a:visited {
+    
+}
+
+/* Insere o conteúdo "Seu nome" antes de cada <p> e define a cor desse conteúdo como aqua */
+p::before {
+    content: "Seu nome";
+    color: aqua;
+}
+
+/* Estiliza a primeira letra de cada <p> */
+/* Exemplo: */
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Estiliza a primeira linha de cada <p> */
+/* Exemplo: */
+p::first-line {
+    text-transform: uppercase;
+}
+
+/* Define a cor como verde para o segundo <li> de cada lista */
+li:nth-child(2){
+    color: green;
+}
+
+/* Estiliza todas as linhas pares de uma tabela */
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+/* Define a cor como chartreuse para todos os <button> que NÃO possuem a classe "primary" */
+button:not(.primary){
+    color: chartreuse;
+}
+
+/* Estiliza o botão no estado ativo (quando está sendo clicado) */
+/* Exemplo: */
+button:active {
+    transform: scale(0.98);
+    background-color: #ddd;
+}
+
+/* --- Seletores Adicionais --- */
+
+/* Seleciona todos os elementos com a classe 'highlight' e define o fundo amarelo */
+.highlight {
+    background-color: yellow;
+}
+
+/* Seleciona o elemento com o ID 'main' e define sua largura para 100% */
+#main {
+    width: 100%;
+}
+
+/* Remove o sublinhado de todos os links dentro de um <nav> */
+nav a {
+    text-decoration: none;
+}
+
+/* Adiciona uma borda azul quando um <input> está focado */
+input:focus {
+    border: 2px solid blue;
+}
+
+/* Define a cor do texto como vermelho para todos os <span> com a classe 'error' */
+span.error {
+    color: red;
+}
+
+/* Define a cor de fundo para o último <li> de cada lista */
+ul li:last-child {
+    background-color: lightgray;
+}
+
+/* Adiciona uma borda preta a todas as imagens que NÃO possuem o atributo alt */
+img:not([alt]) {
+    border: 1px solid black;
+}
+
+/* Seleciona todos os elementos <a> que estão dentro de um <footer> e define a cor como cinza */
+footer a {
+    color: gray;
+}
+
+/* Estiliza todos os botões com a classe 'secondary' */
+button.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Aplica estilos quando um elemento está sendo hoverado */
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Seleciona todos os elementos <section> que são o primeiro filho de seu pai */
+section:first-child {
+    margin-top: 20px;
+}
+
+/* Estiliza todos os elementos <h2> que são seguidos por um <ul> */
+h2 + ul {
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
