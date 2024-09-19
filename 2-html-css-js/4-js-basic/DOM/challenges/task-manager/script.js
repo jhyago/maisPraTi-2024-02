@@ -19,7 +19,7 @@ addTaskBtn.addEventListener('click', () =>{
 function createTaskElement(text) {
     let li = document.createElement('li')
 
-    li.textContext = text
+    li.textContent = text
 
     let removeBtn = document.createElement('span')
     removeBtn.textContent = 'Remover'
@@ -71,3 +71,27 @@ function editTask(li) {
         input.focus()
     }
 }
+
+filters.forEach(filter => {
+    filter.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('active-filter'))
+        filter.classList.add('active-filter')
+
+        let filterType = filter.id
+        let allTasks = taskList.querySelectorAll('li')
+
+        allTasks.forEach(task => {
+            switch(filterType) {
+                case 'filter-all':
+                    task.style.display = ''
+                    break
+                case 'filter-completed':
+                    task.style.display = task.classList.contains('completed') ? '' : 'none'
+                    break
+                case 'filter-not-completed':
+                    task.style.display = task.classList.contains('completed') ? 'none' : ''
+                    break 
+            }
+        })
+    })
+})
