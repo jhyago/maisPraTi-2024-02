@@ -10,7 +10,7 @@ body {
 }
 
 .navegacao-vertical {
-    background-color: #2b2d32;
+    background-color: #2b2d42;
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -66,3 +66,38 @@ body {
     visibility: visible;
     transform: scaleY(1);
 }
+
+.navegacao-horizontal {
+    background-color: #2b2d42;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao-horizontal ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navegacao-horizontal li {
+    margin: 0 30px;
+}
+
+.navegacao-horizontal li a {
+    text-decoration: none;
+    color: #8d99ae;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navegacao-horizontal li a:hover {
+    background-color: #edf2f4;
+    color: #2b2d42;
+    box-sizing: 0 8px 16px rgba(237, 242, 244, 0.4);
+}
+
