@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Browser Object Model</title>
+    <script>
+        let myWindow;
+        // Variável para armazenar a referência da nova janela aberta
+
+        function openWin(){
+            // Função que abre uma nova janela
+            myWindow = window.open("", "myWindow", "width=200, height=100");
+            // Abre uma nova janela com título 'myWindow' e dimensões de 200x100 pixels
+            myWindow.document.write("<p>Nova Janela Aberta!</p>");
+            // Escreve um parágrafo na nova janela
+        }
+
+        function closeWin() {
+            // Função que fecha a janela aberta
+            if(myWindow){
+                // Verifica se a janela foi aberta
+                myWindow.close();
+                // Fecha a janela
+            }
+        }
+
+        function redirectTo(url) {
+            // Função que redireciona o usuário para o URL especificado
+            window.location.href = url;
+            // Muda a URL atual para o endereço especificado
+        }
+
+        function changeText() {
+            // Função que altera o texto da página após 3 segundos
+            setTimeout(() => {
+                document.getElementById("texto").innerHTML = "Texto alterado após 3 segundos!";
+                // Altera o conteúdo do elemento com id 'texto' após 3 segundos
+            }, 3000);
+            // O delay de 3000 milissegundos (3 segundos) antes de mudar o texto
+        }
+
+        let contador;
+        // Variável para armazenar o identificador do intervalo
+        let i = 10;
+        // Valor inicial da contagem (10)
+
+        function startCounter() {
+            // Função que inicia o contador decrescente
+            contador = setInterval(() => {
+                // Função que será executada repetidamente a cada 1000 milissegundos (1 segundo)
+                document.getElementById("contador").innerHTML = i;
+                // Atualiza o conteúdo do elemento com id 'contador' com o valor atual de 'i'
+                i--;
+                // Decrementa o valor de 'i' em 1
+                if (i < 0) {
+                    // Verifica se o contador chegou a 0 ou menos
+                    clearInterval(contador);
+                    // Para o intervalo de execução
+                    document.getElementById("contador").innerHTML = "Contagem finalizada!";
+                    // Atualiza o texto para "Contagem finalizada!"
+                }
+            }, 1000);
+            // Define o intervalo para ser executado a cada 1000 milissegundos (1 segundo)
+        }
+
+        function stopCounter() {
+            // Função que para o contador manualmente
+            clearInterval(contador);
+            // Limpa o intervalo, parando o contador
+        }
+
+        function goBack() {
+            // Função para voltar à página anterior no histórico do navegador
+            window.history.back();
+            // Utiliza o método `history.back()` para voltar
+        }
+
+        function goForward() {
+            // Função para avançar para a próxima página no histórico do navegador
+            window.history.forward();
+            // Utiliza o método `history.forward()` para avançar
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWin()">Abrir Janela</button>
+    <!-- Botão que chama a função openWin para abrir uma nova janela -->
+
+    <button onclick="closeWin()">Fechar Janela</button>
+    <!-- Botão que chama a função closeWin para fechar a janela aberta -->
+
+    <button onclick="window.print()">Imprimir Janela</button>
+    <!-- Botão que chama o método window.print() para imprimir a página -->
+
+    <button onclick="redirectTo('http://www.google.com')">Acessar Google</button>
+    <!-- Botão que chama a função redirectTo para redirecionar para o Google -->
+
+    <h2 id="texto">Texto original</h2>
+    <!-- Cabeçalho onde o texto será alterado após 3 segundos -->
+
+    <button onclick="changeText()">Alterar texto após 3 segundos</button>
+    <!-- Botão que chama a função changeText para alterar o texto após 3 segundos -->
+
+    <h2 id="contador">Contagem não iniciada</h2>
+    <!-- Cabeçalho onde o contador será exibido -->
+
+    <button onclick="startCounter()">Iniciar Contador</button>
+    <!-- Botão que chama a função startCounter para iniciar o contador -->
+
+    <button onclick="stopCounter()">Parar Contador</button>
+    <!-- Botão que chama a função stopCounter para parar o contador manualmente -->
+
+    <button onclick="goBack()">Voltar</button>
+    <!-- Botão que chama a função goBack para voltar ao histórico anterior do navegador -->
+
+    <button onclick="goForward()">Avançar</button>
+    <!-- Botão que chama a função goForward para avançar ao próximo item do histórico do navegador -->
+</body>
+</html>
