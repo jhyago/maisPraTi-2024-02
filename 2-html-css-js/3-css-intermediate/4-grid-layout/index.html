@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o charset como UTF-8, garantindo suporte a caracteres especiais do português -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsável por ajustar a escala da página com base no tamanho da tela do dispositivo -->
+    <title>Grid Layout</title>
+    <!-- Título da página que será exibido na aba do navegador -->
+    <style>
+        /* Estilos internos em CSS */
+
+        div {
+            border: 1px solid blue;
+            /* Define uma borda azul para todos os elementos <div>, para fins de visualização e estrutura */
+        }
+
+        .container {
+            border: 1px solid red;
+            /* Define uma borda vermelha ao redor do container principal, visualizando melhor o grid */
+            display: grid;
+            /* O container agora se torna um grid layout. Os elementos filhos serão posicionados em uma grade */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Define três colunas com tamanhos iguais (1fr significa "uma fração", ou seja, a largura será distribuída igualmente entre as colunas) */
+            grid-template-rows: 100px 200px;
+            /* Define duas linhas: a primeira terá 100px de altura, e a segunda 200px */
+            grid-gap: 10px;
+            /* Cria um espaço de 10px entre as colunas e as linhas do grid */
+        }
+
+        .item1 {
+            grid-column: 1/3;
+            /* A item1 ocupará a primeira e a segunda colunas, indo da coluna 1 até a 3 (sem incluir a 3) */
+            grid-row: 1/2;
+            /* A item1 será posicionada na primeira linha */
+        }
+
+        .item2 {
+            grid-column: 3;
+            /* A item2 estará completamente na terceira coluna */
+            grid-row: 1/3;
+            /* A item2 ocupará desde a primeira até a segunda linha (ou seja, atravessa duas linhas) */
+            background-color: lightblue;
+            /* Define uma cor de fundo azul claro para destacar visualmente a área da sidebar */
+        }
+
+        .item3 {
+            grid-column: 1/4;
+            /* A item3 ocupará todas as três colunas, indo da coluna 1 até o final (coluna 4, sem incluir a 4) */
+            background-color: lightgreen;
+            /* Define uma cor de fundo verde claro para a área do footer */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- O container principal, que segue as regras de grid layout definidas anteriormente -->
+        <div class="item1">Header</div>
+        <!-- A primeira div (item1) será o cabeçalho (Header), ocupando as duas primeiras colunas da primeira linha -->
+        <div class="item2">SideBar</div>
+        <!-- A segunda div (item2) será a barra lateral (SideBar), ocupando a terceira coluna e atravessando duas linhas -->
+        <div class="item3">Footer</div>
+        <!-- A terceira div (item3) será o rodapé (Footer), ocupando todas as três colunas na segunda linha -->
+    </div>
+</body>
+</html>
