@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff0000;
+}
+
+body {
+    position: relative;
+    background-color: #000000;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { 
+    max-width: 60px;
+    min-width: 60px;
+    filter: invert(1);
+    transition: transform 0.5s ease;
+}
+
+.logo:hover img {
+    transform: rotate(540deg) scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+ul {
+    display: flex;
+}
