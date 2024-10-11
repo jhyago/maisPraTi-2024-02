@@ -43,6 +43,8 @@ console.log(outrasInfo)
 //     Use o operador rest para capturar todas as notas passadas como argumentos.
 //     Dentro da função, some todas as notas e divida pela quantidade de notas para calcular a média.
 
+//2
+
 // Imagine que você está desenvolvendo um sistema de e-commerce e precisa mesclar os dados de um cliente com uma atualização recente. Os dados antigos estão em um objeto, e os dados novos chegam em outro. Utilize o operador spread para criar um novo objeto contendo as informações atualizadas.
 
 // Instruções:
