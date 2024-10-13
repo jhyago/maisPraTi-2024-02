@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define a codificação de caracteres como UTF-8, importante para suportar caracteres especiais e acentuação -->
     <meta charset="UTF-8">
+    <!-- Configura a página para ajustar seu layout conforme a largura da tela do dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsividade</title>
     <style>
+        /* Reseta as margens e o padding padrão do body, além de definir uma fonte padrão para o site */
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
         }
 
+        /* Estiliza o cabeçalho, dando um fundo escuro e centralizando o texto */
         header {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
+            background-color: #333; /* Cor de fundo escura (cinza) */
+            padding: 10px; /* Espaçamento interno (padding) de 10px */
+            text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
         }
 
+        /* Define o estilo do contêiner principal que contém as caixas */
         .container {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
+            display: flex; /* Usa flexbox para organizar os elementos em linha */
+            justify-content: space-around; /* Distribui o espaço de forma igual ao redor das caixas */
+            padding: 20px; /* Adiciona 20px de espaçamento interno */
         }
 
+        /* Estilo das caixas individuais que serão exibidas lado a lado */
         .box {
-            width: 30%;
-            padding: 20px;
-            background-color: lightblue;
-            margin: 10px;
-            text-align: center;
+            width: 30%; /* Define que cada caixa ocupará 30% da largura do contêiner */
+            padding: 20px; /* Adiciona espaçamento interno de 20px */
+            background-color: lightblue; /* Cor de fundo azul clara */
+            margin: 10px; /* Adiciona um espaço externo de 10px ao redor de cada caixa */
+            text-align: center; /* Centraliza o texto dentro das caixas */
         }
 
-        @media (max-width: 768px){
+        /* Define regras de estilo para telas com largura máxima de 768px (telas médias, como tablets) */
+        @media (max-width: 768px) {
             .box {
-                width: 45%
+                width: 45%; /* A largura de cada caixa aumenta para 45% para melhor uso do espaço */
             }
         }
 
-        @media (max-width: 480px){
+        /* Define regras de estilo para telas com largura máxima de 480px (telas pequenas, como smartphones) */
+        @media (max-width: 480px) {
             .box {
-                width: 100%;
+                width: 100%; /* Cada caixa ocupará 100% da largura da tela, se adaptando ao layout vertical */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho da página, onde está o título principal -->
     <header>
-        <h1>Layout Responsivo</h1>
+        <h1>Layout Responsivo</h1> <!-- Título do layout, centralizado e com cor branca padrão por causa do fundo escuro -->
     </header>
+
+    <!-- O conteúdo principal da página, que usa flexbox para dispor as caixas -->
     <main class="container">
+        <!-- Cada uma dessas caixas será organizada em linha devido ao display: flex do contêiner -->
         <div class="box">Caixa 1</div>
         <div class="box">Caixa 2</div>
         <div class="box">Caixa 3</div>
     </main>
 </body>
-</html>
+</html> 

@@ -5,30 +5,38 @@
     <meta charset="UTF-8">
     <title>To Do App</title>
 
+    <!-- Link para o CSS do Bootstrap 4, garantindo o layout responsivo e estilização -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Inclusão do jQuery (requerido pelo Bootstrap para alguns componentes funcionarem corretamente) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <!-- Inclusão do Popper.js, usado para as funções de popover e tooltip do Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+    <!-- Inclusão do JavaScript do Bootstrap para adicionar funcionalidades dinâmicas ao site -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <!-- Inclusão do arquivo de script JavaScript personalizado para a aplicação -->
     <script src="app.js"></script>
 
 </head>
 
 <body>
+    <!-- Barra de navegação do Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">To Do App</a>
+        <!-- Botão para dispositivos móveis que exibe/oculta o menu -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Links do menu de navegação -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -41,16 +49,20 @@
         </div>
     </nav>
 
+    <!-- Seção principal, com altura total da tela e fundo cinza claro -->
     <section class="vh-100" style="background-color: #eee;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
+                    <!-- Card Bootstrap para exibir o conteúdo de registro de tarefas -->
                     <div class="card rounded-3">
                         <div class="card-body p-4">
-
+                            <!-- Título centralizado da seção de registro de tarefas -->
                             <h4 class="text-center my-3 pb-3">Register Task</h4>
 
+                            <!-- Formulário de registro de tarefas com elementos responsivos do Bootstrap -->
                             <form class="row g-3 justify-content-center align-items-center mb-4 pb-2">
+                                <!-- Campo de seleção do ano -->
                                 <div class="col-md-2 mb-3">
                                     <select class="form-control" id="year">
                                         <option value="">Year</option>
@@ -58,6 +70,7 @@
                                     </select>
                                 </div>
 
+                                <!-- Campo de seleção do mês -->
                                 <div class="col-md-2 mb-3">
                                     <select class="form-control" id="month">
                                         <option value="">Month</option>
@@ -76,10 +89,12 @@
                                     </select>
                                 </div>
 
+                                <!-- Campo de input para o dia -->
                                 <div class="col-md-2 mb-3">
                                     <input type="text" class="form-control" placeholder="Day" id="day" />
                                 </div>
 
+                                <!-- Campo de seleção do tipo de tarefa -->
                                 <div class="col-md-6 mb-3">
                                     <select class="form-control" id="type">
                                         <option value="">Type</option>
@@ -91,10 +106,13 @@
                                     </select>
                                 </div>
 
+                                <!-- Campo de input para a descrição da tarefa -->
                                 <div class="col-md-8 mb-3">
                                     <input type="text" class="form-control" placeholder="Description"
                                         id="description" />
                                 </div>
+
+                                <!-- Botão para salvar a tarefa -->
                                 <div class="col-md-4 mb-3">
                                     <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                         class="btn btn-dark" onclick="registerTask()">Save

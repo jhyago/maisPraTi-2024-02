@@ -16,6 +16,10 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -27,16 +31,26 @@ header {
     padding: 20px 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 20;
-  }
-  
-  .logo img {
+}
+
+.logo img {
     max-width: 60px;
     max-height: 60px;
     filter: invert(1);
     transition: transform 0.5s ease;
-  }
-  
-  .logo:hover img {
+}
+
+.logo:hover img {
     transform: rotate(540deg) scale(1.2);
     transition: transform 0.5s ease;
-  }
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav li a {
+    color: #fff;
+}

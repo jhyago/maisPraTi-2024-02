@@ -2,38 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>To Do App</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a caracteres especiais -->
+    <title>To Do App</title> <!-- Título da página que aparece na aba do navegador -->
 
+    <!-- Link para o CSS do Bootstrap 4, framework que ajuda a estilizar e estruturar o layout de forma responsiva -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Inclusão do jQuery (necessário para algumas funcionalidades do Bootstrap, como o colapso do menu) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <!-- Inclusão do Popper.js, usado principalmente para posicionar tooltips e popovers no Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+    <!-- Inclusão do Bootstrap JavaScript, necessário para adicionar comportamentos dinâmicos ao site -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <!-- Arquivo JavaScript customizado, onde se encontra a lógica de manipulação do To Do App -->
     <script src="app.js"></script>
 
 </head>
 
 <body>
+    <!-- Barra de navegação superior com estilo do Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Título da aplicação que aparece na barra de navegação -->
         <a class="navbar-brand" href="#">To Do App</a>
+        <!-- Botão que aparece em dispositivos móveis para expandir/colapsar o menu -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Seção colapsável do menu, contendo os links de navegação -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                <!-- Link ativo para a página principal -->
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Main</a>
                 </li>
+                <!-- Link para a página de gerenciamento de tarefas -->
                 <li class="nav-item">
                     <a class="nav-link" href="listTask.html">Management</a>
                 </li>
@@ -41,26 +52,32 @@
         </div>
     </nav>
 
+    <!-- Seção principal que ocupa 100% da altura da tela, com um fundo cinza claro (#eee) -->
     <section class="vh-100" style="background-color: #eee;">
-        <div class="container py-5 h-100">
+        <div class="container py-5 h-100"> <!-- Contêiner Bootstrap que garante um espaçamento uniforme -->
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12">
+                <div class="col-12"> <!-- Coluna que ocupa todo o espaço da largura disponível na tela -->
+                    <!-- Cartão (card) com bordas arredondadas que contém o formulário e a tabela -->
                     <div class="card rounded-3">
-                        <div class="card-body p-4">
+                        <div class="card-body p-4"> <!-- Corpo do cartão com padding interno de 4 unidades Bootstrap -->
 
+                            <!-- Título da lista de tarefas, centralizado e com espaçamento nas margens e bordas -->
                             <h4 class="text-center my-3 pb-3">To Do List</h4>
 
+                            <!-- Formulário para pesquisa de tarefas, usando o sistema de grids do Bootstrap -->
                             <form class="row g-3 justify-content-center align-items-center mb-4 pb-2">
+                                <!-- Campo de seleção do ano, com um único valor (2024) -->
                                 <div class="col-md-2 mb-3">
                                     <select class="form-control" id="year">
-                                        <option value="">Year</option>
-                                        <option value="2024">2024</option>
+                                        <option value="">Year</option> <!-- Opção vazia para o usuário selecionar -->
+                                        <option value="2024">2024</option> <!-- Ano predefinido para seleção -->
                                     </select>
                                 </div>
 
+                                <!-- Campo de seleção do mês, com opções de Janeiro a Dezembro -->
                                 <div class="col-md-2 mb-3">
                                     <select class="form-control" id="month">
-                                        <option value="">Month</option>
+                                        <option value="">Month</option> <!-- Opção padrão vazia -->
                                         <option value="1">January</option>
                                         <option value="2">February</option>
                                         <option value="3">March</option>
@@ -76,13 +93,15 @@
                                     </select>
                                 </div>
 
+                                <!-- Campo de texto para o dia, onde o usuário pode digitar manualmente -->
                                 <div class="col-md-2 mb-3">
                                     <input type="text" class="form-control" placeholder="Day" id="day" />
                                 </div>
 
+                                <!-- Campo de seleção para o tipo de tarefa (e.g., Estudos, Trabalho, Saúde) -->
                                 <div class="col-md-6 mb-3">
                                     <select class="form-control" id="type">
-                                        <option value="">Type</option>
+                                        <option value="">Type</option> <!-- Opção vazia padrão -->
                                         <option value="1">Studies</option>
                                         <option value="2">Work</option>
                                         <option value="3">Home</option>
@@ -91,26 +110,33 @@
                                     </select>
                                 </div>
 
+                                <!-- Campo de entrada de texto para a descrição da tarefa -->
                                 <div class="col-md-8 mb-3">
                                     <input type="text" class="form-control" placeholder="Description"
                                         id="description" />
                                 </div>
+
+                                <!-- Botão de pesquisa de tarefas -->
                                 <div class="col-md-4 mb-3">
+                                    <!-- O botão dispara a função de pesquisa de tarefas definida no arquivo `app.js` -->
                                     <button type="button" data-mdb-button-init data-mdb-ripple-init
                                         class="btn btn-dark" onclick="searchTasks()">Search
                                     </button>
                                 </div>
                             </form>
 
+                            <!-- Tabela que exibirá as tarefas carregadas da base de dados -->
                             <table class="table mb-4">
                                 <thead>
+                                    <!-- Cabeçalho da tabela, com três colunas: Data, Tipo e Descrição -->
                                     <tr>
                                         <th scope="col">Date</th>
                                         <th scope="col">Type</th>
                                         <th scope="col">Description</th>
                                     </tr>
                                 </thead>
-                                <tbody id="listTasks"></tbody>
+                                <!-- Corpo da tabela onde as tarefas serão listadas -->
+                                <tbody id="listTasks"></tbody> <!-- Este tbody será preenchido dinamicamente via JavaScript -->
                             </table>
 
                         </div>

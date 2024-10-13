@@ -1,58 +1,101 @@
-// let numeros = [1, 2, 3]
-// let novosNumeros = [...numeros, 4, 5]
+// ---------------------------------------------
+// 1. Operador Spread em Arrays
+// ---------------------------------------------
+let numeros = [1, 2, 3]
 
-// console.log(novosNumeros) //1, 2, 3, 4, 5
+// Usando o operador spread para criar um novo array, adicionando 4 e 5
+let novosNumeros = [...numeros, 4, 5]
+console.log(novosNumeros) // Saída: [1, 2, 3, 4, 5]
 
-// let pessoa = {nome: "Neymar", idade: 30}
-// let novaPessoa = {...pessoa, cidade: "Santos"}
+// ---------------------------------------------
+// 2. Operador Spread em Objetos
+// ---------------------------------------------
+let pessoa = { nome: "Neymar", idade: 30 }
 
-// console.log(novaPessoa) //Nome: Neymar, idade: 30, cidade: Santos.
+// Usando o spread para adicionar uma nova propriedade 'cidade' ao objeto
+let novaPessoa = { ...pessoa, cidade: "Santos" }
+console.log(novaPessoa) // Saída: {nome: "Neymar", idade: 30, cidade: "Santos"}
 
-// function soma(a, b, c){
-//     return a + b + c
-// }
+// ---------------------------------------------
+// 3. Usando Spread em Funções
+// ---------------------------------------------
+function soma(a, b, c) {
+    return a + b + c
+}
 
-// let numeros = [1, 2, 3]
-// console.log(soma(...numeros))
+let numerosArray = [1, 2, 3]
 
-function soma(...numeros){
+// Usando o spread para passar elementos do array como argumentos individuais
+console.log(soma(...numerosArray)) // Saída: 6
+
+// ---------------------------------------------
+// 4. Usando o Operador Rest em Funções
+// ---------------------------------------------
+function somaTudo(...numeros) {
+    // Usando reduce para somar todos os números recebidos
     return numeros.reduce((total, numero) => total + numero)
 }
 
-console.log(soma(1, 2, 3, 4, 5))
+// Chamando a função com múltiplos argumentos
+console.log(somaTudo(1, 2, 3, 4, 5)) // Saída: 15
 
-
+// ---------------------------------------------
+// 5. Desestruturação de Arrays com Rest
+// ---------------------------------------------
 const [primeiro, segundo, ...resto] = [1, 2, 3, 4, 5]
 
-console.log(primeiro)
-console.log(segundo)
-console.log(resto)
+console.log(primeiro) // Saída: 1
+console.log(segundo)  // Saída: 2
+console.log(resto)    // Saída: [3, 4, 5]
 
+// ---------------------------------------------
+// 6. Desestruturação de Objetos com Rest
+// ---------------------------------------------
+const jogador = { nome: "Kanemann", idade: 30, time: "Maior do sul" }
 
-const pessoa = { nome: "Kanemann", idade: 30, time: "Maior do sul"}
+const { nome: nomeJogador, ...outrasInfo } = jogador
 
-const { nome, ...outrasInfo} = pessoa
+console.log(nomeJogador) // Saída: Kanemann
+console.log(outrasInfo)  // Saída: { idade: 30, time: "Maior do sul" }
 
-console.log(nome)
-console.log(outrasInfo)
+// ---------------------------------------------
+// 7. Função que Calcula Média usando Operador Rest
+// ---------------------------------------------
+function calculaMedia(...notas) {
+    const total = notas.reduce((soma, nota) => soma + nota, 0)
+    return total / notas.length
+}
 
-// Crie uma função chamada calculaMedia que aceita uma quantidade indefinida de notas de estudantes e calcula a média dessas notas.
+// Chama a função com várias notas
+console.log(calculaMedia(8, 7, 9, 6, 10)) // Saída: 8
 
-// Instruções:
+// ---------------------------------------------
+// 8. Exemplo de E-commerce com Spread (Mesclando Objetos)
+// ---------------------------------------------
+const clienteAntigo = {
+    nome: "Carlos",
+    idade: 32,
+    email: "carlos@example.com"
+}
 
-//     Use o operador rest para capturar todas as notas passadas como argumentos.
-//     Dentro da função, some todas as notas e divida pela quantidade de notas para calcular a média.
+const clienteAtualizado = {
+    email: "carlos.dev@example.com",
+    cidade: "São Paulo"
+}
 
-//2
+// Usando o operador spread para combinar os dados antigos com os novos
+const clienteFinal = { ...clienteAntigo, ...clienteAtualizado }
 
-// Imagine que você está desenvolvendo um sistema de e-commerce e precisa mesclar os dados de um cliente com uma atualização recente. Os dados antigos estão em um objeto, e os dados novos chegam em outro. Utilize o operador spread para criar um novo objeto contendo as informações atualizadas.
+console.log(clienteFinal)
+// Saída: { nome: "Carlos", idade: 32, email: "carlos.dev@example.com", cidade: "São Paulo" }
 
-// Instruções:
+// ---------------------------------------------
+// 9. Adicionar Produtos ao Carrinho com Spread
+// ---------------------------------------------
+let carrinho = ["Produto 1", "Produto 2", "Produto 3"]
 
-//     Use o operador spread para combinar os dois objetos, dando prioridade aos dados mais recentes.
+// Usando o spread para criar uma nova lista de produtos, sem alterar o array original
+let novoCarrinho = [...carrinho, "Produto 4", "Produto 5"]
 
-// Suponha que você tem uma lista de produtos em um carrinho de compras e deseja adicionar novos produtos sem modificar o array original. Use o operador spread para criar uma nova lista de produtos.
-
-// Instruções:
-
-//     Use o operador spread para adicionar novos itens a um array já existente.
+console.log(novoCarrinho) 
+// Saída: ["Produto 1", "Produto 2", "Produto 3", "Produto 4", "Produto 5"]

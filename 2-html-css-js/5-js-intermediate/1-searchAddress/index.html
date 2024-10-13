@@ -2,51 +2,70 @@
 <html lang="en">
 
 <head>
+    <!-- Define a codificação de caracteres como UTF-8, permitindo suporte a caracteres especiais -->
     <meta charset="UTF-8">
+    <!-- Configura o layout para ser responsivo, ajustando-se ao tamanho da tela do dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para o CSS do Bootstrap 5, que permite estilização rápida e responsiva da página -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <title>Consulta de Endereço</title>
+    
+    <title>Consulta de Endereço</title> <!-- Título da página exibido na aba do navegador -->
+
     <style>
+        /* Define a cor de fundo e a fonte padrão da página */
         body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Fundo cinza claro */
+            font-family: Arial, sans-serif; /* Fonte padrão para todo o texto */
         }
 
+        /* Adiciona uma sombra à barra de navegação para destacá-la */
         .navbar {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor da barra de navegação */
         }
 
+        /* Estilo personalizado para campos de formulário somente leitura */
         .form-control[readonly] {
-            background-color: #e9ecef;
+            background-color: #e9ecef; /* Cor de fundo diferente para campos readonly */
         }
 
+        /* Define o estilo das mensagens de erro */
         .error {
-            color: red;
-            font-size: 0.9em;
-            margin-top: 5px;
+            color: red; /* Mensagens de erro em vermelho */
+            font-size: 0.9em; /* Fonte menor para a mensagem de erro */
+            margin-top: 5px; /* Espaçamento superior */
         }
     </style>
+
+    <!-- Função JavaScript para buscar o endereço com base no CEP informado -->
     <script>
         function getAddress(cep){
+            // Remove qualquer caractere que não seja número do CEP
             cep = cep.replace(/\D/g, '')
 
+            // Verifica se o CEP possui 8 dígitos
             if(cep.length !== 8){
-                displayError('Insira um CEP válido')
+                displayError('Insira um CEP válido')  // Exibe mensagem de erro se o CEP for inválido
                 return
             }
 
+            // Cria a URL para a API viaCEP com o CEP fornecido
             let url = 'https://viacep.com.br/ws/' + cep + '/json/'
 
+            // Cria um novo objeto XMLHttpRequest para fazer uma requisição HTTP
             const xmlHttp = new XMLHttpRequest()
 
+            // Abre uma conexão para a URL (GET)
             xmlHttp.open('GET', url, true)
 
+            // Função chamada automaticamente a cada mudança de estado da requisição
             xmlHttp.onreadystatechange = () => {
-                if(xmlHttp.readyState === 4){
-                    if(xmlHttp.status === 200){
-                        let data = JSON.parse(xmlHttp.responseText)
+                if(xmlHttp.readyState === 4){  // Verifica se a requisição está completa
+                    if(xmlHttp.status === 200){  // Verifica se a requisição foi bem-sucedida
+                        let data = JSON.parse(xmlHttp.responseText)  // Converte a resposta JSON em objeto JavaScript
 
+                        // Preenche os campos do formulário com os dados retornados pela API
                         document.getElementById('endereco').value = data.logradouro
                         document.getElementById('bairro').value = data.bairro
                         document.getElementById('cidade').value = data.localidade
@@ -54,37 +73,51 @@
                     }
                 }
             }
+            // Envia a requisição
             xmlHttp.send()
         }
     </script>
 </head>
 
 <body>
+    <!-- Barra de navegação simples com título -->
     <nav class="navbar navbar-light bg-light mb-5">
         <div class="container">
+            <!-- Marca da barra de navegação com o título da aplicação -->
             <div class="navbar-brand mb-0">
-                <h1>Consulta de Endereço</h1>
+                <h1>Consulta de Endereço</h1> <!-- Título exibido no topo da página -->
             </div>
         </div>
     </nav>
 
+    <!-- Formulário principal, centralizado dentro de um container do Bootstrap -->
     <div class="container">
+        <!-- Primeira linha do formulário com o campo de CEP e endereço -->
         <div class="row form-group mb-4">
+            <!-- Campo de entrada para o CEP -->
             <div class="col-sm-3">
+                <!-- Campo onde o usuário insere o CEP, e quando ele perde o foco (onblur), a função getAddress() é chamada -->
                 <input type="text" class="form-control" placeholder="CEP" onblur="getAddress(this.value)">
+                <!-- Div para exibir mensagens de erro relacionadas ao campo CEP -->
                 <div id="error-message" class="error"></div>
             </div>
+            <!-- Campo de entrada para o endereço, preenchido automaticamente, somente leitura -->
             <div class="col-sm-6">
                 <input type="text" class="form-control" placeholder="Endereço" readonly id="endereco">
             </div>
         </div>
+
+        <!-- Segunda linha do formulário com bairro, cidade e UF -->
         <div class="row form-group">
+            <!-- Campo de entrada para o bairro, preenchido automaticamente e readonly -->
             <div class="col-sm-5">
                 <input type="text" class="form-control" placeholder="Bairro" id="bairro" readonly>
             </div>
+            <!-- Campo de entrada para a cidade, preenchido automaticamente e readonly -->
             <div class="col-sm-4">
                 <input type="text" class="form-control" placeholder="Cidade" readonly id="cidade">
             </div>
+            <!-- Campo de entrada para a UF, preenchido automaticamente e readonly -->
             <div class="col-sm-3">
                 <input type="text" class="form-control" placeholder="UF" readonly id="uf">
             </div>
