@@ -14,10 +14,7 @@ body {
     font-family: "Roboto", sans-serif;
     width: 100%;
     min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
+    overflow: hidden;
 }
 
 header {
@@ -51,6 +48,88 @@ header {
     justify-content: space-around;
 }
 
+.nav li {
+    list-style-type: none;
+}
+
 .nav li a {
     color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 10px;
 }
+
+.nav li:hover a {
+    color: var(--primary);
+}
+
+.search {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.search:hover {
+    width: 300px;
+}
+
+.search input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 5px;
+}
+
+.search input::placeholder {
+    color: #ffffff;
+    text-transform: uppercase;
+    transform: transLateX(5px);
+    font-weight: 300;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
