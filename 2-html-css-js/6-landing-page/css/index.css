@@ -127,9 +127,44 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide img {
     display: block;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
+
+.swiper .swiper-wrapper .swiper-slide .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner img {
+    position: absolute;
+    max-width: 700px;
+    transform: translateX(-50%);
+    z-index: 1;
+    left: 50%;
+}
+
+.banner img {
+    max-width: 790px;
+    max-height: 790px;
+    width: 50%;
+    height: 50%;
+}
+
+.banner .right iframe {
+    max-width: 450px;
+    max-height: 450px;
+}
+
+
 
