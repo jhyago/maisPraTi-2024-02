@@ -19,5 +19,27 @@ document.addEventListener('DOMContentLoaded', function() {
             swiper.slideNext()
         }
     })
+
+    const gameInput = document.getElementById('gameInput')
+
+    gameInput.addEventListener('keypress', function (event){
+        if(event.key === 'Enter'){
+            let searchGame = gameInput.value.trim().toUpperCase()
+
+            switch(searchGame){
+                case 'MARIO':
+                    swiper.slideTo(0)
+                    break
+                case 'POKEMON':
+                    swiper.slideTo(1)
+                    break
+                default:
+                    alert('Jogo não foi encontrado');
+                    break
+            }
+        }
+    })
+
+
 })
 
