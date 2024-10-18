@@ -160,6 +160,18 @@ header {
     height: 60px;
     top: 50%;
     left: 60%;
+    z-index: 100;
+    background-color: red;
+}
+
+.swiper .swiper-button-next {
+    position: absolute;
+    right: 70%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    background-color: blue;
 }
 
 .swiper .swiper-button-next::after,
@@ -170,7 +182,10 @@ header {
     color: rgba(255, 255, 255, 0.5);
     width: 60px;
     height: 60px;
-    z-index: 100;
+    line-height: 0;
+    background: transparent;
+    border-radius: 50%;
+    
 }
 
 .right {

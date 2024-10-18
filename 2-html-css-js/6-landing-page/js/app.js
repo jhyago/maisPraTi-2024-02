@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let swiper = new Swiper('.swiper', {
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
-        loop: true,
+        loop: false,
         pagination: {
             el: '.swiper-pagination'
         },
@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev'
         }
     })
+
+    document.addEventListener('keydown', function (event) {
+        if(event.key === 'ArrowLeft') {
+            swiper.slidePrev()
+        } else if(event.key === 'ArrowRight'){
+            swiper.slideNext()
+        }
+    })
 })
 
-document.addEventListener('keydown', (event) => {
-    if(event.key === 'ArrowLeft') {
-        swiper.slidePrev()
-    } else if(event.key === 'ArrowRight'){
-        swiper.slideNext()
-    }
-})
