@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Remove a margem e o preenchimento padrão de todos os elementos e define o modelo de box-sizing como border-box. */
 
 :root {
     --primary: #ff0000;
 }
+/* Define a cor vermelha como uma variável CSS chamada --primary. */
 
 body {
     position: relative;
@@ -16,6 +18,7 @@ body {
     min-height: 100vh;
     overflow: hidden;
 }
+/* Define o corpo da página com posição relativa, cor de fundo preta, usa a fonte 'Roboto', ocupa 100% da largura e tem altura mínima de 100vh, com overflow oculto. */
 
 header {
     position: absolute;
@@ -29,6 +32,7 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 20;
 }
+/* O cabeçalho está posicionado de forma absoluta no topo e à esquerda, ocupando 100% da largura, com um layout flexível, espaçamento interno de 20px nas laterais, borda inferior semitransparente e z-index 20. */
 
 .logo img {
     max-width: 60px;
@@ -36,21 +40,25 @@ header {
     filter: invert(1);
     transition: transform 0.5s ease;
 }
+/* Define a imagem do logotipo com largura e altura máximas de 60px, aplica um filtro de inversão de cores e uma transição suave de 0,5s para transformações. */
 
 .logo:hover img {
     transform: rotate(540deg) scale(1.2);
     transition: transform 0.5s ease;
 }
+/* Ao passar o mouse sobre a logo, ela gira 540 graus e aumenta 1.2x de tamanho, com uma transição suave de 0,5s. */
 
 .nav {
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
+/* A navegação usa um layout flexível, ocupando 100% da largura, com os itens distribuídos de maneira uniforme. */
 
 .nav li {
     list-style-type: none;
 }
+/* Remove os marcadores das listas de navegação. */
 
 .nav li a {
     color: #fff;
@@ -61,10 +69,12 @@ header {
     cursor: pointer;
     padding: 10px;
 }
+/* Os links na navegação são brancos, sem sublinhado, com texto em maiúsculas, peso de fonte leve (300), espaçamento entre letras de 1px, e um cursor de ponteiro. */
 
 .nav li:hover a {
     color: var(--primary);
 }
+/* Ao passar o mouse sobre os links de navegação, a cor muda para a cor primária definida (--primary). */
 
 .search {
     position: relative;
@@ -72,10 +82,12 @@ header {
     height: 40px;
     transition: 0.5s;
 }
+/* A barra de busca tem uma largura inicial de 130px, altura de 40px, e uma transição de 0,5s. */
 
 .search:hover {
     width: 300px;
 }
+/* Quando o usuário passa o mouse sobre a barra de busca, ela se expande para 300px de largura. */
 
 .search input {
     position: absolute;
@@ -90,18 +102,21 @@ header {
     border-radius: 4px;
     padding: 0 10px 0 5px;
 }
+/* O campo de texto da busca é posicionado absolutamente dentro do contêiner, ocupa 100% da largura e altura, tem texto branco, fundo transparente, borda semitransparente, bordas arredondadas e espaçamento interno. */
 
 .search input::placeholder {
     color: #ffffff;
     text-transform: uppercase;
-    transform: transLateX(5px);
+    transform: translateX(5px);
     font-weight: 300;
 }
+/* O placeholder do campo de busca é branco, em maiúsculas, com espaçamento à esquerda e peso de fonte leve. */
 
 .swiper {
     width: 100%;
     height: 100vh;
 }
+/* O swiper (carrossel) ocupa 100% da largura e altura total da tela. */
 
 .swiper .swiper-wrapper {
     margin: 0;
@@ -109,11 +124,13 @@ header {
     width: 100%;
     height: 100%;
 }
+/* O contêiner dos slides no swiper tem largura e altura totais, sem margens ou preenchimentos. */
 
 .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
     height: 100%;
 }
+/* Cada slide no swiper ocupa toda a largura e altura disponíveis. */
 
 .swiper .swiper-wrapper .swiper-slide::before {
     position: absolute;
@@ -124,15 +141,16 @@ header {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
 }
+/* Adiciona uma camada semitransparente preta sobre cada slide. */
 
 .swiper .swiper-wrapper .swiper-slide img {
     display: block;
-    /* position: absolute; */
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
+/* As imagens dentro dos slides são ajustadas para cobrir toda a área e são centralizadas. */
 
 .swiper .swiper-wrapper .swiper-slide .banner {
     position: absolute;
@@ -145,6 +163,7 @@ header {
     align-items: center;
     justify-content: space-around;
 }
+/* O banner dentro dos slides ocupa 100% da largura, tem altura mínima de 100vh, usa layout flexível para centralizar seu conteúdo horizontal e verticalmente. */
 
 .swiper .swiper-wrapper .swiper-slide .banner img {
     position: absolute;
@@ -153,6 +172,7 @@ header {
     z-index: 1;
     left: 50%;
 }
+/* As imagens dentro do banner são centralizadas horizontalmente e têm largura máxima de 700px. */
 
 .swiper .swiper-button-prev {
     position: absolute;
@@ -163,6 +183,7 @@ header {
     z-index: 100;
     background-color: red;
 }
+/* O botão anterior do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo vermelho. */
 
 .swiper .swiper-button-next {
     position: absolute;
@@ -173,6 +194,7 @@ header {
     z-index: 100;
     background-color: blue;
 }
+/* O botão próximo do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo azul. */
 
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
@@ -185,12 +207,13 @@ header {
     line-height: 0;
     background: transparent;
     border-radius: 50%;
-    
 }
+/* Os ícones dentro dos botões anterior e próximo estão centralizados, com cor semitransparente, largura e altura de 60px, e bordas arredondadas. */
 
 .right {
     max-height: 70vh;
 }
+/* Define a altura máxima de 70% da viewport para os elementos com a classe 'right'. */
 
 .banner img {
     max-width: 790px;
@@ -198,17 +221,20 @@ header {
     width: 50%;
     height: 50%;
 }
+/* As imagens no banner têm largura e altura máximas de 790px e ocupam 50% do contêiner. */
 
 .swiper .swiper-wrapper .swiper-slide .banner .left {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+/* O conteúdo à esquerda do banner é exibido em uma coluna flexível, espaçado uniformemente. */
 
 .banner .left .features {
     max-width: 400px;
     margin-bottom: 100px;
 }
+/* A seção de recursos à esquerda tem largura máxima de 400px e uma margem inferior de 100px. */
 
 .banner .left .features .rating {
     color: #ffffff;
@@ -217,14 +243,16 @@ header {
     align-items: center;
     margin-bottom: 25px;
 }
+/* A seção de avaliação à esquerda tem texto branco, usa layout flexível para alinhar horizontalmente o conteúdo e tem uma margem inferior de 25px. */
 
 .banner .left .features .rating .score {
     padding: 15px;
     font-size: 2rem;
     font-weight: 400;
     color: var(--primary);
-    background:#ffffff;
+    background: #ffffff;
 }
+/* A nota de avaliação (score) tem padding de 15px, fonte grande (2rem), cor vermelha e fundo branco. */
 
 .banner .left .features .content {
     margin-left: 20px;
@@ -233,6 +261,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+/* O conteúdo de recursos tem uma margem à esquerda de 20px e é exibido em uma coluna flexível. */
 
 .banner .left .features .pricing {
     color: #ffffff;
@@ -240,6 +269,7 @@ header {
     justify-content: flex-start;
     align-items: center;
 }
+/* A seção de preços é exibida com texto branco e layout flexível para alinhamento horizontal. */
 
 .banner .left .features .content h4 {
     color: #ffffff;
@@ -248,16 +278,19 @@ header {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+/* O título 'h4' dentro do conteúdo tem cor branca, tamanho de fonte 1.5em, peso de fonte 400, espaçamento entre letras de 2px e é exibido em maiúsculas. */
 
 .banner .left .features .content span {
     font-size: 0.7em;
     text-transform: uppercase;
     font-weight: 400;
 }
+/* O texto adicional no conteúdo tem tamanho de fonte 0.7em, é exibido em maiúsculas e tem peso de fonte 400. */
 
 .banner .left .features .content .subtitle {
     color: var(--primary);
 }
+/* O subtítulo dentro do conteúdo de recursos tem a cor definida pela variável --primary (vermelha). */
 
 .banner h1 {
     color: #ffffff;
@@ -267,6 +300,7 @@ header {
     z-index: 10;
     text-transform: uppercase;
 }
+/* O título 'h1' do banner tem cor branca, fonte grande (5em), espaçamento entre letras de 5px, altura da linha 0.9, z-index 10 e é exibido em maiúsculas. */
 
 .swiper .swiper-wrapper .swiper-slide .banner .right {
     position: relative;
@@ -278,15 +312,18 @@ header {
     align-items: flex-end;
     z-index: 100;
 }
+/* A seção à direita no banner é posicionada de forma relativa, ocupa 100vh de altura, tem largura máxima de 450px, layout em coluna e alinhamento à direita. */
 
 .banner .right .description {
     padding: 30px 60px 0 0;
     color: #ffffff;
 }
+/* A descrição à direita tem padding no topo e na direita e cor branca. */
 
 .banner .right .description li {
     list-style: none;
 }
+/* Remove o estilo de lista dos itens de descrição à direita. */
 
 .banner .right .description h4 {
     display: inline-block;
@@ -297,11 +334,13 @@ header {
     display: flex;
     align-items: center;
 }
+/* O título 'h4' da descrição à direita tem tamanho de fonte 1.3em, maiúsculas, peso 400, espaçamento entre letras de 1px, e é exibido como bloco inline. */
 
 .banner .right .description p {
     margin: 5px 0 25px 30px;
     font-weight: 300;
 }
+/* Os parágrafos na descrição têm margem superior de 5px e margem inferior de 25px, com peso de fonte leve (300). */
 
 .banner .right h2 {
     color: #ffffff;
@@ -312,16 +351,10 @@ header {
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+/* O título 'h2' à direita tem cor branca, fonte grande (3.5em), linha de altura 1em, peso de fonte 400, alinhamento à direita e margem inferior de 20px, e é exibido em maiúsculas. */
 
 .banner .right iframe {
     max-width: 450px;
     max-height: 250px;
 }
-
-
-
-
-
-
-
-
+/* O iframe à direita do banner tem largura máxima de 450px e altura máxima de 250px. */

@@ -1,146 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Define o tipo de documento como HTML5 e define o idioma da página como inglês -->
 <head>
     <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a viewport para que a página seja responsiva em dispositivos móveis -->
     <link rel="stylesheet" href="css/index.css">
+    <!-- Link para o arquivo CSS local com os estilos da página -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link para a folha de estilo do Swiper, uma biblioteca para carrosséis -->
     <title>Gaming Website Landing Page</title>
+    <!-- Define o título da página que aparece na aba do navegador -->
 </head>
 
 <body>
+    <!-- Início do corpo da página -->
     <header>
+        <!-- Cabeçalho da página -->
         <a href="" class="logo">
+            <!-- Link com a classe 'logo', utilizado para branding -->
             <img src="images/nintendo-switch.png" alt="nintendo switch logo" height="240" width="240" />
+            <!-- Exibe o logotipo do Nintendo Switch com altura e largura definidos -->
         </a>
         <nav>
+            <!-- Seção de navegação do site -->
             <ul class="nav">
+                <!-- Lista de itens de navegação -->
                 <li>
                     <a href="https://www.nintendo.com/us/whatsnew/" target="_blank">Switch News</a>
+                    <!-- Link para notícias do Nintendo Switch, abre em nova aba -->
                 </li>
                 <li>
                     <a href="https://www.nintendo.com/pt-br/switch/online/" target="_blank">Switch Online</a>
+                    <!-- Link para o serviço online do Switch, abre em nova aba -->
                 </li>
                 <li>
-                    <a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/"
-                        target="_blank">Switch Classic</a>
+                    <a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a>
+                    <!-- Link para os jogos clássicos do Nintendo Switch, abre em nova aba -->
                 </li>
             </ul>
         </nav>
 
         <div>
+            <!-- Div que contém o botão de login e um campo de texto -->
             <button>Login</button>
+            <!-- Botão para login -->
             <input type="text" name="" id="">
+            <!-- Campo de texto para possível entrada de dados de login -->
         </div>
 
         <div class="search">
+            <!-- Div para a barra de pesquisa -->
             <input type="text" id="gameInput" placeholder="Search">
+            <!-- Campo de texto para a pesquisa de jogos -->
         </div>
     </header>
 
     <div class="swiper">
+        <!-- Contêiner principal do Swiper, o carrossel -->
         <div class="swiper-wrapper">
+            <!-- Wrapper que envolve os slides -->
             <div class="swiper-slide" id="slide-1">
+                <!-- Primeiro slide do carrossel -->
                 <img src="images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Banner do Super Mario Odyssey">
+                <!-- Imagem do banner do jogo Super Mario Odyssey -->
 
                 <div class="backscene"></div>
-
+                <!-- Div para uma camada de fundo -->
                 <div class="banner">
+                    <!-- Banner de conteúdo adicional -->
                     <div class="left">
+                        <!-- Seção à esquerda do banner -->
                         <div class="features">
+                            <!-- Div para exibir as características do jogo -->
                             <div class="rating">
+                                <!-- Exibe a nota de avaliação do jogo -->
                                 <span class="score">9.2</span>
+                                <!-- Nota de avaliação -->
                                 <div class="content">
+                                    <!-- Conteúdo relacionado à avaliação -->
                                     <span class="subtitle">M E T A S C O R E</span>
+                                    <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Ótimo</h4>
+                                    <!-- Classificação "Ótimo" -->
                                     <span>Descrição do Jogo Mario Odyssey</span>
+                                    <!-- Descrição do jogo -->
                                 </div>
                             </div>
                             <div class="pricing">
+                                <!-- Seção para exibir informações de compra -->
                                 <a href=""></a>
+                                <!-- Link vazio para a compra do jogo -->
                                 <div class="content">
+                                    <!-- Conteúdo relacionado ao preço -->
                                     <span class="subtitle">Super Mario Odyssey</span>
+                                    <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
+                                    <!-- Chamada para compra -->
                                     <span>Plataforma, Aventura, Ação</span>
+                                    <!-- Categorias do jogo -->
                                 </div>
                             </div>
                         </div>
                         <h1>Mario</h1>
+                        <!-- Título "Mario" -->
                     </div>
                     <img src="images/mario.png" alt="Mario">
+                    <!-- Imagem do personagem Mario -->
                     <div class="right">
+                        <!-- Seção à direita do banner -->
                         <ul class="description">
+                            <!-- Lista de descrição do jogo -->
                             <li>
                                 <p>27 de Outubro 2017</p>
+                                <!-- Data de lançamento do jogo -->
                             </li>
                             <li>
                                 <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <!-- Modos de jogo disponíveis -->
                             </li>
                         </ul>
 
                         <div class="trailer">
+                            <!-- Seção para exibir o trailer -->
                             <h2>Assista ao Trailer</h2>
+                            <!-- Título "Assista ao Trailer" -->
                             <iframe width="1280" height="720" src="https://www.youtube.com/embed/5kcdRBHM7kM"
                                 title="Super Mario Odyssey Trailer" allowfullscreen></iframe>
+                            <!-- Frame do YouTube com o trailer do Super Mario Odyssey -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="swiper-slide" id="slide-2">
+                <!-- Segundo slide do carrossel -->
                 <img src="images/pokemon-legends-arceus.jpeg" alt="Banner do Pokemon Legends Arceus">
+                <!-- Imagem do banner do jogo Pokemon Legends Arceus -->
 
                 <div class="backscene"></div>
+                <!-- Div para uma camada de fundo -->
                 <div class="banner">
+                    <!-- Banner de conteúdo adicional -->
 
                     <div class="left">
+                        <!-- Seção à esquerda do banner -->
                         <div class="features">
+                            <!-- Div para exibir as características do jogo -->
                             <div class="rating">
+                                <!-- Exibe a nota de avaliação do jogo -->
                                 <span class="score">8.3</span>
+                                <!-- Nota de avaliação -->
                                 <div class="content">
+                                    <!-- Conteúdo relacionado à avaliação -->
                                     <span class="subtitle">M E T A S C O R E</span>
+                                    <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Bom</h4>
-                                    <span>
-                                        Prepare-se para uma aventura Pokemon!
-                                    </span>
+                                    <!-- Classificação "Bom" -->
+                                    <span>Prepare-se para uma aventura Pokemon!</span>
+                                    <!-- Descrição do jogo -->
                                 </div>
                             </div>
                             <div class="pricing">
+                                <!-- Seção para exibir informações de compra -->
                                 <a href="" target="_blank"></a>
+                                <!-- Link vazio para a compra do jogo -->
                                 <div class="content">
+                                    <!-- Conteúdo relacionado ao preço -->
                                     <span class="subtitle">Pokemon Legends</span>
+                                    <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
+                                    <!-- Chamada para compra -->
                                     <span>Ação, RPG</span>
+                                    <!-- Categorias do jogo -->
                                 </div>
                             </div>
                         </div>
                         <h1 class="pokemon-title">Pokemon</h1>
+                        <!-- Título "Pokemon" -->
                     </div>
                     <img src="images/red.png" alt="Treinador Pokemon Red" class="pokemon">
+                    <!-- Imagem do treinador Pokemon Red -->
                     <div class="right">
+                        <!-- Seção à direita do banner -->
                         <ul class="description">
+                            <!-- Lista de descrição do jogo -->
                             <li>
                                 Data de Lançamento
                                 <p>28 de Janeiro</p>
+                                <!-- Data de lançamento do jogo -->
                             </li>
                             <li>
                                 <h4>Modos de jogo</h4>
                                 <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <!-- Modos de jogo disponíveis -->
                             </li>
                         </ul>
                         <div class="trailer">
+                            <!-- Seção para exibir o trailer -->
                             <h2>Assista ao Trailer</h2>
+                            <!-- Título "Assista ao Trailer" -->
                             <iframe src="" frameborder="0"></iframe>
+                            <!-- Frame do YouTube vazio para o trailer do jogo -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="swiper-button-prev"></div>
+        <!-- Botão de navegação para o slide anterior -->
         <div class="swiper-button-next"></div>
+        <!-- Botão de navegação para o próximo slide -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Script da biblioteca Swiper para o funcionamento do carrossel -->
     <script src="js/app.js"></script>
+    <!-- Script externo para a lógica JavaScript personalizada -->
 </body>
-
 </html>
