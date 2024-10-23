@@ -1,3 +1,10 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
+    // A chave "presets" define um conjunto de configurações pré-determinadas (presets) que o Babel vai usar para transformar o código JavaScript
+    "presets": [
+        // "@babel/preset-env" é um preset que permite que o Babel converta código moderno do JavaScript (ES6+) em uma versão mais compatível com navegadores antigos
+        "@babel/preset-env",
+        
+        // "@babel/preset-react" é um preset que permite ao Babel transformar código JSX e outros recursos específicos do React em JavaScript comum
+        "@babel/preset-react"
+    ]
 }
