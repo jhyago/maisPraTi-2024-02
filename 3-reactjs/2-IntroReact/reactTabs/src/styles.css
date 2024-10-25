@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex; /* Centraliza o conteúdo principal */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  background-color: #1f2833; /* Fundo escuro e moderno */
+  font-family: Arial, sans-serif; /* Fonte moderna e clean */
+  color: #c5c6c7; /* Cor de texto clara */
+}
+
+.container {
+  max-width: 34rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: #0b0c10; /* Fundo do container principal */
+  border-radius: 10px; /* Cantos levemente arredondados */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+  color: #66fcf1; /* Cor de destaque para o texto */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header img {
+  width: 3.5rem; /* Aumenta o tamanho da logo */
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Sombra na logo */
+}
+
+header h1 {
+  margin-left: 1rem;
+  font-size: 1.8rem; /* Aumenta o tamanho do título */
+  color: #45a29e; /* Tom aquático para o título */
+}
+
+header p {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: #c5c6c7;
+}
+
+#tabs {
+  margin-top: 1rem;
+}
+
+#tabs menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#tabs button {
+  font: inherit;
+  font-size: 0.9rem;
+  background-color: #0b0c10;
+  border: 2px solid #45a29e; /* Borda destacada */
+  color: #c5c6c7;
+  border-radius: 50px; /* Cantos totalmente arredondados */
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#tabs button:hover {
+  background-color: #45a29e; /* Cor de fundo no hover */
+  color: #0b0c10; /* Cor de texto no hover */
+}
+
+#tabs button.active {
+  background-color: #66fcf1; /* Cor de fundo da aba ativa */
+  color: #0b0c10; /* Texto escuro na aba ativa */
+}
+
+#tab-content {
+  background-color: #1f2833; /* Fundo do conteúdo das abas */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra interna */
+}
+
+#tab-content ul {
+  list-style-type: none; /* Remove os marcadores */
+}
+
+#tab-content li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #0b0c10; /* Fundo para cada item */
+  border-radius: 4px; /* Cantos levemente arredondados */
+  color: #c5c6c7;
+  transition: background-color 0.3s ease;
+}
+
+#tab-content li:hover {
+  background-color: #45a29e; /* Destaca o item ao passar o mouse */
+}

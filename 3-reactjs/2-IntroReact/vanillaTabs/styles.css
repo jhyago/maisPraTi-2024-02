@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    /* Define o box-sizing como border-box para todos os elementos, garantindo que padding e border não aumentem a largura total */
+}
+
+body {
+    display: flex;
+    /* Torna o body um contêiner flexível */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    height: 100vh;
+    /* Define a altura do body para ocupar a tela toda */
+    margin: 0;
+    /* Remove a margem padrão do body */
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1e24;
+    /* Fundo escuro para dar contraste ao design */
+    color: #dde1e6;
+    /* Cor suave para o texto em contraste com o fundo escuro */
+}
+
+.container {
+    max-width: 34rem; /* Limita a largura máxima do conteúdo */
+    width: 100%; /* O container ocupa a largura disponível */
+    padding: 2rem;
+    /* Adiciona padding para espaçamento interno */
+    background-color: #222a33;
+    /* Fundo mais claro que o body para destacar o conteúdo */
+    border-radius: 16px;
+    /* Bordas arredondadas para um visual moderno */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    /* Sombra suave para dar profundidade ao container */
+    text-align: center;
+    /* Centraliza o texto dentro do container */
+}
+
+header {
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    /* Adiciona espaçamento abaixo do header */
+    display: flex;
+    /* Define o header como um contêiner flexível */
+    gap: 1rem;
+    /* Espaço entre a imagem e o texto */
+    align-items: center;
+    /* Alinha verticalmente os itens ao centro */
+}
+
+header img {
+    width: 3.5rem;
+    /* Aumenta a largura da imagem */
+    object-fit: contain;
+    /* Garante que a imagem se ajuste sem distorção */
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+    /* Sombra na imagem para destaque */
+}
+
+header h1 {
+    margin: 0;
+    /* Remove a margem padrão do título */
+    color: #4fa8f3;
+    /* Cor azul vibrante para o título */
+    font-size: 2rem;
+    /* Tamanho de fonte maior para destacar o título */
+    font-weight: bold;
+    /* Negrito para maior contraste */
+}
+
+header p {
+    margin: 0;
+    /* Remove a margem padrão do parágrafo */
+    color: #a8b5c2;
+    /* Cor de texto suave e contrastante */
+    font-size: 1.1rem;
+    /* Tamanho de fonte levemente aumentado */
+}
+
+#tabs {
+    margin-top: 1.5rem;
+    /* Adiciona espaçamento acima do container das abas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    /* Espaço entre as abas e o conteúdo */
+}
+
+#tabs menu {
+    margin: 0;
+    /* Remove a margem padrão do menu */
+    padding: 0;
+    /* Remove o padding padrão do menu */
+    display: flex;
+    /* Usa flexbox para alinhar os botões em linha */
+    gap: 0.75rem;
+    /* Maior espaçamento entre os botões */
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+}
+
+#tabs button {
+    font: inherit;
+    /* Herda a fonte do elemento pai */
+    font-size: 0.9rem;
+    /* Define o tamanho da fonte dos botões */
+    background-color: #333c47;
+    /* Fundo escuro para os botões */
+    border: 2px solid transparent;
+    /* Remove borda padrão */
+    color: #e4ebf0;
+    /* Cor clara para o texto dos botões */
+    border-radius: 10px;
+    /* Bordas arredondadas para suavizar o design */
+    padding: 0.75rem 1.25rem;
+    /* Define o padding para tornar os botões mais largos */
+    cursor: pointer;
+    /* Altera o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* Transição suave para as mudanças de cor e borda */
+}
+
+#tabs button:hover {
+    background-color: #4fa8f3;
+    /* Cor de destaque azul vibrante para hover */
+    color: #1a1e24;
+    /* Cor de texto escura para contraste */
+    border-color: #4fa8f3;
+    /* Borda azul vibrante ao passar o mouse */
+}
+
+#tabs button.active {
+    background-color: #4fa8f3;
+    /* Cor de fundo para o botão ativo */
+    color: #1a1e24;
+    /* Cor de texto escura para o botão ativo */
+    border-color: #4fa8f3;
+    /* Destaque de borda para o botão ativo */
+    font-weight: bold;
+    /* Negrito para destacar a aba ativa */
+}
+
+#tab-content {
+    background-color: #2b3440;
+    /* Fundo escuro para o conteúdo das abas */
+    border-radius: 10px;
+    /* Bordas arredondadas para consistência com os botões */
+    padding: 1.5rem;
+    /* Adiciona padding interno para espaçamento */
+    margin-top: 1rem;
+    /* Adiciona espaçamento acima do conteúdo */
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Sombra interna para um efeito de profundidade */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+}
+
+#tab-content ul {
+    padding-left: 1.5rem;
+    /* Indentação para a lista */
+}
+
+#tab-content li {
+    margin: 0.5rem 0;
+    /* Espaçamento entre itens */
+    color: #c3d0d8;
+    /* Cor mais clara para o texto dos itens */
+    position: relative;
+    line-height: 1.6;
+    /* Espaçamento de linha maior para legibilidade */
+}
+
+#tab-content li::before {
+    content: "▹"; /* Adiciona um ícone de seta antes de cada item */
+    color: #4fa8f3; /* Cor do ícone para destaque */
+    font-weight: bold;
+    position: absolute;
+    left: -1.25rem;
+    /* Posiciona o ícone à esquerda */
+}
