@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import  Theme  from './Theme'
+import { ThemeContext} from './ThemeContext'
 
 function ThemeSwitcher() {
-    const { theme, toggleTheme } = useContext(Theme)
+    const { theme, toggleTheme } = useContext(ThemeContext)
 
     return (
         <div>
