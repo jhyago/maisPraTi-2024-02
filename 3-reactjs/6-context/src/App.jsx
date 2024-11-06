@@ -1,14 +1,15 @@
 import './App.css'
-import { ThemeProvider } from './components/ThemeContext'
-import ThemeSwitcher from './components/ThemeSwitcher'
+import TodoList from './components/TodoList'
+import AddTodo from './components/AddTodo'
 
 function App() {
   return (
     <>
-        <ThemeProvider>
-          <h1>Exemplo de Tema com useContext</h1>
-          <ThemeSwitcher/>
-        </ThemeProvider>
+      <div>
+        <h1>Lista de Tarefas</h1>
+        <AddTodo/>
+        <TodoList/>
+      </div>     
     </>
   )
 }
