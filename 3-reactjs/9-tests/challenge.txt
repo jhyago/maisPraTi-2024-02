@@ -1,0 +1,47 @@
+Exercício: Gerenciando um Carrinho de Compras
+
+Implemente uma classe chamada CarrinhoDeCompras que tenha os seguintes métodos:
+Requisitos:
+
+    Adicionar produto ao carrinho:
+        Método: adicionarProduto(nome, preco, quantidade)
+        Parâmetros:
+            nome: Nome do produto (string).
+            preco: Preço unitário do produto (número).
+            quantidade: Quantidade do produto (número).
+        Se o produto já estiver no carrinho, incremente a quantidade.
+
+    Remover produto do carrinho:
+        Método: removerProduto(nome)
+        Parâmetro:
+            nome: Nome do produto a ser removido.
+        Se o produto não existir, lance um erro.
+
+    Calcular o total:
+        Método: calcularTotal()
+        Retorna o preço total de todos os produtos no carrinho.
+
+    Listar produtos:
+        Método: listarProdutos()
+        Retorna uma lista com todos os produtos no carrinho, onde cada produto é representado como um objeto com as propriedades nome, preco e quantidade.
+
+Cenário de teste
+
+Implemente testes unitários para cobrir os seguintes cenários:
+1. Adicionar produtos ao carrinho
+
+    Verifique se produtos são adicionados corretamente.
+    Verifique se a quantidade de um produto é incrementada quando ele já existe no carrinho.
+
+2. Remover produtos do carrinho
+
+    Verifique se um produto é removido corretamente.
+    Verifique se um erro é lançado ao tentar remover um produto que não existe.
+
+3. Calcular o total
+
+    Verifique se o total é calculado corretamente com diferentes produtos e quantidades.
+
+4. Listar produtos
+
+    Verifique se a lista de produtos retorna os valores corretos.
