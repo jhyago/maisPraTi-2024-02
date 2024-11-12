@@ -1,0 +1,101 @@
+:root {
+    --cor-fundo: #F6F1ED;
+    --branco: #fff;
+    --branco-2: #d7d1cb;
+    --preto: #000;
+    --verde-escuro: #1B1E18;
+    --verde-escuro-2: #121410;
+    --cinza-verde: #83908F;
+    --vermelho: #881212;
+}
+
+body {
+    background: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos - Navegação */
+
+.Navigation {
+    width: 100%;
+    min-width: 1090px;
+    z-index: 999;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    right: 50%;
+}
+
+.Navigation-itens {
+    padding: 20px;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.logo-autora {
+    margin-top: 40px;
+    margin-left: 80px;
+    position: relative;
+    width: 250px;
+    float: left;
+    padding: 20px;
+}
+
+.cruz {
+    width: 54px;
+    height: 54px;
+}
+
+.nome-navigation {
+    position: absolute;
+    left: 92px;
+    top: 33px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.items {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.items p, a {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--preto);
+    text-decoration: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.items p:hover, a:hover {
+    color: var(--branco);
+}
+
+.button-navigation {
+    padding-right: 25px;
+    padding-left: 10px;
+    background: var(--verde-escuro);
+    border-radius: 8px;
+}
+
+.button-navigation div.ComprarAgora, a#ComprarAgora {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -4px;
+}
+
+.button-navigation:hover {
+    background-color: var(--vermelho);
+}
