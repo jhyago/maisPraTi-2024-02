@@ -2,7 +2,7 @@ function calculateArea(shape, ...dimensions) {
     switch (shape) {
         case 'circle': 
             const [radius] = dimensions
-            Math.PI * (radius * radius)
+            return Math.PI * (radius * radius)
         case 'square': 
             const [side] = dimensions
             return side * side
