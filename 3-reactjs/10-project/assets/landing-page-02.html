@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://broad-surf-9663.animaapp.io/landing-page-02?t=_8b6e4c68&handoff=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style><style id="st_globalStyles">
+/* MEDIA QUERIES */
+.anima-desktop-only {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+/* SCROLLBAR */
+
+[dark-scroll]::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[dark-scroll]::-webkit-scrollbar-track-piece {
+  background-color: #2b2b2b;
+  border: 1px solid #1d1d1d;
+}
+
+[dark-scroll]::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #4d4d4d;
+}
+[dark-scroll]::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5a5a;
+}
+
+/* LOAD PROGRESS */
+
+.turbolinks-progress-bar {
+  height: 3px;
+  background-color: #ff6250;
+}
+
+/* GROUPING */
+
+[data-id].ui-selecting {
+  box-shadow: inset 0 0 0 1px #4285f4 !important;
+}
+[data-id].ui-selected {
+  box-shadow: inset 0 0 0 1px #4285f4 !important;
+}
+
+/* CURSOR */
+
+body[mode='comments'] * {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00LjkxNjQ4IDIzLjQxMDlDNS40OTE1MyAyMi45ODg3IDUuOTMxNzkgMjIuMzkzNSA2LjIzMjggMjEuNjQwN0M0Ljc5MDY5IDE5LjczODMgNCAxNy4zOTMzIDQgMTQuOTk3NUM0IDguOTM0MSA4LjkzMjgyIDQgMTUuMDAyMiA0QzIxLjA3MTcgNCAyNiA4LjkzOTE5IDI2IDE1LjAwMjVDMjYgMjEuMDY1OSAyMS4wNjcyIDI2IDE0Ljk5NzggMjZDMTIuOTg5NiAyNiAxMS4wMzUzIDI1LjQ1NTcgOS4zMjM2NyAyNC40MjMxQzguNDI5NjUgMjQuOTU3MiA3LjQxNDM0IDI1LjIyNjggNi4zMDAxOCAyNS4yMjY4QzUuOTU0MjYgMjUuMjI2OCA1LjU5OTM1IDI1LjIwMTQgNS4yNTM0MiAyNS4xNDU0QzQuOTAzIDI1LjA4OTUgNC42Mjg5NiAyNC44MDQ2IDQuNTUyNTggMjQuNDE4QzQuNDc2MjEgMjQuMDI2NCA0LjYxOTk3IDIzLjYyOTYgNC45MTY0OCAyMy40MTA5WiIgZmlsbD0iI0ZGNjI1MCIvPgo8L3N2Zz4K')
+      0 24,
+    auto !important;
+}
+
+body[mode='code'] [data-id]:not(.hidden) {
+  cursor: default;
+}
+
+/* default node state */
+
+body[mode='code'] [data-id]:not(.hidden), body[mode='comments'] [data-id]:not(.hidden) {
+  pointer-events: all;
+}
+
+/* is_image */
+
+body[mode='code'] [data-id].is_image [data-id], body[mode='comments'] [data-id].is_image [data-id] {
+  pointer-events: none !important;
+}
+
+/* without a data-id or ignored */
+
+[data-id].ignore,body[mode='code'] *:not([data-id]) {
+  pointer-events: none !important;
+}
+/* disable transforms for ignored elements */
+
+
+body[mode='code'] [data-id]:hover{
+  transform: none !important;
+}
+
+/* ANIMA BUTTONS */
+.an-button {
+  position: relative;
+  height: 28px;
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition-property: all;
+  transition-duration: 100ms;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  border-width: 0;
+}
+
+.an-button > div {
+  width: 100%;
+}
+
+.an-button.primary {
+  background: #ff6250;
+  color: #ffffff;
+}
+
+.an-button.primary:hover:not(:disabled) {
+  background: #e2412e;
+}
+
+.an-button.secondary {
+  background: transparent;
+  border: 1px solid #ff6250;
+  color: #ff6250;
+}
+
+.an-button.secondary:hover:not(:disabled) {
+  color: #ffffff;
+  background: #ff6250;
+}
+
+.an-button.rounded {
+  border-radius: 100px;
+}
+
+.an-button:disabled {
+  opacity: 0.5;
+}
+
+.an-button:disabled {
+  cursor: default;
+}
+
+.an-button:active,
+.an-button:focus {
+  outline: none;
+}
+
+</style><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="./load.js.download"></script><script id="anima-hotspots-script" src="./hotspots.js.download"></script><style id="hotspots-styles">
+    .hotspot {
+      position: absolute;
+      border: 1px solid #2a9fd8;
+      background: rgba(0, 173, 255, 0.54);
+      opacity: 0;
+      z-index: -1;
+      pointer-events:none;
+    }
+  </style><script id="s_turbo" src="./turbo.es2017-umd.js.download"></script><script id="anima-overrides-script" src="./overrides.js.download"></script><script src="./timeline.js.download"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Karma:500,700,400|Inter:500");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6663fa73f877c48c40efc9cf.6663fa74f877c48c40efc9d2.2nMnOG5.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --green-waterloo: #12140f;
+  --mercury: #e6e6e6;
+  --oslo-gray: #83908f;
+  --rangoon-green: #1b1e18;
+  --red-devil: #881212;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 18px;
+  --font-size-s: 16px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 36px;
+  --font-size-xxxl: 38px;
+  --font-size-xxxxl: 40px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-karma: "Karma", Helvetica;
+}
+.body-text {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.small-text {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.karma-medium-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.karma-bold-oslo-gray-36px {
+  color: var(--oslo-gray);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.karma-bold-mercury-40px {
+  color: var(--mercury);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.karma-bold-mercury-20px {
+  color: var(--mercury);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.karma-normal-rangoon-green-16px {
+  color: var(--rangoon-green);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.karma-bold-green-waterloo-20px {
+  color: var(--green-waterloo);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.karma-bold-mercury-38px {
+  color: var(--mercury);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.karma-bold-mercury-18px {
+  color: var(--mercury);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+:root {
+}
+
+
+/* screen - landing-page-02 */
+
+.landing-page-02 {
+  background-color: #f6f1ed;
+  height: 4560px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.landing-page-02 .footer-xcmeFx {
+  background-color: var(--white);
+  height: 171px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 4389px;
+  width: 1440px;
+}
+
+.landing-page-02 .relatos-de-um-vampiro-na-guerra-f7xB1y {
+  background-color: transparent;
+  color: var(--rangoon-green);
+  font-family: var(--font-family-karma);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: 29px;
+  left: 184px;
+  letter-spacing: -0.48px;
+  line-height: 29.0px;
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  width: 1071px;
+}
+
+.landing-page-02 .site-desenvolvido-po-f7xB1y {
+  background-color: transparent;
+  color: var(--rangoon-green);
+  font-family: var(--font-family-karma);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 184px;
+  letter-spacing: -0.26px;
+  line-height: 14.0px;
+  position: absolute;
+  text-align: center;
+  top: 140px;
+  width: 1071px;
+}
+
+.landing-page-02 .icon-f7xB1y {
+  height: 32px;
+  left: 704px;
+  top: 156px;
+  width: 32px;
+}
+
+.landing-page-02 .icon-4KLbec {
+  height: 27px;
+  left: 3px;
+  top: -75px;
+  width: 27px;
+}
+
+.landing-page-02 .image-10-4KLbec {
+  background-color: transparent;
+  height: 30px;
+  left: -47px;
+  object-fit: cover;
+  position: absolute;
+  top: -77px;
+  width: 29px;
+}
+
+.landing-page-02 .divider-f7xB1y {
+  background-color: transparent;
+  height: 1px;
+  left: 80px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1280px;
+}
+
+.landing-page-02 .image-8-f7xB1y {
+  background-color: transparent;
+  height: 117px;
+  left: 1251px;
+  position: absolute;
+  top: 24px;
+  width: 115px;
+}
+
+.landing-page-02 .image-9-f7xB1y {
+  background-color: transparent;
+  height: 38px;
+  left: 747px;
+  object-fit: cover;
+  position: absolute;
+  top: 75px;
+  width: 38px;
+}
+
+.landing-page-02 .link-direto-xcmeFx {
+  left: 129px;
+  position: absolute;
+  top: 3757px;
+}
+
+.landing-page-02 .link-direto-ZFkxq8 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.landing-page-02 .group-10-flft1O {
+  background-color: transparent;
+  height: 492px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1192px;
+}
+
+.landing-page-02 .para-comprar-o-livro-dw2nIy {
+  background-color: transparent;
+  color: var(--green-waterloo);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 358px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 48px;
+  position: absolute;
+  text-align: left;
+  top: 36px;
+  width: 689px;
+}
+
+.landing-page-02 .span0-M4cWg4 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.landing-page-02 .span1-M4cWg4 {
+  font-size: var(--font-size-l);
+  font-style: normal;
+  line-height: 30px;
+}
+
+.landing-page-02 .span2-M4cWg4 {
+  font-style: normal;
+  line-height: 30px;
+}
+
+.landing-page-02 .span3-M4cWg4 {
+  font-size: var(--font-size-l);
+  font-style: normal;
+  line-height: 30px;
+}
+
+.landing-page-02 .ana-clara-galli-auto-dw2nIy {
+  background-color: transparent;
+  height: 51px;
+  left: 781px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 436px;
+  width: 401px;
+}
+
+.landing-page-02 .span0-Y59QPr {
+}
+
+.landing-page-02 .span1-Y59QPr {
+  color: var(--green-waterloo);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.landing-page-02 .button-dw2nIy {
+  background-color: var(--red-devil);
+  height: 52px;
+  left: 0px;
+  position: absolute;
+  top: 440px;
+  width: 263px;
+}
+
+.landing-page-02 .reserve-o-seu-livro-comigo-xKnvNJ {
+  background-color: transparent;
+  height: 24px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 204px;
+}
+
+.landing-page-02 .image-7-dw2nIy {
+  background-color: transparent;
+  height: 412px;
+  left: 776px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 412px;
+}
+
+.landing-page-02 .links-ecommerce-xcmeFx {
+  background-color: transparent;
+  height: 646px;
+  left: 64px;
+  position: absolute;
+  top: 3052px;
+  width: 1311px;
+}
+
+.landing-page-02 .group-9-elX1Xx {
+  background-color: transparent;
+  height: 501px;
+  left: 0px;
+  position: absolute;
+  top: 84px;
+  width: 1311px;
+}
+
+.landing-page-02 .ebook-1-elX1Xx {
+  height: 646px;
+  left: 0px;
+  top: 0px;
+  width: 695px;
+}
+
+.landing-page-02 .relatos-xcmeFx {
+  background-color: transparent;
+  height: 630px;
+  left: 158px;
+  position: absolute;
+  top: 2333px;
+  width: 1130px;
+}
+
+.landing-page-02 .relatos-de-quem-j-garantiu-sua-leitura-0WCxe5 {
+  background-color: transparent;
+  color: var(--rangoon-green);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 60px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 1004px;
+}
+
+.landing-page-02 .camada_1-0WCxe5 {
+  left: 174px;
+  top: 0px;
+  width: 52px;
+}
+
+.landing-page-02 .camada_1-VU7pyk {
+  left: 894px;
+  top: 0px;
+  width: 52px;
+}
+
+.landing-page-02 .image-5-0WCxe5 {
+  background-color: transparent;
+  height: 519px;
+  left: 391px;
+  position: absolute;
+  top: 111px;
+  width: 342px;
+}
+
+.landing-page-02 .image-4-0WCxe5 {
+  background-color: transparent;
+  height: 519px;
+  left: 0px;
+  position: absolute;
+  top: 111px;
+  width: 330px;
+}
+
+.landing-page-02 .image-3-0WCxe5 {
+  background-color: transparent;
+  height: 519px;
+  left: 793px;
+  position: absolute;
+  top: 111px;
+  width: 335px;
+}
+
+.landing-page-02 .onde-comprar-xcmeFx {
+  background-color: transparent;
+  height: 838px;
+  left: 64px;
+  position: absolute;
+  top: 1391px;
+  width: 1314px;
+}
+
+.landing-page-02 .rectangle-1-uh06Sv {
+  background-color: var(--rangoon-green);
+  border-radius: 18px;
+  height: 838px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1311px;
+}
+
+.landing-page-02 .textura-1-uh06Sv {
+  background-blend-mode: difference;
+  background-color: transparent;
+  height: 838px;
+  left: -0px;
+  object-fit: cover;
+  position: absolute;
+  top: -0px;
+  width: 1312px;
+}
+
+.landing-page-02 .opes-de-compra-uh06Sv {
+  background-color: transparent;
+  color: var(--oslo-gray);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 169px;
+  letter-spacing: -0.80px;
+  line-height: 48.3px;
+  position: absolute;
+  text-align: center;
+  top: 43px;
+  width: 974px;
+}
+
+.landing-page-02 .group-1-uh06Sv {
+  background-color: transparent;
+  height: 671px;
+  left: 46px;
+  position: absolute;
+  top: 121px;
+  width: 290px;
+}
+
+.landing-page-02 .ebook-1-pjSPhE {
+  height: 350px;
+  left: 8px;
+  top: 129px;
+  width: 267px;
+}
+
+.landing-page-02 .e-book-pjSPhE {
+  background-color: transparent;
+  height: auto;
+  left: 52px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 114px;
+  width: 179px;
+}
+
+.landing-page-02 .r18-pjSPhE {
+  background-color: transparent;
+  height: auto;
+  left: 52px;
+  letter-spacing: -0.80px;
+  line-height: 48.3px;
+  position: absolute;
+  text-align: center;
+  top: 458px;
+  width: 179px;
+}
+
+.landing-page-02 .envio-imediato-contate-por-dm-pjSPhE {
+  background-color: transparent;
+  height: auto;
+  left: 8px;
+  letter-spacing: -0.40px;
+  line-height: 24.1px;
+  position: absolute;
+  text-align: center;
+  top: 509px;
+  width: 268px;
+}
+
+.landing-page-02 .camada_1-pjSPhE {
+  left: 114px;
+  top: 35px;
+  width: 51px;
+}
+
+.landing-page-02 .group-2-uh06Sv {
+  background-color: transparent;
+  height: 671px;
+  left: 360px;
+  position: absolute;
+  top: 121px;
+  width: 294px;
+}
+
+.landing-page-02 .ebook-1-ExZ8Fv {
+  height: 280px;
+  left: 7px;
+  top: 149px;
+  width: 269px;
+}
+
+.landing-page-02 .livro-fsico-ExZ8Fv {
+  background-color: transparent;
+  height: auto;
+  left: 31px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 114px;
+  width: 221px;
+}
+
+.landing-page-02 .r65-ExZ8Fv {
+  background-color: transparent;
+  height: auto;
+  left: 52px;
+  letter-spacing: -0.80px;
+  line-height: 48.3px;
+  position: absolute;
+  text-align: center;
+  top: 429px;
+  width: 179px;
+}
+
+.landing-page-02 .r60-frete-ExZ8Fv {
+  background-color: transparent;
+  height: auto;
+  left: 12px;
+  letter-spacing: -0.76px;
+  line-height: 45.9px;
+  position: absolute;
+  text-align: center;
+  top: 512px;
+  width: 261px;
+}
+
+.landing-page-02 .camada_1-ExZ8Fv {
+  left: 114px;
+  top: 35px;
+  width: 51px;
+}
+
+.landing-page-02 .group-5-uh06Sv {
+  background-color: transparent;
+  height: 671px;
+  left: 673px;
+  position: absolute;
+  top: 121px;
+  width: 294px;
+}
+
+.landing-page-02 .group-8-JEAIUi {
+  left: 25px;
+  width: 245px;
+}
+
+.landing-page-02 .ebook-1-bwFCMz {
+  height: 238px;
+  left: 22px;
+  top: 0px;
+  width: 190px;
+}
+
+.landing-page-02 .group-7-bwFCMz {
+  background-color: transparent;
+  height: 174px;
+  left: 0px;
+  position: absolute;
+  top: 55px;
+  width: 64px;
+}
+
+.landing-page-02 .adesivo-01-7-mdNNa8 {
+  background-color: transparent;
+  height: 65px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 64px;
+}
+
+.landing-page-02 .adesivo-01-6-mdNNa8 {
+  background-color: transparent;
+  height: 65px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 36px;
+  width: 64px;
+}
+
+.landing-page-02 .adesivo-01-8-mdNNa8 {
+  background-color: transparent;
+  height: 65px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 72px;
+  width: 64px;
+}
+
+.landing-page-02 .adesivo-01-5-mdNNa8 {
+  background-color: transparent;
+  height: 65px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 109px;
+  width: 64px;
+}
+
+.landing-page-02 .marca-pginas2-1-bwFCMz {
+  background-color: transparent;
+  height: 180px;
+  left: 167px;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+  width: 78px;
+}
+
+.landing-page-02 .kit-ktszy-JEAIUi {
+  background-color: transparent;
+  height: auto;
+  left: 31px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 114px;
+  width: 221px;
+}
+
+.landing-page-02 .r70-JEAIUi {
+  background-color: transparent;
+  height: auto;
+  left: 52px;
+  letter-spacing: -0.80px;
+  line-height: 48.3px;
+  position: absolute;
+  text-align: center;
+  top: 429px;
+  width: 179px;
+}
+
+.landing-page-02 .r70-frete-JEAIUi {
+  background-color: transparent;
+  height: auto;
+  left: 12px;
+  letter-spacing: -0.76px;
+  line-height: 45.9px;
+  position: absolute;
+  text-align: center;
+  top: 512px;
+  width: 261px;
+}
+
+.landing-page-02 .camada_1-JEAIUi {
+  left: 114px;
+  top: 35px;
+  width: 51px;
+}
+
+.landing-page-02 .group-6-uh06Sv {
+  background-color: transparent;
+  height: 671px;
+  left: 986px;
+  position: absolute;
+  top: 121px;
+  width: 294px;
+}
+
+.landing-page-02 .group-8-nklRw9 {
+  left: 63px;
+  width: 190px;
+}
+
+.landing-page-02 .ebook-1-Wx5WwZ {
+  height: 238px;
+  left: 0px;
+  top: 0px;
+  width: 190px;
+}
+
+.landing-page-02 .kit-kovcs-nklRw9 {
+  background-color: transparent;
+  height: auto;
+  left: 31px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 114px;
+  width: 221px;
+}
+
+.landing-page-02 .r75-nklRw9 {
+  background-color: transparent;
+  height: auto;
+  left: 52px;
+  letter-spacing: -0.80px;
+  line-height: 48.3px;
+  position: absolute;
+  text-align: center;
+  top: 429px;
+  width: 179px;
+}
+
+.landing-page-02 .r75-frete-nklRw9 {
+  background-color: transparent;
+  height: auto;
+  left: 12px;
+  letter-spacing: -0.76px;
+  line-height: 45.9px;
+  position: absolute;
+  text-align: center;
+  top: 512px;
+  width: 261px;
+}
+
+.landing-page-02 .camada_1-nklRw9 {
+  left: 114px;
+  top: 35px;
+  width: 51px;
+}
+
+.landing-page-02 .ebook-1-nklRw9 {
+  height: 203px;
+  left: 16px;
+  top: 234px;
+  width: 135px;
+}
+
+.landing-page-02 .button-uh06Sv {
+  background-color: var(--red-devil);
+  height: 52px;
+  left: 124px;
+  position: absolute;
+  top: 714px;
+  width: 151px;
+}
+
+.landing-page-02 .button-ZVtf6x {
+  background-color: var(--red-devil);
+  height: 52px;
+  left: 430px;
+  position: absolute;
+  top: 714px;
+  width: 151px;
+}
+
+.landing-page-02 .button-b0TWIz {
+  background-color: var(--red-devil);
+  height: 52px;
+  left: 736px;
+  position: absolute;
+  top: 714px;
+  width: 151px;
+}
+
+.landing-page-02 .button-Q94a7w {
+  background-color: var(--red-devil);
+  height: 52px;
+  left: 1041px;
+  position: absolute;
+  top: 714px;
+  width: 151px;
+}
+
+.landing-page-02 .adesivos-xcmeFx {
+  background-color: transparent;
+  height: 384px;
+  left: 138px;
+  position: absolute;
+  top: 911px;
+  width: 1129px;
+}
+
+.landing-page-02 .o-que-voc-encontrar-neste-livro-3KOEiX {
+  background-color: transparent;
+  color: var(--rangoon-green);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 80px;
+  letter-spacing: -0.72px;
+  line-height: 43.5px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 1004px;
+}
+
+.landing-page-02 .uma-jornada-pica-de-3KOEiX {
+  background-color: transparent;
+  height: 46px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 338px;
+  width: 225px;
+}
+
+.landing-page-02 .uma-protagonista-cor-3KOEiX {
+  background-color: transparent;
+  height: 46px;
+  left: 314px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 338px;
+  width: 197px;
+}
+
+.landing-page-02 .um-mergulho-na-cultu-3KOEiX {
+  background-color: transparent;
+  height: 46px;
+  left: 574px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 338px;
+  width: 251px;
+}
+
+.landing-page-02 .um-confronto-com-mit-3KOEiX {
+  background-color: transparent;
+  height: 46px;
+  left: 881px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 338px;
+  width: 225px;
+}
+
+.landing-page-02 .adesivo-01-1-3KOEiX {
+  background-color: transparent;
+  height: 256px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 73px;
+  width: 251px;
+}
+
+.landing-page-02 .adesivo-01-2-3KOEiX {
+  background-color: transparent;
+  height: 256px;
+  left: 287px;
+  object-fit: cover;
+  position: absolute;
+  top: 73px;
+  width: 251px;
+}
+
+.landing-page-02 .adesivo-01-3-3KOEiX {
+  background-color: transparent;
+  height: 256px;
+  left: 868px;
+  object-fit: cover;
+  position: absolute;
+  top: 73px;
+  width: 251px;
+}
+
+.landing-page-02 .adesivo-01-4-3KOEiX {
+  background-color: transparent;
+  height: 256px;
+  left: 574px;
+  object-fit: cover;
+  position: absolute;
+  top: 73px;
+  width: 251px;
+}
+
+.landing-page-02 .main-xcmeFx {
+  background-color: transparent;
+  height: 1031px;
+  left: 0px;
+  position: absolute;
+  top: -195px;
+  width: 1964px;
+}
+
+.landing-page-02 .background-BmrVi1 {
+  background-color: transparent;
+  height: 1031px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1960px;
+}
+
+.landing-page-02 .h1-BmrVi1 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-karma);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 113px;
+  letter-spacing: -1.28px;
+  line-height: 77.3px;
+  position: absolute;
+  text-align: left;
+  top: 394px;
+  width: 842px;
+}
+
+.landing-page-02 .hermina-uma-jovem-ob-BmrVi1 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 297px;
+  left: 113px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: absolute;
+  text-align: left;
+  top: 557px;
+  width: 581px;
+}
+
+.landing-page-02 .button-BmrVi1 {
+  align-items: center;
+  background-color: var(--red-devil);
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 113px;
+  padding: 14px 24px 10px;
+  position: absolute;
+  top: 905px;
+}
+
+.landing-page-02 .leia-os-primeiros-captulos-de-graa-xxjzoh {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-02 .mockup-leve-1-BmrVi1 {
+  background-color: transparent;
+  height: 730px;
+  left: 732px;
+  position: absolute;
+  top: 295px;
+  width: 684px;
+}
+
+.landing-page-02 .navigation-xcmeFx {
+  background-color: transparent;
+  height: 164px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.landing-page-02 .items-XjMJ16 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 48px;
+  justify-content: flex-end;
+  left: 754px;
+  position: absolute;
+  top: 56px;
+}
+
+.landing-page-02 .kits-9OOQqA {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-02 .onde-comprar-9OOQqA {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-02 .fale-comigo-9OOQqA {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-02 .button-9OOQqA {
+  align-items: center;
+  background-color: var(--rangoon-green);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 14px 24px;
+  position: relative;
+}
+
+.landing-page-02 .comprar-agora-spQ6H7 {
+  background-color: transparent;
+  color: var(--white);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-02 .p-XjMJ16 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-karma);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  height: 30px;
+  left: 192px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 66px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.landing-page-02 .icon-XjMJ16 {
+  height: 53px;
+  left: 112px;
+  top: 53px;
+  width: 54px;
+}
+
+.landing-page-02 .button {
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px #0000000d;
+}
+
+.landing-page-02 .camada_1 {
+  background-color: transparent;
+  height: 53px;
+  position: absolute;
+}
+
+.landing-page-02 .compre-agora {
+  background-color: transparent;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.landing-page-02 .ebook-1 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.landing-page-02 .group-8 {
+  background-color: transparent;
+  height: 238px;
+  position: absolute;
+  top: 170px;
+}
+
+.landing-page-02 .icon {
+  background-color: transparent;
+  position: absolute;
+}
+
+.landing-page-02 .link-direto {
+  background-color: transparent;
+  height: 492px;
+  width: 1188px;
+}
+
+.landing-page-02 .outras-regies {
+  background-color: transparent;
+  height: auto;
+  left: 8px;
+  letter-spacing: -0.36px;
+  line-height: 21.7px;
+  position: absolute;
+  text-align: center;
+  top: 550px;
+  width: 268px;
+}
+
+.landing-page-02 .porto-alegre {
+  background-color: transparent;
+  height: auto;
+  left: 8px;
+  letter-spacing: -0.40px;
+  line-height: 24.1px;
+  position: absolute;
+  text-align: center;
+  top: 472px;
+  width: 268px;
+}
+
+.landing-page-02 .rectangle-2 {
+  background-color: var(--green-waterloo);
+  border-radius: 19px;
+  height: 671px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 284px;
+}
+</style><script id="anime-js-script" src="./anime.min.js.download" integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8=" crossorigin="anonymous"></script><script id="imgloaded-js-script" src="./imagesloaded.pkgd.min.js.download"></script><style id="action-links-styles">
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+#anima-interface{
+  transition: all 0.5s ease-in-out;
+}
+
+#anima-watermark {
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+#anima-watermark-link{
+  position: fixed;
+  bottom:20px;
+  height:30px;
+  border-radius: 1000px;
+  background: #3B3B3B;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  transition: width 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  text-decoration:none;
+  color:#fff;
+  padding:8px 16px 8px 11px;
+  font-family:Mulish, sans-serif;
+  font-size:12px;
+}
+#anima-watermark-link .text {
+  margin-left: 6px;
+}
+
+.omniview-anima-action-links .link{
+  height: 30px;
+  width: 30px;
+  border-radius: 1000px;
+  background: #3B3B3B;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  transition: width 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  text-decoration:none;
+  color:#fff;
+}
+.omniview-anima-action-links #comment-link .text,.omniview-anima-action-links #code-link .text{
+  display:none;
+  font-size:12px;
+  margin-right:5px;
+}
+.omniview-anima-action-links #comment-link:hover,.omniview-anima-action-links #code-link:hover{
+  width:105px;
+}
+.omniview-anima-action-links #comment-link.pop-active,.omniview-anima-action-links #code-link.pop-active{
+  width:105px;
+  background: #FF6250;
+}
+.omniview-anima-action-links #comment-link.pop-active .text,.omniview-anima-action-links #code-link.pop-active .text{
+  display:block
+}
+.omniview-anima-action-links #comment-link:hover .text,.omniview-anima-action-links #code-link:hover .text{
+  display:block;
+}
+
+.link.navigation{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  width:auto;
+  height:32px;
+  color:#fff;
+  font-size:12px;
+  cursor:default;
+  padding:0 5px;
+}
+.link.navigation .icon{
+  margin:0 6px;
+  fill:none;
+  stroke:currentColor;
+  cursor:pointer;
+}
+.link.navigation .icon.disabled{
+  opacity:0.5;
+  cursor:default;
+}
+
+
+.link.navigation .home-icon{
+  margin-left:6px;
+  fill:currentColor;
+  stroke:currentColor;
+  cursor:pointer;
+}
+
+.omniview-anima-action-links .restart{
+  height: 30px;
+  padding:0 12px;
+  background: #3B3B3B;
+  border-radius: 1000px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:#f1f1f1;
+  font-size: 12px;
+}
+
+.omniview-anima-action-links{
+  display:flex;
+  align-items:center;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  font-family:Mulish, sans-serif;
+  transition: all 0.5s ease-in-out;
+  opacity:1;
+}
+
+.omniview-anima-action-links > * + *{
+   margin-right: 0;
+   margin-left: 10px;
+}
+
+.idle{
+  opacity:0;
+  pointer-events:none;
+}
+
+#popoverOpener {
+  position: absolute;
+  left: 50%;
+  margin-left: -10vw;
+  text-align: center;
+  top: 45vh;
+  width: 20vw;
+}
+
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  font-family: "sans-serif";
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.popover.top {
+  margin-top: -12px
+}
+
+.popover.right {
+  margin-left: 10px
+}
+
+.popover.bottom {
+  margin-top: 10px
+}
+
+.popover.left {
+  margin-left: -10px
+}
+
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0
+}
+
+.popover-content {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  overflow:hidden;
+  font-family:Mulish, sans-serif;
+}
+
+
+
+.popover>.arrow,.popover>.arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid
+}
+
+.popover>.arrow {
+  border-width: 11px
+}
+
+.popover>.arrow:after {
+  content: "";
+  border-width: 10px
+}
+
+.popover.top>.arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #999;
+  border-top-color: rgba(0,0,0,.25);
+  border-bottom-width: 0
+}
+
+.popover.top>.arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-color: #fff;
+  border-bottom-width: 0
+}
+
+.popover.right>.arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #999;
+  border-right-color: rgba(0,0,0,.25);
+  border-left-width: 0
+}
+
+.popover.right>.arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #fff;
+  border-left-width: 0
+}
+
+.popover.bottom>.arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0,0,0,.25)
+}
+
+.popover.bottom>.arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff
+}
+
+.popover.left>.arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0,0,0,.25)
+}
+
+.popover.left>.arrow:after {
+  right: 1px;
+  bottom: -10px;
+  content: " ";
+  border-right-width: 0;
+  border-left-color: #fff
+}
+
+
+
+#anima-comment-popover,#anima-code-popover{
+  background:#333333;
+  color:#fff;
+}
+
+#anima-comment-popover.top>.arrow,#anima-comment-popover.top>.arrow:after,#anima-code-popover.top>.arrow:after,#anima-code-popover.top>.arrow {
+  border-top-color:#333;
+}
+
+#anima-comment-popover .btn,#anima-code-popover .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 20px;
+  background: #FF6250;
+  color:#fff;
+  border-radius: 100px;
+  width: max-content;
+  text-decoration:none;
+}
+
+@media screen and (max-width: 550px) {
+  #anima-watermark-link {
+    padding: 6px !important;
+  }
+  #anima-watermark-link .text {
+    display: none !important;
+  }
+}
+
+</style></head><body style="margin: 0px; background: rgb(246, 241, 237); overflow-x: hidden;" dark-scroll=""><input type="hidden" id="anPageName" name="page" value="landing-page-02"><div class="container-center-horizontal"><div class="landing-page-02 screen " data-id="1:219"><footer class="footer-xcmeFx" data-id="1:282"><p class="relatos-de-um-vampiro-na-guerra-f7xB1y valign-text-middle" data-id="1:298">Relatos de um Vampiro na Guerra</p><p class="site-desenvolvido-po-f7xB1y valign-text-middle" data-id="1:566">Site desenvolvido por Leonardo Boeira Maciel</p><div class="icon-f7xB1y icon" data-id="1:316"><img class="icon-4KLbec icon" data-id="1:317" src="./icon.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/icon.svg" alt="Icon"><img class="image-10-4KLbec" data-id="1:564" src="./image-10.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-10.png" alt="image 10"></div><img class="divider-f7xB1y" data-id="1:320" src="./divider.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/divider.svg" alt="Divider"><img class="image-8-f7xB1y" data-id="1:560" src="./image-8@2x.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-8@2x.png" alt="image 8"><img class="image-9-f7xB1y" data-id="1:562" src="./image-9.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-9.png" alt="image 9"></footer><div class="link-direto-xcmeFx link-direto" data-id="1:588"><div class="link-direto-ZFkxq8 link-direto" data-id="1:587"><div class="group-10-flft1O" data-id="1:551"><p class="para-comprar-o-livro-dw2nIy valign-text-middle" data-id="1:541"><span><span class="span0-M4cWg4">Para comprar o livro com preço mais acessível (sem tarifas) me chame no Instagram.<br></span><span class="span1-M4cWg4"><br>Para leitores de Porto Alegre é possível combinar entrega sem custo de frete. Para outros estados este valor deverá ser calculado juntamente.<br><br>Indico, principalmente, optar por comprar o e-book por e-mail ou DM do Instagram; você também recebe o arquivo na hora, </span><span class="span2-M4cWg4 karma-bold-green-waterloo-20px">mas apoia mais diretamente o trabalho independente! </span><span class="span3-M4cWg4">Neste modo, o valor é direcionado inteiramente à autora, sem ter parte cortada por taxas de plataforma de vendas.</span></span></p><p class="ana-clara-galli-auto-dw2nIy valign-text-middle karma-bold-green-waterloo-20px" data-id="1:548"><span><span class="span0-Y59QPr karma-bold-green-waterloo-20px">Ana Clara Galli<br></span><span class="span1-Y59QPr">autora de Relatos de um Vampiro na Guerra</span></span></p><div class="button-dw2nIy button" data-id="1:546"><p class="reserve-o-seu-livro-comigo-xKnvNJ valign-text-middle karma-medium-white-16px" data-id="1:547">Reserve o Seu Livro Comigo</p></div><img class="image-7-dw2nIy" data-id="1:545" src="./image-7@2x.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-7@2x.png" alt="image 7"></div></div></div><div class="links-ecommerce-xcmeFx" data-id="1:586"><img class="group-9-elX1Xx" data-id="1:549" src="./group-9.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/group-9.png" alt="Group 9"><img class="ebook-1-elX1Xx ebook-1" data-id="1:550" src="./ebook-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1.png" alt="Ebook 1"></div><div class="relatos-xcmeFx" data-id="1:567"><p class="relatos-de-quem-j-garantiu-sua-leitura-0WCxe5" data-id="1:502">Relatos de quem já garantiu sua leitura</p><img class="camada_1-0WCxe5 camada_1" data-id="1:520" src="./camada-1.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1.svg" alt="Camada_1"><img class="camada_1-VU7pyk camada_1" data-id="1:522" src="./camada-1-1.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1-1.svg" alt="Camada_1"><img class="image-5-0WCxe5" data-id="1:366" src="./image-5.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-5.png" alt="image 5"><img class="image-4-0WCxe5" data-id="1:364" src="./image-4.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-4.png" alt="image 4"><img class="image-3-0WCxe5" data-id="1:362" src="./image-3.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/image-3.png" alt="image 3"></div><div class="onde-comprar-xcmeFx" data-id="1:568"><div class="rectangle-1-uh06Sv" data-id="1:385"></div><img class="textura-1-uh06Sv" data-id="2:3" src="./textura-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/textura-1.png" alt="textura 1"><div class="opes-de-compra-uh06Sv" data-id="1:381">Opções de compra</div><div class="group-1-uh06Sv" data-id="1:398"><div class="rectangle-2" data-id="1:392"></div><img class="ebook-1-pjSPhE ebook-1" data-id="1:386" src="./ebook-1-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1-1.png" alt="Ebook 1"><div class="e-book-pjSPhE karma-bold-oslo-gray-36px" data-id="1:387">E-BOOK</div><div class="r18-pjSPhE karma-bold-mercury-40px" data-id="1:388">R$18</div><div class="envio-imediato-contate-por-dm-pjSPhE karma-bold-mercury-20px" data-id="1:389">envio imediato<br>(contate por DM)</div><img class="camada_1-pjSPhE camada_1" data-id="1:393" src="./camada-1-2.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1-2.svg" alt="Camada_1"></div><div class="group-2-uh06Sv" data-id="1:409"><div class="rectangle-2" data-id="1:410"></div><img class="ebook-1-ExZ8Fv ebook-1" data-id="1:411" src="./ebook-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1.png" alt="Ebook 1"><div class="livro-fsico-ExZ8Fv karma-bold-oslo-gray-36px" data-id="1:412">LIVRO FÍSICO</div><div class="r65-ExZ8Fv karma-bold-mercury-40px" data-id="1:413">R$65</div><div class="r60-frete-ExZ8Fv karma-bold-mercury-38px" data-id="1:449">R$60 + frete</div><div class="porto-alegre karma-bold-mercury-20px" data-id="1:414">Porto Alegre</div><div class="outras-regies karma-bold-mercury-18px" data-id="1:450">outras regiões</div><img class="camada_1-ExZ8Fv camada_1" data-id="1:417" src="./camada-1-3.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1-3.svg" alt="Camada_1"></div><div class="group-5-uh06Sv" data-id="1:453"><div class="rectangle-2" data-id="1:454"></div><div class="group-8-JEAIUi group-8" data-id="1:490"><img class="ebook-1-bwFCMz ebook-1" data-id="1:457" src="./ebook-1-2.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1-2.png" alt="Ebook 1"><div class="group-7-bwFCMz" data-id="1:484"><img class="adesivo-01-7-mdNNa8" data-id="1:485" src="./adesivo-01-7.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-7.png" alt="Adesivo-01 7"><img class="adesivo-01-6-mdNNa8" data-id="1:486" src="./adesivo-01-6.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-6.png" alt="Adesivo-01 6"><img class="adesivo-01-8-mdNNa8" data-id="1:487" src="./adesivo-01-8.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-8.png" alt="Adesivo-01 8"><img class="adesivo-01-5-mdNNa8" data-id="1:488" src="./adesivo-01-5.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-5.png" alt="Adesivo-01 5"></div><img class="marca-pginas2-1-bwFCMz" data-id="1:489" src="./marca-p-ginas2-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/marca-p-ginas2-1.png" alt="Marca-Pginas2 1"></div><div class="kit-ktszy-JEAIUi karma-bold-oslo-gray-36px" data-id="1:458">KIT KÉTSZY</div><div class="r70-JEAIUi karma-bold-mercury-40px" data-id="1:459">R$70</div><div class="r70-frete-JEAIUi karma-bold-mercury-38px" data-id="1:460">R$70 + frete</div><div class="porto-alegre karma-bold-mercury-20px" data-id="1:461">Porto Alegre</div><div class="outras-regies karma-bold-mercury-18px" data-id="1:462">outras regiões</div><img class="camada_1-JEAIUi camada_1" data-id="1:463" src="./camada-1-4.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1-4.svg" alt="Camada_1"></div><div class="group-6-uh06Sv" data-id="1:465"><div class="rectangle-2" data-id="1:466"></div><div class="group-8-nklRw9 group-8" data-id="1:491"><img class="ebook-1-Wx5WwZ ebook-1" data-id="1:492" src="./ebook-1-2.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1-2.png" alt="Ebook 1"></div><div class="kit-kovcs-nklRw9 karma-bold-oslo-gray-36px" data-id="1:499">KIT KOVÁCS</div><div class="r75-nklRw9 karma-bold-mercury-40px" data-id="1:471">R$75</div><div class="r75-frete-nklRw9 karma-bold-mercury-38px" data-id="1:472">R$75 + frete</div><div class="porto-alegre karma-bold-mercury-20px" data-id="1:473">Porto Alegre</div><div class="outras-regies karma-bold-mercury-18px" data-id="1:474">outras regiões</div><img class="camada_1-nklRw9 camada_1" data-id="1:475" src="./camada-1-5.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/camada-1-5.svg" alt="Camada_1"><img class="ebook-1-nklRw9 ebook-1" data-id="1:501" src="./ebook-1-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/ebook-1-1.png" alt="Ebook 1"></div><div class="button-uh06Sv button" data-id="1:511"><div class="compre-agora valign-text-middle karma-medium-white-16px" data-id="1:512">COMPRE AGORA</div></div><div class="button-ZVtf6x button" data-id="1:513"><div class="compre-agora valign-text-middle karma-medium-white-16px" data-id="1:514">COMPRE AGORA</div></div><div class="button-b0TWIz button" data-id="1:515"><div class="compre-agora valign-text-middle karma-medium-white-16px" data-id="1:516">COMPRE AGORA</div></div><div class="button-Q94a7w button" data-id="1:517"><div class="compre-agora valign-text-middle karma-medium-white-16px" data-id="1:518">COMPRE AGORA</div></div></div><div class="adesivos-xcmeFx" data-id="1:569"><p class="o-que-voc-encontrar-neste-livro-3KOEiX" data-id="1:370">O que você encontrará neste livro:</p><p class="uma-jornada-pica-de-3KOEiX valign-text-middle karma-normal-rangoon-green-16px" data-id="1:371">Uma jornada épica de autodescoberta e desafios inimagináveis.</p><p class="uma-protagonista-cor-3KOEiX valign-text-middle karma-normal-rangoon-green-16px" data-id="1:373">Uma protagonista corajosa que desafia as convenções de seu tempo.</p><p class="um-mergulho-na-cultu-3KOEiX valign-text-middle karma-normal-rangoon-green-16px" data-id="1:375">Um mergulho na cultura e na história da Hungria nas vésperas da Primeira Guerra Mundial.</p><p class="um-confronto-com-mit-3KOEiX valign-text-middle karma-normal-rangoon-green-16px" data-id="1:377">Um confronto com mitos e realidades que mudarão a vida de Mina para sempre.</p><img class="adesivo-01-1-3KOEiX" data-id="1:372" src="./adesivo-01-5.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-5.png" alt="Adesivo-01 1"><img class="adesivo-01-2-3KOEiX" data-id="1:374" src="./adesivo-01-6.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-6.png" alt="Adesivo-01 2"><img class="adesivo-01-3-3KOEiX" data-id="1:376" src="./adesivo-01-7.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-7.png" alt="Adesivo-01 3"><img class="adesivo-01-4-3KOEiX" data-id="1:378" src="./adesivo-01-8.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/adesivo-01-8.png" alt="Adesivo-01 4"></div><div class="main-xcmeFx" data-id="1:574"><img class="background-BmrVi1" data-id="1:540" src="./background.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/background.png" alt="background"><h1 class="h1-BmrVi1" data-id="1:270">Relatos de um<br>Vampiro na Guerra</h1><p class="hermina-uma-jovem-ob-BmrVi1 valign-text-middle" data-id="1:271">Hermina, uma jovem obscurecida pela monotonia de sua vida, tem sua existência transformada ao se deparar com um encontro extraordinário. Em uma história que ecoa a bravura de Mulan, ela é lançada em um turbilhão de eventos que mudarão não apenas sua vida, mas o destino de sua nação.<br><br>Ambientado na Hungria, nas vésperas da Primeira Guerra, Mina se vê diante de um dilema que irá desencadear uma reação em cadeia irreversível. Enquanto tenta esconder seu verdadeiro eu e enfrenta um mito que se torna realidade, ela se vê obrigada a escolher entre abandonar quem era ou abraçar cada parte de si mesma.</p><div class="button-BmrVi1 button" data-id="1:272"><p class="leia-os-primeiros-captulos-de-graa-xxjzoh valign-text-middle karma-medium-white-16px" data-id="1:273">Leia os primeiros capítulos de graça!</p></div><img class="mockup-leve-1-BmrVi1" data-id="1:358" src="./mockup-leve-1.png" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/mockup-leve-1.png" alt="Mockup-Leve 1"></div><div class="navigation-xcmeFx" data-id="1:576"><div class="items-XjMJ16" data-id="1:577"><div class="kits-9OOQqA valign-text-middle body-text" data-id="1:578">Kits</div><div class="onde-comprar-9OOQqA valign-text-middle body-text" data-id="1:579">Onde Comprar</div><div class="fale-comigo-9OOQqA valign-text-middle body-text" data-id="1:580">Fale Comigo</div><div class="button-9OOQqA button" data-id="1:581"><div class="comprar-agora-spQ6H7 valign-text-middle small-text" data-id="1:582">Comprar Agora</div></div></div><div class="p-XjMJ16 valign-text-middle" data-id="1:583">Ana Clara Galli</div><img class="icon-XjMJ16 icon" data-id="1:584" src="./icon-1.svg" anima-src="https://cdn.animaapp.com/projects/6663fa75f877c48c40efc9d4/releases/6663faa4922e58f92718b2a4/img/icon-1.svg" alt="icon"></div></div></div><script src="./launchpad-banner.js.download" async=""></script><script defer="" src="./restart-btn.min.js.download"></script><div id="t_preload_links"></div><div id="anima-interface" data-turbo-permanent="true" class="idle"><!---->
+        <div id="anima-comment-popover" class="popover top" role="tooltip" style="left: -205px; top: -220px;">
+          <div class="arrow" style="margin-left: 128px;"></div>
+          <div class="popover-content" style="align-items:center">
+            <div style="display:flex;flex-direction:column;height: 100%;padding: 20px;">
+              <h3 style="font-size:18px;margin-bottom:10px;font-weight:500;line-height: 26px;font-family: Roslindale;">
+                Leave feedback and collaborate
+              </h3>
+              <p style="font-size:12px;margin-bottom:20px;font-weight:400;line-height: 20px;">
+                Login to your account to leave comments. Don't have an account?
+                Sign up for free!
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn" href="https://projects.animaapp.com/p/undefined/s/undefined?mode=comments&amp;utm_campaign=add-comment&amp;utm_medium=add-comment&amp;utm_source=animaapp.io">Add comment</a>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:center;padding-right:20px">
+              <img src="./comment-illustration.svg">
+            </div>
+          </div>
+        </div>
+        <div id="anima-code-popover" class="popover top" role="tooltip" style="left: -205px; top: -220px;">
+          <div class="arrow" style="margin-left: 168px;"></div>
+          <div class="popover-content" style="align-items:center">
+            <div style="display:flex;flex-direction:column;height: 100%;padding: 20px;">
+              <h3 style="font-size:18px;margin-bottom:10px;font-weight:500;line-height: 26px;font-family: Roslindale;">
+                Get clean code you’ll love with Anima
+              </h3>
+              <p style="font-size:12px;margin-bottom:20px;font-weight:400;line-height: 20px;">
+                Login and easily export HTML, React or Vue of this prototype.
+                Don’t have an account? Sign up for free!
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn" href="https://projects.animaapp.com/p/undefined/s/undefined?mode=code&amp;utm_campaign=get-code&amp;utm_medium=get-code&amp;utm_source=animaapp.io">
+                Get code
+              </a>
+            </div>
+
+            <img src="./code-illustration.svg">
+          </div>
+        </div>
+        <div class="omniview-anima-action-links" id="actions-wrap">
+          <div class="omniview-anima-action-links">
+            <div id="page-nav" class="link navigation" style="display: none;">
+              <svg id="homepage-icon" class="home-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.151 11a.25.25 0 01-.167-.436l4.349-3.913a.25.25 0 01.334 0l4.349 3.913a.25.25 0 01-.167.436H8.15zM16 12H9v4a1 1 0 001 1h5a1 1 0 001-1v-4z" fill="#fff"></path>
+              </svg>
+
+              <svg class="icon" id="arrow-left" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18l-6-6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+
+              <span id="page-num"></span>
+
+              <svg class="icon" id="arrow-right" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+
+            <a class="link" id="comment-link" target="_blank" style="display: none;">
+              <span class="text">Comment</span>
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.301 15.137a.551.551 0 01.199-.55c.314-.23.554-.554.718-.965A6.015 6.015 0 014 10 6.006 6.006 0   0110.001 4 6.006 6.006 0 0116 10.001 6.006 6.006 0 019.999 16a5.98 5.98 0 01-3.095-.86 3.165 3.165 0 01-1.65.438 3.6  3.6 0 01-.57-.044c-.191-.03-.34-.186-.383-.397z" fill="#fff"></path>
+              </svg>
+            </a>
+
+            <a class="link" id="code-link" target="_blank" style="display: none;">
+              <span class="text">Get Code</span>
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15.667a1 1 0 01-.707-1.708l3.626-3.625-3.626-3.626a1 1 0 111.415-1.415l4.333 4.333a1 1 0 010 1.414l-4.333 4.333a.993.993 0 01-.707.294zM7.333 5a1 1 0 01.707 1.708l-3.626 3.625 3.627 3.626a1 1 0 11-1.415 1.415L2.293 11.04a1 1 0 010-1.415l4.333-4.333A.992.992 0 017.333 5z" fill="#fff"></path>
+              </svg>
+            </a>
+
+            <div class="restart" id="restart-btn" style="display: none;">
+              <svg style="margin-right: 6px" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11.817A5.017 5.017 0 01.994 6.811c0-.207.169-.375.375-.375s.375.168.375.375A4.265 4.265 0 006 11.067a4.265 4.265 0 004.256-4.256A4.265 4.265 0 006 2.555a.376.376 0 01-.375-.376c0-.206.169-.374.375-.374a5.017 5.017 0 015.006 5.006A5.017 5.017 0 016 11.817z" fill="#fff"></path>
+                <path d="M6.75 4.237a.37.37 0 01-.263-.112l-1.65-1.65a.363.363 0 010-.525L6.487.3c.15-.15.375-.15.525 0 .15.15.15.375 0 .525L5.625 2.212 7.012 3.6c.15.15.15.375 0 .525-.056.075-.15.112-.262.112z" fill="#fff"></path>
+              </svg>
+              Restart
+            </div>
+          </div>
+        </div>
+      <!----></div><div id="anima-watermark" style="display: none;" class="idle"><!----><a id="anima-watermark-link" target="_blank" href="https://www.animaapp.com/?utm_campaign=public-link-banner&amp;utm_medium=public-link-banner&amp;utm_source=animaapp.io" style="right: 20px; left: auto; padding: 6px;">
+        <svg width="20" height="20" viewBox="0 0 20 20" id="anima-logo-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.09293 3.00001H16.5327C16.5484 2.99976 16.5638 3.00351 16.5776 3.01092C16.5913 3.01832 16.603 3.02913 16.6114 3.04231C16.6198 3.0555 16.6247 3.07061 16.6256 3.08622C16.6265 3.10182 16.6233 3.1174 16.6165 3.13146C15.5441 5.29706 13.9276 7.14699 11.9253 8.50009C8.69117 10.6822 5.43436 10.9075 4.09389 10.9196C4.08165 10.9198 4.06949 10.9176 4.05811 10.9131C4.04672 10.9086 4.03636 10.9019 4.02761 10.8933C4.01887 10.8848 4.01192 10.8745 4.00718 10.8633C4.00244 10.852 4 10.8399 4 10.8276V3.09198C4 3.07982 4.00241 3.06778 4.00709 3.05656C4.01177 3.04534 4.01863 3.03516 4.02728 3.02661C4.03592 3.01805 4.04617 3.0113 4.05744 3.00673C4.06871 3.00217 4.08077 2.99988 4.09293 3.00001Z" fill="#FF6250"></path>
+          <path d="M6.77772 17.4446C8.31182 17.4446 9.55545 16.201 9.55545 14.6669C9.55545 13.1328 8.31182 11.8892 6.77772 11.8892C5.24363 11.8892 4 13.1328 4 14.6669C4 16.201 5.24363 17.4446 6.77772 17.4446Z" fill="#FFDF90"></path>
+          <path d="M12.4559 17.2799C11.6701 16.9799 11.2522 16.1151 11.5185 15.3496L13.6153 9.3656C13.884 8.60003 14.7387 8.22302 15.5245 8.52299C16.3103 8.82344 16.7282 9.68772 16.4619 10.4538L14.365 16.4377C14.0964 17.2033 13.2417 17.5808 12.4559 17.2799Z" fill="#3366FF"></path>
+        </svg>
+        <span class="text" style="display: none;">Made with Anima</span>
+      </a><!----></div></body></html>
