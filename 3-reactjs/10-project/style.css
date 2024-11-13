@@ -197,3 +197,230 @@ body {
     left: 50%;
     top: 220px;
 }
+
+/* Estilos - Stickers */
+
+.stickers {
+    position: absolute;
+    width: 100%;
+    max-width: 86%;
+    top: 1120px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.sticker-grid {
+    display: grid;
+    justify-items: center;
+    align-items: baseline;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.stickers-text {
+    max-width: 245px;
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.sticker {
+    width: 256px;
+    margin-bottom: -40px;
+}
+
+/* Estilos - Opções de Compra */
+
+.ondeComprar {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1800px;
+    max-width: 1300px;
+    width: 88%;
+    height: 840px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--verde-escuro);
+    border-radius: 18px;
+    min-width: 1225px;
+}
+
+.box-bg-texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 18px;
+    min-width: 1225px;
+
+    background-image: url('./assets/textura-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.ondeComprar p {
+    z-index: 3;
+    margin-top: 43px;
+    position: absolute;
+    text-align: center;
+    color: var(--branco);
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.ondeComprar-title {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+.ondeComprar-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.img-ebook {
+    width: 90%;
+}
+
+#preco-01 {
+    margin-bottom: 10px;
+}
+
+#img-ebook-01 {
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+#img-ebook-02 {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+#img-ebook-03 {
+    width: 220px;
+    margin-top: 25px;
+    margin-bottom: 52px;
+}
+
+#img-ebook-04 {
+    width: 220px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.produto-container {
+    margin-top: 130px;
+    width: 260px;
+    height: 650px;
+    background: var(--branco);
+    text-align: center;
+    border-radius: 19px;
+    display: inline-block;
+}
+
+.cruz-02 img {
+    margin-top: 30px;
+    width: 100%;
+    width: 41px;
+    height: 41px;
+}
+
+.produto-titulo {
+    z-index: 2;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 36px;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-transform: uppercase;
+}
+
+.produto-valor {
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: -40px;
+}
+
+#produto-valor-02 {
+    margin-top: -15px;
+    color: var(--verde-escuro);
+    font-size: 30px;
+}
+
+.produto-complemento {
+    z-index: 4;
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#produto-complemento-02 {
+    margin-top: -15px;
+    color: var(--verde-escuro);
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.produto-botao {
+    color: var(--branco);
+    background: var(--vermelho);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-left: 32px;
+}
+
+.produto-botao p, a {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 0px auto;
+    padding: 0px;
+    margin-left: 13px;
+    margin-bottom: 15px;
+    line-height: 70px;
+}
+
+
+
+
+
+
