@@ -1,426 +1,922 @@
 :root {
-    --cor-fundo: #F6F1ED;
-    --branco: #fff;
-    --branco-2: #d7d1cb;
-    --preto: #000;
-    --verde-escuro: #1B1E18;
-    --verde-escuro-2: #121410;
-    --cinza-verde: #83908F;
-    --vermelho: #881212;
+    --cor-fundo: #F6F1ED; /* Define a cor de fundo principal da página */
+    --branco: #fff; /* Branco puro */
+    --branco-2: #d7d1cb; /* Tom de branco acinzentado */
+    --preto: #000; /* Preto puro */
+    --verde-escuro: #1B1E18; /* Verde escuro usado para textos e fundos */
+    --verde-escuro-2: #121410; /* Verde ainda mais escuro */
+    --cinza-verde: #83908F; /* Cinza com tonalidade esverdeada */
+    --vermelho: #881212; /* Vermelho intenso, ideal para botões e destaques */
 }
 
 body {
-    background: var(--cor-fundo);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    background: var(--cor-fundo); /* Aplica a cor de fundo usando a variável global */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamento interno padrão */
+    overflow-x: hidden; /* Impede rolagem horizontal indesejada */
 }
 
-/* Estilos - Navegação */
-
 .Navigation {
-    width: 100%;
-    min-width: 1090px;
-    z-index: 999;
-    top: 60px;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%; /* Largura total da tela */
+    min-width: 1090px; /* Define largura mínima para evitar que quebre em telas pequenas */
+    z-index: 999; /* Garante que a navegação fique acima de outros elementos */
+    top: 60px; /* Posição da barra em relação ao topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move a barra para o centro horizontal */
 }
 
 .Navigation-itens {
-    padding: 20px;
-    position: relative;
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
+    padding: 20px; /* Adiciona espaçamento interno para os itens */
+    position: relative; /* Define o posicionamento relativo aos elementos filhos */
+    float: right; /* Alinha os itens à direita */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-right: 20px; /* Espaçamento direito */
 }
 
 .logo-autora {
-    margin-top: 46px;
-    margin-left: 85px;
-    position: relative;
-    width: 250px;
-    float: left;
-    padding: 20px;
+    margin-top: 46px; /* Espaçamento superior */
+    margin-left: 85px; /* Espaçamento esquerdo */
+    position: relative; /* Necessário para posicionamento de elementos internos */
+    width: 250px; /* Largura fixa do contêiner da logo */
+    float: left; /* Alinha o logo à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
 }
 
 .cruz {
-    width: 54px;
-    height: 54px;
+    width: 54px; /* Largura fixa da imagem da cruz */
+    height: 54px; /* Altura fixa da cruz */
 }
 
 .nome-navigation {
-    position: absolute;
-    left: 92px;
-    top: 33px;
-    width: 150px;
-    color: white;
-    font-size: 20px;
-    font-family: Karma;
-    font-weight: 700;
-    line-height: 30px;
-    word-wrap: break-word;
+    position: absolute; /* Posicionamento livre dentro do contêiner */
+    left: 92px; /* Distância à esquerda */
+    top: 33px; /* Distância do topo */
+    width: 150px; /* Largura fixa */
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-family: Karma; /* Fonte personalizada */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 30px; /* Altura da linha */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
 }
 
 .items {
-    display: inline-flex;
-    align-items: center;
-    gap: 48px;
+    display: inline-flex; /* Exibe itens em linha e permite flexibilidade */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 48px; /* Espaçamento horizontal entre os itens */
 }
 
 .items p, a {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--preto);
-    text-decoration: none;
-    overflow: hidden;
-    word-wrap: break-word;
-    white-space: nowrap;
+    font-size: 20px; /* Tamanho da fonte dos textos e links */
+    font-weight: 700; /* Fonte em negrito */
+    color: var(--preto); /* Cor preta definida na variável global */
+    text-decoration: none; /* Remove sublinhado dos links */
+    overflow: hidden; /* Oculta conteúdo excedente */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    white-space: nowrap; /* Impede quebra automática de linha */
 }
 
 .items p:hover, a:hover {
-    color: var(--branco);
+    color: var(--branco); /* Altera a cor para branco ao passar o mouse */
 }
 
 .button-navigation {
-    padding-right: 25px;
-    padding-left: 10px;
-    background: var(--verde-escuro);
-    border-radius: 8px;
-    transition: background 0.3s ease;
+    padding-right: 25px; /* Espaçamento interno à direita */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: background 0.3s ease; /* Animação suave na mudança de fundo */
 }
 
 .button-navigation div.ComprarAgora, a#ComprarAgora {
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: -4px;
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 500; /* Fonte com peso médio */
+    margin-bottom: -4px; /* Ajusta o alinhamento vertical */
 }
 
 .button-navigation:hover {
-    background-color: var(--vermelho);
-    transition: 0.3s ease;
+    background-color: var(--vermelho); /* Altera a cor de fundo para vermelho ao passar o mouse */
+    transition: 0.3s ease; /* Define uma transição suave para a mudança */
 }
 
 /* Estilos - Main */
 
 .main {
-    width: 100%;
-    height: 1030px;
-    position: relative;
-    top: 350px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 1031px; /* Define altura fixa da seção principal */
+    top: 350px; /* Define a distância do topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente em relação ao viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move o elemento para o centro exato */
 }
 
 .background {
-    width: 100%;
-    height: 1030px;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: -2;
-    background-image: url("./assets/background-2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
+    width: 100%; /* Largura total da tela */
+    height: 1031px; /* Altura fixa igual à seção principal */
+    left: 0px; /* Alinha à extremidade esquerda */
+    top: 0px; /* Alinha ao topo */
+    position: relative; /* Permite posicionamento relativo de elementos internos */
+    z-index: -2; /* Envia o fundo para trás de outros elementos */
+    background-image: url("./assets/background-2.jpg"); /* Imagem de fundo personalizada */
+    background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: left; /* Posiciona a imagem no lado esquerdo */
 }
 
 .title {
-    min-width: 600px;
-    left: 110px;
-    top: 300px;
-    position: absolute;
-    color: white;
-    font-size: 90px;
-    line-height: 77px;
-    word-wrap: break-word;
-    font-weight: 100;
+    font-family: 'Older Dictator', sans-serif; /* Aplica uma fonte personalizada */
+    min-width: 600px; /* Define largura mínima para evitar colapsos de texto */
+    left: 113px; /* Distância da borda esquerda */
+    top: 294px; /* Distância do topo */
+    position: absolute; /* Permite posicionamento livre */
+    color: white; /* Texto branco */
+    font-size: 90px; /* Tamanho grande para o título */
+    line-height: 77.25px; /* Altura da linha para espaçamento entre palavras */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    font-weight: 100; /* Fonte leve para um visual elegante */
 }
 
 .description {
-    width: 580px;
-    left: 110px;
-    top: 500px;
-    position: absolute;
-    color: white;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
-    word-wrap: break-word;
+    width: 581px; /* Largura fixa para controle de layout */
+    left: 113px; /* Distância da borda esquerda */
+    top: 530px; /* Distância do topo */
+    position: absolute; /* Posicionamento livre */
+    color: white; /* Texto branco */
+    font-size: 18px; /* Tamanho menor do texto */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    font-weight: 400; /* Peso normal para o texto */
+    line-height: 27px; /* Altura da linha para legibilidade */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
 }
 
 .button-main {
-    width: 300px;
-    height: 50px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 24px;
-    padding-right: 24px;
-    position: absolute;
-    left: 100px;
-    top: 900px;
-    background: var(--vermelho);
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    white-space: nowrap;
-    color: var(--branco-2);
-    font-weight: 500;
-    transition: 0.2s ease;
+    width: 300px; /* Largura fixa do botão */
+    height: 48px; /* Altura fixa do botão */
+    padding-top: 14px; /* Espaçamento interno no topo */
+    padding-bottom: 10px; /* Espaçamento interno na parte inferior */
+    padding-left: 24px; /* Espaçamento interno à esquerda */
+    padding-right: 24px; /* Espaçamento interno à direita */
+    left: 113px; /* Distância da borda esquerda */
+    top: 905px; /* Distância do topo */
+    position: absolute; /* Permite posicionamento livre */
+    background: var(--vermelho); /* Fundo vermelho, definido na variável */
+    border-radius: 8px; /* Cantos arredondados */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    display: inline-flex; /* Permite flexbox em linha */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    color: var(--branco-2); /* Texto com cor de branco acinzentado */
+    font-weight: 500; /* Peso médio da fonte */
+    transition: 0.2s ease; /* Transição suave para alterações */
 }
 
 .button-main:hover {
-    background-color: var(--branco-2);
-    color: var(--verde-escuro);
-    font-weight: 700;
+    background-color: var(--branco-2); /* Altera o fundo para branco acinzentado ao passar o mouse */
+    color: var(--verde-escuro); /* Altera a cor do texto para verde escuro */
+    font-weight: 700; /* Torna o texto em negrito no hover */
 }
 
 .button-main-text {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 75px;
-    text-align: center;
-    margin-left: 75px;
-    transition: color 0.3s ease;
+    font-size: 16px; /* Tamanho do texto */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    line-height: 24px; /* Altura da linha para alinhamento */
+    margin-right: 75px; /* Espaçamento interno à direita */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 75px; /* Espaçamento interno à esquerda */
+    transition: color 0.3s ease; /* Animação suave para mudanças de cor */
 }
 
 .mockup {
-    z-index: -1;
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    left: 50%;
-    top: 220px;
+    z-index: -1; /* Posiciona a imagem atrás de outros elementos */
+    position: absolute; /* Permite posicionamento livre */
+    width: 800px; /* Largura fixa da imagem */
+    height: 850px; /* Altura fixa da imagem */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    top: 225px; /* Define a distância do topo */
 }
+
 
 /* Estilos - Stickers */
 
 .stickers {
-    position: absolute;
-    width: 100%;
-    max-width: 86%;
-    top: 1120px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    top: 1120px; /* Define a distância do topo da página */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 86%; /* Limita a largura máxima a 86% do espaço disponível */
+    position: absolute; /* Posicionamento livre, independente do fluxo padrão */
+    left: 50%; /* Centraliza horizontalmente em relação ao viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Alinha ao centro exato horizontalmente */
 }
 
 .header {
-    width: 100%;
-    text-align: center;
-    color: var(--verde-escuro);
-    font-size: 36px;
-    font-weight: 700;
+    width: 100%; /* Ocupa toda a largura disponível */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #1B1E18; /* Define a cor do texto (verde escuro) */
+    font-size: 36px; /* Tamanho grande para o título */
+    font-weight: 700; /* Texto em negrito */
 }
 
 .sticker-grid {
-    display: grid;
-    justify-items: center;
-    align-items: baseline;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid; /* Configura os elementos internos em uma grade */
+    justify-items: center; /* Centraliza os stickers horizontalmente */
+    align-items: baseline; /* Alinha os stickers verticalmente pela linha de base do texto */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cria 4 colunas de tamanho igual */
 }
 
 .stickers-text {
-    max-width: 245px;
-    text-align: center;
-    color: var(--verde-escuro);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    word-wrap: break-word;
+    max-width: 245px; /* Limita a largura máxima do texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #1B1E18; /* Define a cor do texto (verde escuro) */
+    font-size: 16px; /* Tamanho do texto médio */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    font-weight: 400; /* Peso normal da fonte */
+    line-height: 24px; /* Altura das linhas para facilitar a leitura */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
 }
 
 .sticker {
-    width: 256px;
-    margin-bottom: -40px;
+    width: 256px; /* Largura fixa para as imagens dos stickers */
+    margin-bottom: -40px; /* Define um espaçamento negativo na parte inferior */
 }
 
-/* Estilos - Opções de Compra */
+/* Estilos para a seção de opções de compra */
 
-.ondeComprar {
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 1800px;
-    max-width: 1300px;
-    width: 88%;
-    height: 840px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+.OndeComprar {
+    align-items: center; /* Centraliza verticalmente os itens internos */
+    justify-content: center; /* Centraliza horizontalmente os itens internos */
+    top: 1800px; /* Define a distância do topo */
+    max-width: 1300px; /* Define a largura máxima */
+    width: 88%; /* Define a largura relativa ao contêiner */
+    height: 840px; /* Altura fixa da seção */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move o elemento para o centro */
 }
 
 .box-bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: var(--verde-escuro);
-    border-radius: 18px;
-    min-width: 1225px;
+    width: 100%; /* Largura total do fundo */
+    height: 100%; /* Altura total do fundo */
+    position: absolute; /* Posicionamento livre */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 18px; /* Cantos arredondados */
+    min-width: 1225px; /* Largura mínima para o fundo */
 }
 
 .box-bg-texture {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 18px;
-    min-width: 1225px;
-
-    background-image: url('./assets/textura-1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: multiply;
-    opacity: 0.4;
-    z-index: 0;
+    width: 100%; /* Largura total da textura */
+    height: 100%; /* Altura total da textura */
+    position: absolute; /* Posicionamento livre */
+    border-radius: 18px; /* Cantos arredondados */
+    min-width: 1225px; /* Largura mínima */
+    background-image: url("./assets/textura-1.png"); /* Adiciona uma textura como fundo */
+    background-size: cover; /* Ajusta para cobrir todo o contêiner */
+    background-repeat: no-repeat; /* Evita repetição da textura */
+    background-position: center; /* Centraliza a textura */
+    background-blend-mode: multiply; /* Mescla a textura com o fundo */
+    opacity: 0.4; /* Torna a textura parcialmente transparente */
+    z-index: 0; /* Coloca a textura abaixo de outros elementos */
 }
 
-.ondeComprar p {
-    z-index: 3;
-    margin-top: 43px;
-    position: absolute;
-    text-align: center;
-    color: var(--branco);
-    font-size: 42px;
-    font-weight: 700;
+.OndeComprar p {
+    z-index: 3; /* Garante que o texto esteja acima de outros elementos */
+    margin-top: 43px; /* Define espaçamento superior */
+    position: absolute; /* Posicionamento livre */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--branco); /* Texto branco */
+    font-size: 42px; /* Tamanho grande do texto */
+    font-weight: 700; /* Texto em negrito */
 }
 
-.ondeComprar-title {
-    display: grid;
-    width: 100%;
-    justify-content: center;
+.OndeComprar-title {
+    display: grid; /* Cria uma grade para centralizar os títulos */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Largura total */
 }
 
-.ondeComprar-container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    position: relative;
-    height: auto;
-    margin-left: 40px;
-    margin-right: 40px;
+.OndeComprar-container {
+    display: grid; /* Cria uma grade para os produtos */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Define 4 colunas iguais */
+    gap: 20px; /* Espaçamento entre os itens */
+    position: relative; /* Necessário para posicionar os itens dentro do contêiner */
+    height: auto; /* Altura automática baseada no conteúdo */
+    margin-left: 40px; /* Espaçamento à esquerda */
+    margin-right: 40px; /* Espaçamento à direita */
 }
 
 .img-ebook {
-    width: 90%;
+    width: 90%; /* Largura relativa ao contêiner do produto */
 }
 
 #preco-01 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
 #img-ebook-01 {
-    width: 250px;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    width: 250px; /* Largura da imagem */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 45px; /* Espaçamento inferior */
 }
 
 #img-ebook-02 {
-    width: 250px;
-    margin-bottom: 30px;
+    width: 250px; /* Largura da imagem */
+    margin-bottom: 30px; /* Espaçamento inferior */
 }
 
 #img-ebook-03 {
-    width: 220px;
-    margin-top: 25px;
-    margin-bottom: 52px;
+    width: 220px; /* Largura da imagem */
+    margin-top: 25px; /* Espaçamento superior */
+    margin-bottom: 52px; /* Espaçamento inferior */
 }
 
 #img-ebook-04 {
-    width: 220px;
-    margin-top: 25px;
-    margin-bottom: 20px;
+    width: 220px; /* Largura da imagem */
+    margin-top: 25px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .produto-container {
-    margin-top: 130px;
-    width: 260px;
-    height: 650px;
-    background: var(--branco);
-    text-align: center;
-    border-radius: 19px;
-    display: inline-block;
+    margin-top: 130px; /* Espaçamento superior */
+    width: 260px; /* Largura do contêiner */
+    height: 650px; /* Altura do contêiner */
+    background: var(--branco-2); /* Fundo branco acinzentado */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    border-radius: 19px; /* Cantos arredondados */
+    display: inline-block; /* Exibe os contêineres em linha */
 }
 
 .cruz-02 img {
-    margin-top: 30px;
-    width: 100%;
-    width: 41px;
-    height: 41px;
+    margin-top: 30px; /* Espaçamento superior */
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    width: 41px; /* Largura fixa */
+    height: 41px; /* Altura fixa */
 }
 
 .produto-titulo {
-    z-index: 2;
-    margin-top: 10px;
-    text-align: center;
-    color: var(--verde-escuro);
-    font-size: 36px;
-    font-weight: 700;
-    word-wrap: break-word;
-    text-transform: uppercase;
+    z-index: 2; /* Garante que o título fique acima de outros elementos */
+    margin-top: 10px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+    color: var(--verde-escuro); /* Texto verde escuro */
+    font-size: 36px; /* Tamanho grande do texto */
+    font-weight: 700; /* Texto em negrito */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
 }
 
 .produto-valor {
-    text-align: center;
-    color: var(--verde-escuro);
-    font-size: 40px;
-    font-weight: 700;
-    margin-top: -40px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--verde-escuro); /* Texto verde escuro */
+    font-size: 40px; /* Tamanho grande do texto */
+    font-weight: 700; /* Texto em negrito */
+    margin-top: -40px; /* Margem negativa para ajustar posição */
 }
 
 #produto-valor-02 {
-    margin-top: -15px;
-    color: var(--verde-escuro);
-    font-size: 30px;
+    margin-top: -15px; /* Margem superior negativa para alinhamento */
+    color: var(--verde-escuro); /* Texto verde escuro */
+    font-size: 30px; /* Tamanho menor do texto */
 }
 
 .produto-complemento {
-    z-index: 4;
-    text-align: center;
-    color: var(--verde-escuro);
-    font-size: 20px;
-    line-height: 25px;
-    margin-top: -20px;
-    margin-bottom: 20px;
+    z-index: 4; /* Coloca o texto acima de outros elementos */
+    text-align: center; /* Centraliza o texto */
+    color: var(--verde-escuro); /* Texto verde escuro */
+    font-size: 20px; /* Tamanho menor do texto */
+    line-height: 25px; /* Altura das linhas */
+    margin-top: -20px; /* Margem superior negativa para ajuste */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 #produto-complemento-02 {
-    margin-top: -15px;
-    color: var(--verde-escuro);
-    font-size: 20px;
-    line-height: 25px;
+    margin-top: -15px; /* Margem superior negativa */
+    color: var(--verde-escuro); /* Texto verde escuro */
+    font-size: 20px; /* Tamanho do texto */
+    line-height: 25px; /* Altura das linhas */
 }
 
 .produto-botao {
-    color: var(--branco);
-    background: var(--vermelho);
-    margin-top: 20px;
-    margin-bottom: 30px;
-    max-width: 200px;
-    height: 70px;
-    border-radius: 10px;
-    font-weight: 700;
-    margin-left: 32px;
+    color: var(--branco); /* Texto branco */
+    background: var(--vermelho); /* Fundo vermelho */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    max-width: 200px; /* Largura máxima do botão */
+    height: 70px; /* Altura fixa do botão */
+    border-radius: 10px; /* Cantos arredondados */
+    font-weight: 700; /* Texto em negrito */
+    margin-left: 32px; /* Espaçamento à esquerda */
 }
 
 .produto-botao p, a {
-    color: var(--branco);
-    text-decoration: none;
-    margin: 0px auto;
-    padding: 0px;
-    margin-left: 13px;
-    margin-bottom: 15px;
-    line-height: 70px;
+    color: #fff; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado de links */
+    margin: 0px auto; /* Centraliza o texto automaticamente */
+    padding: 0px; /* Remove preenchimento interno */
+    margin-left: 13px; /* Margem à esquerda */
+    margin-bottom: 15px; /* Margem inferior */
+    line-height: 70px; /* Centraliza o texto verticalmente no botão */
 }
 
+/* Estilos para a seção de relatos */
 
+/* Contêiner principal da seção */
+.relatos {
+    top: 2630px; /* Define a distância do topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+}
 
+/* Texto principal da seção de relatos */
+.relatos-texto {
+    position: relative; /* Posiciona em relação ao contêiner pai */
+    top: -95px; /* Ajusta a posição vertical com margem negativa */
+    display: inline-block; /* Exibe o elemento como bloco em linha */
+}
 
+/* Grade das imagens de relatos */
+.grid-relatos {
+    position: relative; /* Necessário para ajuste dentro do contêiner */
+    height: auto; /* Ajusta a altura com base no conteúdo */
+    display: grid; /* Cria um layout em grade */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    grid-template-columns: 1fr 1fr 1fr; /* Divide em três colunas iguais */
+    gap: 60px; /* Define o espaçamento entre os itens */
+}
 
+/* Estilo do texto de descrição da seção */
+.relatos_texto {
+    width: 1004px; /* Define a largura máxima do texto */
+    left: 60px; /* Espaçamento da borda esquerda */
+    top: 8px; /* Ajuste de distância do topo */
+    position: absolute; /* Permite posicionamento livre */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #1B1E18; /* Define a cor verde escuro */
+    font-size: 36px; /* Define tamanho grande para o texto */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    font-weight: 700; /* Negrito para destaque */
+    line-height: 43.45px; /* Altura da linha para espaçamento */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
 
+/* Cruz decorativa à esquerda */
+.relatos_cruz-01 {
+    left: 155px; /* Define a distância da borda esquerda */
+    top: -55px; /* Ajusta a posição vertical com margem negativa */
+    position: absolute; /* Permite posicionamento livre */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    display: inline-flex; /* Exibe como um bloco flexível */
+}
+
+/* Cruz decorativa à direita */
+.relatos_cruz-02 {
+    left: 910px; /* Define a distância da borda esquerda */
+    top: -55px; /* Ajusta a posição vertical com margem negativa */
+    position: absolute; /* Permite posicionamento livre */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    display: inline-flex; /* Exibe como um bloco flexível */
+}
+
+/* Estilo para o ícone vetorial */
+.vector {
+    width: 53px; /* Define a largura fixa */
+    height: 53px; /* Define a altura fixa */
+}
+
+/* Estilo das imagens dos relatos */
+.relatos-imagem {
+    border-radius: 15px; /* Arredonda os cantos da imagem */
+    width: 342px; /* Define a largura fixa */
+    height: 519px; /* Define a altura fixa */
+}
+
+/* Estilos - Onde Comprar */
+
+/* Contêiner principal da seção "Onde Comprar" */
+.links-ecommerce {
+    top: 3280px; /* Define a distância do topo da página */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 18px; /* Cantos arredondados */
+    max-width: 1300px; /* Define a largura máxima */
+    width: 90%; /* Define largura relativa ao contêiner pai */
+    height: 501px; /* Altura fixa */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+}
+
+/* Textura de fundo da seção */
+.links-ecommerce-textura {
+    position: absolute; /* Permite posicionamento livre */
+    max-width: 1300px; /* Define a largura máxima */
+    width: 100%; /* Largura total */
+    height: 501px; /* Altura fixa igual ao contêiner */
+    border-radius: 18px; /* Cantos arredondados */
+    background-image: url("./assets/textura-1.png"); /* Imagem de fundo personalizada */
+    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    background-blend-mode: difference; /* Aplica o modo de mesclagem "difference" */
+    opacity: 0.5; /* Torna a textura semitransparente */
+    z-index: -1; /* Posiciona a textura atrás de outros elementos */
+}
+
+/* Contêiner de texto */
+.links-ecommerce-text {
+    position: relative; /* Permite ajustes de posicionamento */
+    max-width: 500px; /* Largura máxima para o texto */
+    left: 700px; /* Define a distância da borda esquerda */
+    margin-top: 80px; /* Espaçamento superior */
+    color: var(--branco); /* Texto branco */
+    font-family: 'Karma', sans-serif; /* Aplica uma fonte personalizada */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+}
+
+/* Título principal da seção */
+.links-ecommerce-title {
+    font-size: 47px; /* Tamanho grande do título */
+    font-weight: 600; /* Peso médio para o texto */
+    line-height: 51.70px; /* Altura da linha */
+}
+
+/* Subtítulo da seção */
+.links-ecommerce-subtitle {
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 40px; /* Espaçamento inferior */
+    font-size: 20px; /* Tamanho menor para o subtítulo */
+    font-weight: 400; /* Peso normal do texto */
+    line-height: 22px; /* Altura da linha */
+}
+
+/* Contêiner dos botões de links */
+.links-container {
+    position: relative; /* Posicionamento relativo ao contêiner pai */
+    margin-left: 684px; /* Espaçamento à esquerda */
+    margin-right: 40px; /* Espaçamento à direita */
+    height: auto; /* Altura dinâmica baseada no conteúdo */
+    display: grid; /* Cria uma grade para os links */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    grid-template-columns: 1fr 1fr; /* Divide os itens em duas colunas iguais */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos botões */
+.button_ecommerce {
+    background: var(--vermelho); /* Fundo vermelho */
+    width: 180px; /* Largura fixa do botão */
+    height: 40px; /* Altura fixa do botão */
+    border-radius: 8px; /* Cantos arredondados */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 14px 24px; /* Define espaçamento interno do botão */
+    overflow: hidden; /* Esconde conteúdo que ultrapasse o limite do botão */
+}
+
+/* Texto dos botões */
+.button_ecommerce-text {
+    position: relative; /* Permite ajustes de posicionamento */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: 500; /* Peso médio para o texto */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    bottom: 29px; /* Ajuste vertical relativo ao contêiner */
+}
+
+/* Imagem de destaque do eBook */
+.ebook1 {
+    width: 400px; /* Define a largura da imagem */
+    position: absolute; /* Permite posicionamento livre */
+    left: 160px; /* Distância da borda esquerda */
+    top: -30px; /* Ajusta a posição vertical com margem negativa */
+    border-radius: 20px; /* Cantos arredondados */
+}
+
+/* Estilos - Seção Fale Comigo */
+
+/* Contêiner principal da seção "Fale Comigo" */
+.link-direto {
+    top: 3900px; /* Distância do topo da página */
+    max-width: 1200px; /* Largura máxima da seção */
+    width: 90%; /* Largura relativa ao contêiner pai */
+    height: 500px; /* Altura fixa */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+}
+
+/* Contêiner para agrupar os elementos internos */
+.link-direto-group {
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+}
+
+/* Descrição principal da seção */
+.link-direto-description {
+    max-width: 680px; /* Largura máxima do texto */
+    position: absolute; /* Posicionamento livre */
+    top: 36px; /* Ajuste de distância do topo */
+}
+
+/* Destaques no texto da descrição */
+.link-direto-description .highlight {
+    color: #121410; /* Cor do texto em verde escuro */
+    font-size: 32px; /* Tamanho grande do texto */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 48px; /* Altura das linhas */
+    display: block; /* Exibe como bloco */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Parágrafos na descrição */
+.link-direto-description span {
+    color: #121410; /* Cor do texto */
+    font-size: 20px; /* Tamanho do texto médio */
+    font-weight: 400; /* Peso normal do texto */
+    line-height: 30px; /* Altura das linhas */
+    display: block; /* Exibe como bloco */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Contêiner para informações da autora */
+.author {
+    width: 401px; /* Largura fixa */
+    position: absolute; /* Posicionamento livre */
+    left: 781px; /* Distância da borda esquerda */
+    top: 460px; /* Ajuste de distância do topo */
+    text-align: center; /* Centraliza o texto */
+    color: var(--verde-escuro); /* Cor do texto */
+}
+
+/* Nome da autora */
+.author-name {
+    font-size: 20px; /* Tamanho do texto */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 30px; /* Altura das linhas */
+}
+
+/* Título ou cargo da autora */
+.author-title {
+    font-size: 16px; /* Tamanho menor do texto */
+    font-weight: 400; /* Peso normal do texto */
+    line-height: 24px; /* Altura das linhas */
+}
+
+/* Botão de ação "Reserve o Seu Livro" */
+.link-direto-button {
+    width: 263px; /* Largura fixa */
+    height: 52px; /* Altura fixa */
+    position: absolute; /* Posicionamento livre */
+    left: -15px; /* Ajuste da posição horizontal */
+    top: 460px; /* Ajuste da posição vertical */
+    background: var(--vermelho); /* Fundo vermelho */
+    border-radius: 8px; /* Cantos arredondados */
+    display: flex; /* Cria um layout flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Texto do botão */
+.link-direto-button-text {
+    color: var(--branco); /* Texto branco */
+    font-size: 16px; /* Tamanho do texto */
+    font-family: 'Karma', sans-serif; /* Fonte personalizada */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 24px; /* Altura das linhas */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Imagem da autora */
+.author-image {
+    width: 412px; /* Largura fixa */
+    height: 412px; /* Altura fixa */
+    position: absolute; /* Posicionamento livre */
+    left: 776px; /* Ajuste da posição horizontal */
+    top: 30px; /* Ajuste da posição vertical */
+    border-radius: 50%; /* Formato circular */
+}
+
+/* Estilos - Seção Playlist */
+
+/* Contêiner principal da seção Playlist */
+.spotify-playlist {
+    top: 4530px; /* Distância do topo */
+    max-width: 100%; /* Largura máxima */
+    width: 1100px; /* Largura fixa */
+    height: 520px; /* Altura fixa */
+    position: absolute; /* Posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+    z-index: 999; /* Coloca o elemento no topo da pilha */
+    background-color: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 30px; /* Cantos arredondados */
+}
+
+/* Textura de fundo da playlist */
+.playlist-texture {
+    width: 100%; /* Largura total */
+    height: 520px; /* Altura fixa */
+    position: absolute; /* Posicionamento livre */
+    z-index: -1; /* Coloca a textura atrás de outros elementos */
+    border-radius: 30px; /* Cantos arredondados */
+    margin-top: -481px; /* Margem superior negativa para ajuste */
+    background-image: url("./_assets/textura-1.png"); /* Imagem de textura */
+    background-size: cover; /* Ajusta a imagem para cobrir o contêiner */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    background-blend-mode: difference; /* Aplica o modo de mesclagem */
+    opacity: 0.5; /* Torna a textura semitransparente */
+}
+
+/* Texto da playlist */
+.text-playlist {
+    margin: 20px; /* Espaçamento geral */
+    margin-top: 40px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-family: 'Older Dictator', sans-serif; /* Fonte personalizada */
+    color: var(--branco); /* Texto branco */
+    font-size: 60px; /* Tamanho grande do texto */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    font-weight: 100; /* Peso leve do texto */
+}
+
+/* Grade de elementos da playlist */
+.playlist-grid {
+    margin-left: 40px; /* Espaçamento à esquerda */
+    margin-right: 40px; /* Espaçamento à direita */
+    display: grid; /* Cria uma grade para os itens */
+    grid-template-columns: 1fr 1fr 1fr; /* Divide em três colunas iguais */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-items: center; /* Centraliza horizontalmente os itens */
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+/* Estilos - Formulário */
+
+/* Contêiner principal do formulário */
+.form-container {
+    position: absolute; /* Permite posicionamento livre */
+    z-index: 99; /* Garante que o formulário fique acima de outros elementos */
+    top: 4850px; /* Define a distância do topo da página */
+    max-width: 100%; /* Largura máxima para evitar que ultrapasse o contêiner pai */
+    width: 100%; /* Largura total do contêiner */
+    height: 200px; /* Altura fixa */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    color: var(--branco); /* Texto branco */
+}
+
+/* Fundo interno do formulário */
+.form-bg {
+    width: 90%; /* Define largura relativa ao contêiner pai */
+    position: absolute; /* Permite ajuste livre de posicionamento */
+    top: 83px; /* Distância do topo do contêiner pai */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+    font-family: 'Karma', sans-serif; /* Aplica fonte personalizada */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    font-size: 20px; /* Tamanho padrão do texto */
+    font-weight: 400; /* Peso normal para o texto */
+    line-height: 22px; /* Altura da linha */
+}
+
+/* Parágrafo de texto do formulário */
+.form-container p {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--branco); /* Cor branca para o texto */
+    font-size: 28px; /* Tamanho grande do texto */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 48px; /* Altura das linhas */
+}
+
+/* Grupo de elementos do formulário */
+.form-group {
+    display: grid; /* Cria um layout em grade */
+    grid-template-columns: 1fr 1fr 1fr; /* Divide em três colunas iguais */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilos dos rótulos dos campos do formulário */
+.form-group label {
+    font-weight: 600; /* Negrito leve para destaque */
+    margin-right: 10px; /* Espaçamento à direita do rótulo */
+}
+
+/* Campo de entrada para o nome */
+#name input {
+    font-family: 'Karma', sans-serif; /* Aplica fonte personalizada */
+    font-size: 16px; /* Define tamanho do texto */
+    margin-right: 30px; /* Espaçamento à direita */
+    width: 250px; /* Largura fixa */
+    height: 46px; /* Altura fixa */
+    border-radius: 7px; /* Cantos arredondados */
+    border: none; /* Remove a borda padrão */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+}
+
+/* Campo de entrada para a mensagem */
+#mensagem input {
+    font-family: 'Karma', sans-serif; /* Aplica fonte personalizada */
+    font-size: 16px; /* Define tamanho do texto */
+    margin-right: 30px; /* Espaçamento à direita */
+    width: 250px; /* Largura fixa */
+    height: 46px; /* Altura fixa */
+    border-radius: 7px; /* Cantos arredondados */
+    border: none; /* Remove a borda padrão */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+}
+
+/* Botão de envio do formulário */
+.button-form {
+    width: 263px; /* Largura fixa */
+    height: 46px; /* Altura fixa */
+    background: var(--vermelho); /* Fundo vermelho */
+    color: var(--branco); /* Texto branco */
+    border-radius: 8px; /* Cantos arredondados */
+    font-family: 'Karma', sans-serif; /* Aplica fonte personalizada */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    font-size: 20px; /* Tamanho padrão do texto */
+    font-weight: 400; /* Peso normal do texto */
+    line-height: 22px; /* Altura das linhas */
+    text-decoration: none; /* Remove sublinhado padrão */
+    border: none; /* Remove a borda padrão */
+}
+
+/* Estilos - Rodapé */
+
+/* Contêiner principal do rodapé */
+.footer {
+    position: absolute; /* Permite posicionamento livre */
+    max-width: 100%; /* Largura máxima para evitar quebra */
+    width: 100%; /* Largura total do rodapé */
+    height: 171px; /* Altura fixa */
+    top: 5160px; /* Define a distância do topo da página */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+    background: white; /* Fundo branco */
+    padding-top: 24px; /* Espaçamento interno superior */
+    padding-bottom: 24px; /* Espaçamento interno inferior */
+}
+
+/* Título no rodapé */
+.footer-title {
+    width: 100%; /* Largura total do texto */
+    margin: 10px; /* Espaçamento geral ao redor */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--verde-escuro); /* Texto em verde escuro */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 28.97px; /* Altura das linhas */
+}
+
+/* Texto de créditos no rodapé */
+.footer-credit {
+    width: 100%; /* Largura total */
+    margin-top: 20px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--verde-escuro); /* Texto em verde escuro */
+    font-size: 13px; /* Texto pequeno */
+    font-weight: 400; /* Peso normal */
+    line-height: 14px; /* Altura das linhas */
+}
+
+/* Contêiner dos ícones sociais */
+.social-icons {
+    align-items: center; /* Centraliza os ícones verticalmente */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    display: grid; /* Cria uma grade para os ícones */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide em quatro colunas iguais */
+    gap: 40px; /* Espaçamento entre os ícones */
+    margin-top: 40px; /* Espaçamento superior */
+    position: absolute; /* Posicionamento livre */
+    max-width: 5%; /* Largura máxima */
+    width: 100%; /* Largura total */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+}
+
+/* Estilo individual dos ícones sociais */
+.icon {
+    width: 30px; /* Largura fixa */
+    height: 30px; /* Altura fixa */
+}
+
+/* Ícone de destaque do Catarse */
+.icon-catarse {
+    width: 115px; /* Largura fixa */
+    height: 117px; /* Altura fixa */
+    position: absolute; /* Permite posicionamento livre */
+    right: 70px; /* Distância da borda direita */
+    top: 45px; /* Distância do topo do rodapé */
+}

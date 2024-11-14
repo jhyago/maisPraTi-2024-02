@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- Declaração do tipo de documento como HTML5 e define o idioma da página como português do Brasil. -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a caracteres especiais, como acentos e cedilha. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para design responsivo, ajustando a largura da página à largura da tela do dispositivo. -->
     <title>Relatos de um Vampiro na Guerra - Pré-venda</title>
+    <!-- Define o título da página, que será exibido na aba do navegador. -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linka um arquivo CSS externo para estilizar o layout e os elementos da página. -->
 
     <meta name="description" content="LP lançamento do Livro Rellatos de um Vampiro na Guerra">
+    <!-- Adiciona uma descrição da página, útil para motores de busca e redes sociais. -->
     <meta name="author" content="Leonardo Boeira Maciel">
+    <!-- Identifica o autor da página, útil para fins de crédito e rastreamento. -->
     <meta name="keywords" content="livro, ebook, lançamento, vampiro, guerra">
-    <link rel="stylesheet" href="">
+    <!-- Lista de palavras-chave relacionadas ao conteúdo, para ajudar na indexação em motores de busca. -->
     <link rel="icon" href="./assets/fav-icon.png" type="image/png">
+    <!-- Define o ícone da página (favicon), exibido na aba do navegador. -->
 </head>
 
 <body>
+    <!-- Início do corpo da página. Todo o conteúdo visível ao usuário está aqui. -->
+
     <div class="Navigation">
+        <!-- Contêiner para a barra de navegação principal. -->
         <div class="logo-autora">
+            <!-- Subcontêiner para exibir o logotipo e o nome da autora. -->
             <div class="cruz">
                 <img src="./assets/cruz-03.svg" alt="Cruz">
+                <!-- Imagem decorativa em formato de cruz. -->
             </div>
             <div class="nome-navigation">Ana Clara Galli</div>
-
+            <!-- Exibe o nome da autora no menu de navegação. -->
         </div>
         <div class="Navigation-itens">
+            <!-- Subcontêiner para os itens de navegação. -->
             <div class="items">
+                <!-- Lista de links de navegação. -->
                 <p><a href="#" id="linkKits">Kits</a></p>
+                <!-- Link para a seção de Kits. O ID será usado no JavaScript para implementar o scroll suave. -->
                 <p><a href="#" id="linkOndeComprar">Onde Comprar</a></p>
+                <!-- Link para a seção "Onde Comprar". -->
                 <p><a href="#" id="linkFaleComigo">Fale Comigo</a></p>
+                <!-- Link para a seção "Fale Comigo". -->
                 <div class="button-navigation">
+                    <!-- Contêiner para o botão de destaque. -->
                     <div class="ComprarAgora">
                         <a id="ComprarAgora" href="https://www.catarse.me/rduvng" target="_blank">Comprar Agora</a>
+                        <!-- Botão que redireciona o usuário para o site do Catarse em uma nova aba. -->
                     </div>
                 </div>
             </div>
@@ -38,122 +58,418 @@
     </div>
 
     <div class="main">
-        <div class="background" alt="background">
-            <h1 class="title">Relatos de um<br>Vampiro na Guerra</h1>
-
-            <p class="description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, impedit nihil odit amet quos quod vero
-                expedita dicta ad saepe temporibus officia odio laudantium aspernatur. Esse nulla officia maxime autem
-                rem, ratione obcaecati unde, sapiente ex quam dolorum excepturi corrupti sequi dolor. Tempore
-                repellendus assumenda qui exercitationem ex! Aspernatur, voluptatibus.</p>
-        </div>
-
-        <a href="">
+        <!-- Seção principal da página, que destaca o título e a descrição do livro. -->
+        <div class="background" alt="Background"></div>
+        <!-- Elemento de fundo, que pode ser uma imagem ou um gradiente decorativo. -->
+        <h1 class="title">Relatos de um<br>Vampiro na Guerra</h1>
+        <!-- Título principal do livro, com uma quebra de linha para melhorar o layout. -->
+        <p class="description">
+            <!-- Parágrafo que contém uma descrição envolvente do enredo do livro. -->
+            Hermina, uma jovem obscurecida pela monotonia de sua vida, tem sua existência transformada ao se deparar com
+            um encontro extraordinário. Em uma história que ecoa a bravura de Mulan...
+        </p>
+        <a target="_blank"
+            href="https://file.notion.so/f/f/96f8f21a-0e81-4969-b007-de2e8727f07d/06a50b30-a4ba-469c-afc7-b3bb5440999f/Relatos_de_um_Vampiro_na_Guerra_-_Primeiros_Captulos.pdf?id=96ed551a-6dac-4dc2-99c9-85df2bbe0637&table=block&spaceId=96f8f21a-0e81-4969-b007-de2e8727f07d&expirationTimestamp=1718136000000&signature=hkt9Rig8lhAQlvUIzqYlqOtvt6ACQ4USLDrP_qGbI7U&downloadName=Relatos+de+um+Vampiro+na+Guerra+-+Primeiros+Cap%C3%ADtulos.pdf">
+            <!-- Link para acessar os primeiros capítulos do livro em formato PDF. -->
             <div class="button-main">
+                <!-- Botão estilizado para destacar o link para os capítulos. -->
                 <div class="button-main-text">Leia os primeiros capítulos de graça!</div>
+                <!-- Texto dentro do botão, incentivando o usuário a acessar o conteúdo gratuito. -->
             </div>
         </a>
         <img class="mockup" src="./assets/mockup-leve-1.png" alt="Mockup do Livro">
+        <!-- Mockup do livro, exibido como uma imagem para aumentar o apelo visual. -->
     </div>
 
     <div class="stickers">
-        <div class="header">O que encontrará neste livro:</div>
-
+        <!-- Seção que apresenta destaques sobre o livro, com adesivos e textos explicativos. -->
+        <div class="header">O que você encontrará neste livro:</div>
+        <!-- Título da seção, destacando o conteúdo único do livro. -->
         <div class="sticker-grid">
+            <!-- Grade que organiza os adesivos em um layout estruturado. -->
             <div class="sticker-container">
-                <img class="sticker" src="./assets/adesivo-01-5.png" alt="Adesivo 1">
-                <p class="sticker-text" id="desc1">Uma jornada épica de autodescoberta e desafios inimagináveis.</p>
+                <!-- Contêiner para o primeiro adesivo e seu texto descritivo. -->
+                <img class="sticker" id="sticker1" src="./assets/adesivo-01-5.png" alt="Adesivo 1">
+                <!-- Imagem do adesivo número 1. -->
+                <p class="stickers-text" id="desc1">Uma jornada épica de autodescoberta e desafios inimagináveis.</p>
+                <!-- Texto explicativo para o adesivo número 1. -->
             </div>
-
             <div class="sticker-container">
-                <img class="sticker" src="./assets/adesivo-01-6.png" alt="Adesivo 2">
-                <p class="sticker-text" id="desc2">Uma protagonista corajosa que desafia as convenções de seu tempo.</p>
+                <!-- Contêiner para o segundo adesivo. -->
+                <img class="sticker" id="sticker2" src="./assets/adesivo-01-6.png" alt="Adesivo 2">
+                <!-- Imagem do adesivo número 2. -->
+                <p class="stickers-text" id="desc2">Uma protagonista corajosa que desafia as convenções de seu tempo.
+                </p>
+                <!-- Texto explicativo para o adesivo número 2. -->
             </div>
-
             <div class="sticker-container">
-                <img class="sticker" src="./assets/adesivo-01-7.png" alt="Adesivo 3">
-                <p class="sticker-text" id="desc3">Um mergulho na cultura e na história da Hungria nas vésperas da primeira Guerra Mundial.</p>
+                <!-- Contêiner para o terceiro adesivo. -->
+                <img class="sticker" id="sticker3" src="./assets/adesivo-01-7.png" alt="Adesivo 3">
+                <!-- Imagem do adesivo número 3. -->
+                <p class="stickers-text" id="desc3">Um mergulho na cultura e na história da Hungria nas vésperas da
+                    Primeira Guerra Mundial.</p>
+                <!-- Texto explicativo para o adesivo número 3. -->
             </div>
-
             <div class="sticker-container">
-                <img class="sticker" src="./assets/adesivo-01-8.png" alt="Adesivo 4">
-                <p class="sticker-text" id="desc4">Um confronto com mitos e realidades que mudarão a vida de Mina para sempre.</p>
+                <!-- Contêiner para o quarto adesivo. -->
+                <img class="sticker" id="sticker4" src="./assets/adesivo-01-8.png" alt="Adesivo 4">
+                <!-- Imagem do adesivo número 4. -->
+                <p class="stickers-text" id="desc4">Um confronto com mitos e realidades que mudarão a vida de Mina para
+                    sempre.
+                </p>
+                <!-- Texto explicativo para o adesivo número 4. -->
             </div>
         </div>
     </div>
-
-    <div id="kits" class="ondeComprar">
+    <div id="kits" class="OndeComprar">
+        <!-- Seção "Kits", onde são exibidas as diferentes opções de compra do livro. -->
         <div class="box-bg"></div>
+        <!-- Elemento decorativo de fundo, que pode ser uma imagem ou uma cor sólida. -->
         <div class="box-bg-texture"></div>
+        <!-- Elemento adicional de textura, usado para estilizar o fundo. -->
 
-        <div class="ondeComprar-title">
+        <div class="OndeComprar-title">
+            <!-- Título da seção "Opções de compra". -->
             <p>Opções de compra</p>
         </div>
 
-        <div class="ondeComprar-container">
+        <div class="OndeComprar-container">
+            <!-- Contêiner que organiza os diferentes produtos disponíveis para compra. -->
+
             <div class="produto-container">
+                <!-- Contêiner para o primeiro produto (E-BOOK). -->
                 <div class="cruz-02">
+                    <!-- Imagem decorativa em forma de cruz. -->
                     <img src="./assets/cruz-01.svg" alt="Cruz">
                 </div>
                 <div class="produto-titulo">E-BOOK</div>
+                <!-- Título do produto: E-book. -->
                 <img class="img-ebook" id="img-ebook-01" src="./assets/kit-01.png" />
+                <!-- Imagem ilustrativa do produto E-book. -->
                 <div id="preco-01" class="produto-valor">R$18</div>
+                <!-- Exibe o preço do produto. -->
                 <div class="produto-complemento">envio imediato<br />(contate por DM)</div>
+                <!-- Informações adicionais sobre o envio do E-book. -->
                 <div class="produto-botao">
-                    <p><a href="https://www.catarse.me/rduvng" target="_blank">COMPRE AGORA</p>
+                    <!-- Botão para redirecionar à página de compra do E-book. -->
+                    <p><a href="https://www.catarse.me/rduvng" target="_blank" rel="noopener noreferrer">COMPRE
+                            AGORA</a></p>
                 </div>
-                </a>
             </div>
 
             <div class="produto-container">
+                <!-- Contêiner para o segundo produto (Livro Físico). -->
                 <div class="cruz-02">
+                    <!-- Imagem decorativa em forma de cruz. -->
                     <img src="./assets/cruz-01.svg" alt="Cruz">
                 </div>
                 <div class="produto-titulo">livro físico</div>
-
+                <!-- Título do produto: Livro físico. -->
                 <img class="img-ebook" id="img-ebook-02" src="./assets/kit-02.png" />
+                <!-- Imagem ilustrativa do produto Livro físico. -->
                 <div class="produto-valor">R$65</div>
+                <!-- Exibe o preço do produto para Porto Alegre. -->
                 <div class="produto-complemento">Porto Alegre</div>
+                <!-- Informação sobre o local do envio do produto. -->
                 <div id="produto-valor-02" class="produto-valor">R$60 + frete</div>
+                <!-- Exibe o preço do produto para outras regiões. -->
                 <div id="produto-complemento-02" class="produto-complemento">outras regiões</div>
+                <!-- Informações adicionais sobre o envio para outras regiões. -->
                 <div class="produto-botao">
-                    <p><a href="https://www.catarse.me/rduvng" target="_blank">COMPRE AGORA</a></p>
+                    <!-- Botão para redirecionar à página de compra do livro físico. -->
+                    <p><a href="https://www.catarse.me/rduvng" target="_blank" rel="noopener noreferrer">COMPRE
+                            AGORA</a></p>
                 </div>
             </div>
 
             <div class="produto-container">
+                <!-- Contêiner para o terceiro produto (Kit Kétszy). -->
                 <div class="cruz-02">
+                    <!-- Imagem decorativa em forma de cruz. -->
                     <img src="./assets/cruz-01.svg" alt="Cruz">
                 </div>
                 <div class="produto-titulo">kit kétszy</div>
-
+                <!-- Título do produto: Kit Kétszy. -->
                 <img class="img-ebook" id="img-ebook-03" src="./assets/kit-03.png" />
+                <!-- Imagem ilustrativa do produto Kit Kétszy. -->
                 <div class="produto-valor">R$70</div>
+                <!-- Exibe o preço do produto para Porto Alegre. -->
                 <div class="produto-complemento">Porto Alegre</div>
+                <!-- Informação sobre o local do envio do produto. -->
                 <div id="produto-valor-02" class="produto-valor">R$70 + frete</div>
+                <!-- Exibe o preço do produto para outras regiões. -->
                 <div id="produto-complemento-02" class="produto-complemento">outras regiões</div>
+                <!-- Informações adicionais sobre o envio para outras regiões. -->
                 <div class="produto-botao">
-                    <p><a href="https://www.catarse.me/rduvng" target="_blank">COMPRE AGORA</a></p>
+                    <!-- Botão para redirecionar à página de compra do Kit Kétszy. -->
+                    <p><a href="https://www.catarse.me/rduvng" target="_blank" rel="noopener noreferrer">COMPRE
+                            AGORA</a></p>
                 </div>
             </div>
 
             <div class="produto-container">
+                <!-- Contêiner para o quarto produto (Kit Kovács). -->
                 <div class="cruz-02">
+                    <!-- Imagem decorativa em forma de cruz. -->
                     <img src="./assets/cruz-01.svg" alt="Cruz">
                 </div>
                 <div class="produto-titulo">kit KOVÁCS</div>
-
+                <!-- Título do produto: Kit Kovács. -->
                 <img class="img-ebook" id="img-ebook-04" src="./assets/kit-04.png" />
+                <!-- Imagem ilustrativa do produto Kit Kovács. -->
                 <div class="produto-valor">R$75</div>
+                <!-- Exibe o preço do produto para Porto Alegre. -->
                 <div class="produto-complemento">Porto Alegre</div>
+                <!-- Informação sobre o local do envio do produto. -->
                 <div id="produto-valor-02" class="produto-valor">R$75 + frete</div>
+                <!-- Exibe o preço do produto para outras regiões. -->
                 <div id="produto-complemento-02" class="produto-complemento">outras regiões</div>
+                <!-- Informações adicionais sobre o envio para outras regiões. -->
                 <div class="produto-botao">
-                    <p><a href="https://www.catarse.me/rduvng" target="_blank">COMPRE AGORA</a></p>
+                    <!-- Botão para redirecionar à página de compra do Kit Kovács. -->
+                    <p><a href="https://www.catarse.me/rduvng" target="_blank" rel="noopener noreferrer">COMPRE
+                            AGORA</a></p>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="relatos">
+        <!-- Seção para exibir relatos ou avaliações de quem já comprou o livro. -->
+        <div class="relatos-texto">
+            <!-- Texto de introdução aos relatos. -->
+            <div class="relatos_cruz-01">
+                <div class="vector"></div>
+                <!-- Elemento decorativo em forma de vetor. -->
+                <img src="./assets/cruz-01.svg" alt="Cruz">
+                <!-- Imagem decorativa em forma de cruz. -->
+            </div>
+            <div class="relatos_texto">Relatos de quem já garantiu sua leitura</div>
+            <!-- Texto explicativo sobre os relatos. -->
+            <div class="relatos_cruz-02">
+                <div class="vector"></div>
+                <!-- Outro elemento decorativo em forma de vetor. -->
+                <img src="./assets/cruz-01.svg" alt="Cruz">
+                <!-- Imagem decorativa em forma de cruz. -->
+            </div>
+        </div>
+
+        <div class="grid-relatos">
+            <!-- Grade para organizar os relatos visuais. -->
+            <div>
+                <img id="imagem-02" class="relatos-imagem" src="./assets/insta-01.png" />
+                <!-- Imagem de um relato ou avaliação. -->
+            </div>
+            <div>
+                <img id="imagem-01" class="relatos-imagem" src="./assets/insta-03.png" />
+                <!-- Outra imagem de relato. -->
+            </div>
+            <div>
+                <img id="imagem-03" class="relatos-imagem" src="./assets/insta-02.png" />
+                <!-- Outra imagem de relato. -->
+            </div>
+        </div>
+    </div>
+    <div id="onde-comprar" class="links-ecommerce">
+        <!-- Seção para exibir links de e-commerces onde o livro pode ser comprado. -->
+        <div class="links-ecommerce-textura">
+        </div>
+        <!-- Elemento decorativo de textura para o fundo. -->
+
+        <div class="links-ecommerce-text">
+            <!-- Contêiner de texto com título e subtítulo para a seção. -->
+            <div class="links-ecommerce-title">Uma história que irá atravessar um século.</div>
+            <!-- Título da seção para atrair o usuário. -->
+            <div class="links-ecommerce-subtitle">Reserve sua cópia agora e faça parte dessa jornada.</div>
+            <!-- Subtítulo explicando a importância de adquirir o livro. -->
+        </div>
+
+        <div class="links-container">
+            <!-- Contêiner para organizar os botões de links para e-commerces. -->
+            <a href="https://www.amazon.com.br/Relatos-um-Vampiro-na-Guerra-ebook/dp/B0D1LC8STG" target="_blank"
+                class="button_ecommerce">
+                <!-- Botão que leva para o e-commerce da Amazon (E-book). -->
+                <p id="button_amazon_ebook" class="button_ecommerce-text">AMAZON - EBOOK</p>
+                <!-- Texto do botão que indica que é para comprar o e-book. -->
+            </a>
+
+            <a href="https://www.amazon.com.br/dp/6500988353?ref=myi_title_dp" target="_blank" class="button_ecommerce">
+                <!-- Botão que leva para o e-commerce da Amazon (Capa Dura). -->
+                <p class="button_ecommerce-text">AMAZON - CAPA DURA</p>
+                <!-- Texto do botão que indica que é para comprar o livro capa dura. -->
+            </a>
+
+            <a href="https://shopee.com.br/product/332636394/18499247830/" target="_blank" class="button_ecommerce">
+                <!-- Botão que leva para o e-commerce Shopee. -->
+                <p class="button_ecommerce-text">SHOPPE</p>
+                <!-- Texto do botão indicando o nome da plataforma Shopee. -->
+            </a>
+        </div>
+
+        <img class="ebook1" src="./assets/red_cross2.png" alt="Ebook">
+        <!-- Imagem decorativa exibida ao lado dos botões. -->
+    </div>
+
+    <div id="fale-comigo" class="link-direto">
+        <!-- Seção "Fale Comigo", para contato direto com a autora. -->
+        <div class="link-direto-group">
+            <!-- Agrupamento dos elementos de texto e botão. -->
+            <div class="link-direto-description">
+                <!-- Descrição que incentiva o contato direto com a autora. -->
+                <span class="highlight">Para comprar o livro com preço mais acessível (sem tarifas) me chame no
+                    Instagram.<br /></span>
+                <!-- Destaca que a compra pelo Instagram é mais acessível. -->
+
+                <span>Para leitores de Porto Alegre é possível combinar entrega sem custo de frete. Para outros estados
+                    este valor deverá ser calculado juntamente.<br /></span>
+                <!-- Explica as condições de frete para diferentes regiões. -->
+
+                <span>Neste modo, o valor é direcionado inteiramente à autora, sem ter parte cortada por taxas de
+                    plataforma de vendas.</span>
+                <!-- Enfatiza que a compra direta apoia melhor a autora. -->
+
+                <a href="https://www.instagram.com/rduvng/" target="_blank" class="link-direto-button">
+                    <!-- Botão que leva ao Instagram da autora. -->
+                    <p class="link-direto-button-text">Reserve o Seu Livro Comigo</p>
+                    <!-- Texto dentro do botão. -->
+                </a>
+            </div>
+
+            <div class="author">
+                <!-- Exibe informações sobre a autora. -->
+                <span class="author-name">Ana Clara Galli<br /></span>
+                <!-- Nome da autora. -->
+                <span class="author-title">autora de Relatos de um Vampiro na Guerra</span>
+                <!-- Título de apresentação da autora. -->
+            </div>
+            <img class="author-image" src="./assets/foto-autora.png" alt="Foto da autora">
+            <!-- Foto da autora exibida ao lado das informações. -->
+        </div>
+    </div>
+
+    <div class="spotify-playlist">
+        <!-- Seção com playlists do Spotify, relacionadas ao tema do livro. -->
+        <p class="text-playlist">Entre no Mood</p>
+        <!-- Texto que apresenta a seção de playlists. -->
+        <div class="playlist-grid">
+            <!-- Contêiner para organizar os players do Spotify em grade. -->
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/1rIllGWmBAdBDtMbsom9wU?utm_source=generator" width="300"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <!-- Primeiro iframe que exibe uma playlist do Spotify. -->
+
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/3RXP1GHeziPq7uXIJU1iRr?utm_source=generator" width="300"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <!-- Segundo iframe que exibe outra playlist do Spotify. -->
+
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/5ZyTCVn4qWo0U8hSAEEGUB?utm_source=generator" width="300"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <!-- Terceiro iframe que exibe outra playlist do Spotify. -->
+        </div>
+        <div class="playlist-texture">
+        </div>
+        <!-- Elemento decorativo para o fundo da seção. -->
+    </div>
+
+    <div class="form-container">
+        <!-- Seção de formulário para dúvidas ou contato. -->
+        <div class="form-bg">
+            <!-- Fundo decorativo do formulário. -->
+            <p>Para dúvidas ou contato, encaminhe sua mensagem</p>
+            <!-- Texto introdutório explicando o propósito do formulário. -->
+            <form id="contact-form">
+                <!-- Formulário com um ID para ser manipulado via JavaScript. -->
+                <div class="form-group">
+                    <!-- Agrupamento de campos do formulário. -->
+                    <div id="name">
+                        <!-- Campo para o nome do usuário. -->
+                        <label for="name">Nome</label>
+                        <!-- Rótulo do campo de entrada para o nome. -->
+                        <input type="text" name="name" id="name" />
+                        <!-- Campo de entrada de texto para o nome. -->
+                    </div>
+                    <div id="mensagem">
+                        <!-- Campo para a mensagem do usuário. -->
+                        <label for="mensagem">Mensagem</label>
+                        <!-- Rótulo do campo de entrada para a mensagem. -->
+                        <input type="text" name="mensagem" id="mensagem" maxlength="300" />
+                        <!-- Campo de entrada de texto limitado a 300 caracteres. -->
+                    </div>
+
+                    <button type="submit" class="button-form">Enviar</button>
+                    <!-- Botão para submeter o formulário. -->
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // Script para processar o envio do formulário via WhatsApp.
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Evita o comportamento padrão do envio do formulário.
+
+                const name = document.getElementById('name').querySelector('input').value;
+                // Captura o valor do campo "Nome".
+                const mensagem = document.getElementById('mensagem').querySelector('input').value;
+                // Captura o valor do campo "Mensagem".
+
+                const phoneNumber = '5551992626012';
+                // Define o número de telefone para o envio do WhatsApp.
+                const text = `Nome: ${name}%0AMensagem: ${mensagem}`;
+                // Monta o texto da mensagem no formato apropriado.
+
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+                // Cria a URL para o envio da mensagem no WhatsApp.
+
+                window.open(whatsappUrl, '_blank');
+                // Abre a URL no WhatsApp em uma nova aba.
+            });
+        </script>
+    </div>
+
+    <div class="footer">
+        <!-- Rodapé da página com informações adicionais e links de redes sociais. -->
+        <div class="footer-title">Relatos de um Vampiro na Guerra</div>
+        <!-- Título do livro destacado no rodapé. -->
+        <div class="social-icons">
+            <!-- Ícones com links para redes sociais. -->
+            <a href="https://www.goodreads.com/book/show/211226924-relatos-de-um-vampiro-na-guerra" target="_blank">
+                <img class="icon" src="./assets/icon-goodreads.png" alt="Goodreads">
+                <!-- Ícone que leva ao perfil do livro no Goodreads. -->
+            </a>
+
+            <a href="https://www.instagram.com/rduvng/" target="_blank">
+                <img class="icon" src="./assets/instagram-icon.svg" alt="Instagram">
+                <!-- Ícone que leva ao perfil do livro no Instagram. -->
+            </a>
+
+            <a href="https://www.skoob.com.br/relatos-de-um-vampiro-na-guerra-122450332ed122451356.html"
+                target="_blank">
+                <img class="icon" src="./assets/icon-skoob.png" alt="Skoob">
+                <!-- Ícone que leva ao perfil do livro no Skoob. -->
+            </a>
+        </div>
+        <a href="https://www.catarse.me/rduvng" target="_blank" rel="noopener noreferrer">
+            <img class="icon-catarse" src="./assets/icon-catarse.png" alt="Catarse">
+            <!-- Ícone que leva à página de financiamento coletivo no Catarse. -->
+        </a>
+
+        <a href="https://www.linkedin.com/in/leonardo-boeira-maciel/" target="_blank" rel="noopener noreferrer">
+            <div class="footer-credit">Site desenvolvido por Leonardo Boeira Maciel</div>
+            <!-- Crédito para o desenvolvedor do site. -->
+        </a>
+    </div>
+
+    <script src="./scripts/nav-link.js"></script>
+    <!-- Importa um script externo para manipular a navegação com links. -->
 </body>
 
 </html>
