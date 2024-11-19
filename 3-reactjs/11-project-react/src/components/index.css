@@ -1,0 +1,72 @@
+/* tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  color: #121410;
+  background-color: #F6F1ED;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1rem 1.2rem;
+  padding-bottom: 0.7rem;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #881212;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #730f0f;
+  border-color: #480909;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Tailwind Dark Mode */
+:root.dark {
+  color: #f9f9f9;
+  background-color: rgb(4, 8, 4);
+}
+
+:root.dark h1 {
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'Older Dictator';
+  src: url('./Older_Dictator.otf') format('opentype');
+}

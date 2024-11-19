@@ -1,13 +1,47 @@
 <!doctype html>
+<!-- Declaração do tipo de documento HTML. Define que este documento é HTML5. -->
 <html lang="en">
+  <!-- Elemento raiz da página, com atributo de idioma definido como inglês ("en"). -->
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <!-- Cabeçalho do documento. Contém informações e metadados sobre a página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suporte a caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para que o layout seja responsivo em dispositivos móveis. -->
+
+    <title>Relatos de um Vampiro na Guerra - Lançamento</title>
+    <!-- Define o título da página, exibido na aba do navegador. -->
+
+    <meta name="description" content="LP Lançamento do Livro Relatos de um Vampiro na Guerra">
+    <!-- Define a descrição da página, utilizada por motores de busca para SEO. -->
+
+    <meta name="author" content="Leonardo Boeira Maciel">
+    <!-- Define o autor do conteúdo da página. -->
+
+    <meta name="keywords" content="livro, ebook, lançamento, vampiro">
+    <!-- Define palavras-chave para SEO relacionadas ao conteúdo da página. -->
+
+    <link rel="icon" href="./fav-icon.png" type="image/png">
+    <!-- Define o ícone (favicon) que será exibido na aba do navegador. -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Estabelece uma conexão antecipada com o servidor de fontes do Google para melhorar o carregamento. -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Estabelece outra conexão antecipada com o servidor de fontes do Google, com permissões para recursos cruzados. -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Importa a fonte "Karma" do Google Fonts com diferentes pesos de fonte. -->
   </head>
   <body>
+    <!-- Corpo do documento. Contém o conteúdo principal da página. -->
+
     <div id="root"></div>
+    <!-- Div com ID "root" que será usada para renderizar o conteúdo do React. -->
+
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Importa o arquivo principal do React (ou outro framework), que é escrito em JSX e utiliza o sistema de módulos ES6. -->
   </body>
 </html>
