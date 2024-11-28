@@ -1,5 +1,3 @@
-import React from "react";
-
 export const FaleComigo = () => {
     return (
         <div

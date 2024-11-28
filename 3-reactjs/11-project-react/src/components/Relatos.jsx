@@ -1,4 +1,6 @@
 export const Relatos = () => {
+
+    
     return (
         <div className="flex flex-col items-center justify-center m-auto">
             {/* Contêiner principal:

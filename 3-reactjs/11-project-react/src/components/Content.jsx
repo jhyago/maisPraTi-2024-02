@@ -1,4 +1,22 @@
+import { useState } from 'react'
+import Modal from 'react-modal'
+import "./ModalStyle.css"
+import { FaFileDownload } from "react-icons/fa"
+import { MdOutlineClose } from "react-icons/md"
+
+Modal.setAppElement("#root")
+
 export const Content = () => {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+
+    const openModal = () => {
+        setModalIsOpen(true)
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false)
+    }
+
     return (
         <div className="relative sm:mb-0 mb-24">
             {/* Contêiner principal com posicionamento relativo. Margem inferior variável: `mb-24` para telas menores, `sm:mb-0` para maiores. */}

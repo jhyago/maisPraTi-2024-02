@@ -1,5 +1,3 @@
-import React from "react";
-
 // Componente Sticker, exibindo informações sobre o conteúdo do livro.
 export const Sticker = () => {
     return (

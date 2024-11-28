@@ -1,4 +1,24 @@
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { CardsProdutos } from './CardsProdutos'
+
 export const OndeComprar = () => {
+    const [produtos, setProdutos] = useState([])
+    const [error, setError] = useState(null)
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        axios.get("https://my-json-server.typicode.com/leomaciel14/JSON-Server/produtos").then(
+            response => {
+                setProdutos(response.data)
+                setLoading(false)
+            }).catch(error => {
+                console.error("Houve um erro ao buscar os produtos")
+                setError("Não foi possível recuperar os dados dos produtos")
+                setLoading(false)
+            })
+    }, [])
+
     return (
         <div id="kits">
             {/* Contêiner principal com um ID único "kits" para facilitar o acesso, por exemplo, com âncoras de links. */}

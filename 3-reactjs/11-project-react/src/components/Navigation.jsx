@@ -1,7 +1,28 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export const Navigation = () => {
+
+  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem("theme") === "dark")
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    if(isDarkMode){
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light")
+  }, [isDarkMode])
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode)
+  }
+
   return (
     <header className="p-6 sm:px-12 w-full h-28 z-50 fixed bg-gradient-to-b from-verde2/95 to-verde1/80 backdrop-blur-sm from-80%">
       {/* Cabeçalho fixo com espaçamento interno, largura total, altura fixa e fundo em gradiente com leve desfoque. */}

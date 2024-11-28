@@ -1,4 +1,19 @@
+import { useState } from 'react'
+
 export const Forms = () => {
+    const [name, setName] = useState('')
+    const [mensagem, setMensagem] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const phoneNumber = "0800 642 822"
+        const text = `Nome: ${name}%0AMensagem: ${mensagem}`
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`
+        
+        window.open(whatsappUrl, '_blank')
+    }
 
     return (
         <div className="w-full mt-12 bg-verde2 m-auto flex flex-col items-center justify-center xl:flex-row text-branco md:p-4 xl:p-0">
