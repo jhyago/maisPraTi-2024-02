@@ -47,4 +47,31 @@ public class DoublyLinkedList<T> {
         size--;
         return value;
     }
+
+    public T removeLast() {
+        if(size == 0) throw new IllegalStateException("Lista vazia.");
+        T value = tail.value;
+        if (size == 1) {
+            head = tail = null;
+        } else {
+            tail = tail.previous;
+            tail.next = null;
+        }
+        size--;
+        return value;
+    }
+
+    public void display() {
+        Node<T> current = head;
+        System.out.print("[ ");
+        while(current != null){
+            System.out.print(current.value + " ");
+            current = current.next;
+        }
+        System.out.println("]");
+    }
+
+    public int size() {
+        return this.size;
+    }
 }
