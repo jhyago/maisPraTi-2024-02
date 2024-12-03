@@ -1,25 +1,69 @@
 package ds;
 
-import ds.doublyLinkedList.DoublyLinkedList;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Java");
+        list.add("Python");
 
-        System.out.println("Adicionando elementos no final: ");
-        list.addLast(1);
-        list.addLast(2);
-        list.addLast(3);
-        list.display();
+        for(String lang : list) {
+            System.out.println(lang);
+        }
 
-        System.out.println("Adicionando elementos no início: ");
-        list.addFirst(-3);
-        list.addFirst(-2);
-        list.addFirst(-1);
-        list.display();
+        list.remove("Python");
 
-        list.removeLast();
-        list.removeFirst();
-        list.display();
+        Collections.sort(list);
+        list.forEach(System.out::println);
+
+        System.out.println("-----------------------------------------------");
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("João");
+        linkedList.add("Manoel");
+        linkedList.addFirst("Marcio");
+        linkedList.addLast("Hyago");
+
+        System.out.println("Primeiro elemento: " + linkedList.getFirst());
+
+        linkedList.forEach(System.out::println);
+
+
+        System.out.println("-----------------------------------------------");
+
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
+
+        priorityQueue.add(30);
+        priorityQueue.add(10);
+        priorityQueue.add(1);
+        System.out.println("PriorityQueue: " + priorityQueue);
+        System.out.println("PriorityQueue (Cabeça da Fila): " + priorityQueue.peek());
+
+        while(!priorityQueue.isEmpty()) {
+            System.out.println("Removendo: " + priorityQueue.poll());
+        }
+
+        Queue<String> linkedListQueue = new LinkedList<>();
+
+        linkedListQueue.add("Elemento 1");
+        linkedListQueue.add("Elemento 2");
+        linkedListQueue.add("Elemento 45");
+        System.out.println("LinkedList Queue: " + linkedListQueue);
+        System.out.println("LinkedList Queue(Cabeça da Fila): " + linkedListQueue.peek());
+
+        System.out.println("-----------------------------------------------");
+
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        hashMap.put("Laranja", 3);
+        hashMap.put("Beterraba", 5);
+        hashMap.put("Maça", 2);
+
+        System.out.println("Valor associada a 'Laranja': " + hashMap.get("Laranja"));
+
+        hashMap.forEach((key, value) -> System.out.println(key + " -> " + value));
+    //Filtro de Plavras: Um programa que leia uma frase do usuário e armazene cada palavra em um ArrayList
+        //Remova todas as palavras com menos de 4 caracteres e exiba a lista
     }
 }
