@@ -65,5 +65,13 @@ public class App {
         hashMap.forEach((key, value) -> System.out.println(key + " -> " + value));
     //Filtro de Plavras: Um programa que leia uma frase do usuário e armazene cada palavra em um ArrayList
         //Remova todas as palavras com menos de 4 caracteres e exiba a lista
+
+        //Simulando uma Fila de Espera:
+
+        //Crie um programa que simule uma fila de espera utilizando uma LinkedList.
+        //Adicione os seguintes nomes na fila: "Ana", "Pedro", "Maria", "João".
+            //    Mostre o próximo nome a ser atendido (primeiro da fila) e remova-o.
+          //      Permita que o usuário insira novos nomes na fila ou remova o próximo nome a ser atendido até que a fila esteja vazia.
+        //Mostre a fila a cada operação.
     }
 }
