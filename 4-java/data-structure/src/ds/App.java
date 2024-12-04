@@ -1,6 +1,7 @@
 package ds;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) {
@@ -73,5 +74,38 @@ public class App {
             //    Mostre o próximo nome a ser atendido (primeiro da fila) e remova-o.
           //      Permita que o usuário insira novos nomes na fila ou remova o próximo nome a ser atendido até que a fila esteja vazia.
         //Mostre a fila a cada operação.
+
+
+        List<Integer> numeros = List.of(1, 2, 3, 4, 5);
+        List<Integer> pares = new ArrayList<>();
+
+        for (Integer num : numeros) {
+            if (num % 2 == 0) {
+                pares.add(num);
+            }
+        }
+
+        System.out.println("Números pares: " + pares);
+
+        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+
+        List<Integer> menoresTres = numeros.stream().sorted().limit(3).toList();
+
+        System.out.println("Três menores n[umeros: " + menoresTres);
+
+        int soma = numeros.stream().reduce(1, Integer::sum);
+
+        System.out.println("Soma dos números: " + soma);
+
+        List<Integer> par = nums.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
+
+        System.out.println("Números pares: " + par);
+
+        List<String> palavras = List.of("Java", "Stream", "Aula");
+
+        List<String> palavrasMaiusculas = palavras.stream().map(String::toUpperCase).collect(Collectors.toList());
+        System.out.println("Palavras em maiúsculas: " + palavrasMaiusculas);
+
+
     }
 }
