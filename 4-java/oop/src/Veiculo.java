@@ -1,26 +1,88 @@
-//Crie um sistema de uma loja que vende produtos:
+import java.util.ArrayList;
+import java.util.List;
 
-//Classe Produto:
-//Atributos: nome, preco.
-//        Método: calcularPrecoFinal(), que retorna o preço sem alterações.
-//Subclasse ProdutoPerecivel:
-//Atributos adicionais: dataDeValidade.
-//Sobrescreva o método calcularPrecoFinal() para aplicar um desconto de 10% caso o produto esteja próximo
-//da data de validade.
-//Subclasse ProdutoEletronico:
-//Atributos adicionais: garantiaEmMeses.
-//Sobrescreva o método calcularPrecoFinal() para incluir uma taxa de garantia de 5% no preço.
+class Disciplina {
+    String nome;
 
-//Implemente as classes e crie uma lista de produtos com diferentes tipos. Mostre o preço final de
-// cada produto usando o polimorfismo.
+    public Disciplina(String nome) {
+        this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return nome;
+    }
+}
 
-//Modele um sistema de gestão de projetos com as seguintes classes:
+class Professor {
+    String nome;
+    List<Disciplina> disciplinas;
 
-//Classe Projeto:
-//Atributos: nome, membros (uma lista de objetos do tipo Pessoa).
-//Métodos: adicionarMembro() e listarMembros().
-//Classe Pessoa:
-//Atributos: nome, projetos (uma lista de objetos do tipo Projeto).
-//Métodos: adicionarProjeto().
+    public Professor(String nome) {
+        this.nome = nome;
+        this.disciplinas = new ArrayList<>();
+    }
 
-//Garanta que, ao adicionar um membro a um projeto, o projeto seja automaticamente associado ao membro e vice-versa.
+    public void adicionarDisciplina(Disciplina disciplina) {
+        disciplinas.add(disciplina);
+    }
+
+    @Override
+    public String toString() {
+        return nome + " - Disciplinas: " + disciplinas;
+    }
+}
+
+class Departamento {
+    String nome;
+    List<Professor> professores;
+
+    public Departamento(String nome) {
+        this.nome = nome;
+        this.professores = new ArrayList<>();
+    }
+
+    public void adicionarProfessor(Professor professor) {
+        professores.add(professor);
+    }
+
+    @Override
+    public String toString() {
+        return nome + " - Professores: " + professores;
+    }
+}
+
+
+class Universidade {
+    String nome;
+    List<Departamento> departamentos;
+
+    public Universidade(String nome) {
+        this.nome = nome;
+        this.departamentos = new ArrayList<>();
+    }
+
+    public void adicionarDepartamento(Departamento departamento) {
+        departamentos.add(departamento);
+    }
+
+    @Override
+    public String toString() {
+        return "Universidade: " + nome + "\nDepartamentos: " + departamentos;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Disciplina quimica = new Disciplina("Química");
+        Professor professor = new Professor("Ana");
+        professor.adicionarDisciplina(quimica);
+
+        Departamento exatas = new Departamento("Departamento de Ciências Exatas");
+        exatas.adicionarProfessor(professor);
+
+        Universidade maisPraTi = new Universidade("Universidade Federal Rural do Rio de Janeiro");
+        maisPraTi.adicionarDepartamento(exatas);
+
+        System.out.println(maisPraTi);
+    }
+}
