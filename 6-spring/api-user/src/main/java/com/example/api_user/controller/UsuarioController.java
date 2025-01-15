@@ -13,13 +13,8 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping
-    public List<Usuario> listarUsuarios() {
-        return usuarioService.listarUsuarios();
-    }
-
     @PostMapping
-    public Usuario criarUsuario(@RequestBody Usuario usario) {
-       return usuarioService.criarUsuario(usario);
+    public Usuario criarUsuarioComPerfil(@RequestParam String nome, @RequestParam String bio) {
+       return usuarioService.criarUsuarioComPerfil(nome, bio);
     }
 }

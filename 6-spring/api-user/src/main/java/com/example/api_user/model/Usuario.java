@@ -1,17 +1,17 @@
 package com.example.api_user.model;
 
+import jakarta.persistence.*;
 
-import lombok.*;
-
+@Entity
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
 
-    public Usuario(Long id, String nome, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    private Profile profile;
 
     public Long getId() {
         return id;
@@ -29,13 +29,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
-
-    private String email;
 }
