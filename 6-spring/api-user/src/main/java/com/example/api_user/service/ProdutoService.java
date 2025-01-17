@@ -15,17 +15,27 @@ public class ProdutoService {
         this.produtoRepository = produtoRepository;
     }
 
+    public Produto createProduto(String nome, double preco) {
+        Produto produto = new Produto();
+        produto.setNome(nome);
+        produto.setPreco(preco);
+        return produtoRepository.save(produto);
+    }
+
     public List<Produto> listarTodos() {
         return produtoRepository.findAll();
     }
 
     public Optional<Produto> buscarPorId(Long id) {
         return produtoRepository.findById(id);
-
     }
 
-    public Produto salvar(Produto produto) {
-        return produtoRepository.save(produto);
+    public void update(Long id, String nome, double preco) {
+        produtoRepository.findById(id).ifPresent(produto -> {
+            produto.setNome(nome);
+            produto.setPreco(preco);
+            produtoRepository.save(produto);
+        });
     }
 
     public void deletarPorId(Long id) {

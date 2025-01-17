@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(236, 236, 236, 0.911);
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    background-color: rgba(25, 91, 94, 0.541);
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    margin: 50px 0px 10px 0px;
+}
+
+label {
+    margin: 10px;
+}
+
+input {
+    margin: 10px 5px;
+    padding: 8px;
+}
+
+/* textarea {
+    margin: 10px 5px;
+    padding: 15px;
+} */
+
+select {
+    margin: 10px 5px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 800;
+    background-color: rgba(220, 20, 60, 0.514);
+    color: rgba(255, 255, 255, 0.733);
+    transform: translate(70%, 50%);
+}
+
+button:hover {
+    background-color: rgba(220, 20, 60, 0.822);
+}
+
