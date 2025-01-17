@@ -1,5 +1,6 @@
 package com.example.api_user.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -10,6 +11,11 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    private List<Book> books;
+
+    public Author() {
+    }
 
     public Author(Long id, String name, List<Book> books) {
         this.id = id;
@@ -17,8 +23,6 @@ public class Author {
         this.books = books;
     }
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
-    private List<Book> books;
 
     public Long getId() {
         return id;
