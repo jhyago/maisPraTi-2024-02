@@ -16,6 +16,11 @@ public class ProdutoController {
         this.produtoService = produtoService;
     }
 
+    @PostMapping
+    public Produto criarProduto(@RequestParam String nome, @RequestParam double preco) {
+        return produtoService.createProduto(nome, preco);
+    }
+
     @GetMapping
     public List<Produto> listarTodos() {
         return produtoService.listarTodos();
@@ -26,9 +31,9 @@ public class ProdutoController {
         return produtoService.buscarPorId(id);
     }
 
-    @PostMapping
-    public Object produtoSalvar(@RequestBody Produto produto){
-        return produtoService.salvar(produto);
+    @PutMapping("/edit/{id}")
+    public void produtoEditar(@PathVariable Long id, @RequestParam String nome, @RequestParam double preco){
+        produtoService.update(id, nome, preco);
     }
 
     @DeleteMapping("/{id}")

@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/usuarios")
+@RequestMapping("/usuarios")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
@@ -17,4 +18,25 @@ public class UsuarioController {
     public Usuario criarUsuarioComPerfil(@RequestParam String nome, @RequestParam String bio) {
        return usuarioService.criarUsuarioComPerfil(nome, bio);
     }
+
+    @GetMapping
+    public List<Usuario> listarTodos() {
+        return usuarioService.listarTodos();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Usuario> findById(@PathVariable Long id) {
+        return usuarioService.buscarPorId(id);
+    }
+
+    @PutMapping("/edit/{id}")
+    public void usuarioEditar(@PathVariable Long id, @RequestParam String nome) {
+        usuarioService.update(id, nome);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletarPorId(@PathVariable Long id) {
+        usuarioService.deletarPorId(id);
+    }
+
 }

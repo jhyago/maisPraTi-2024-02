@@ -1,5 +1,7 @@
 package com.example.api_user.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class Profile {
     private Long id;
     private String bio;
     @OneToOne(mappedBy = "profile")
+    @JsonBackReference
     private Usuario user;
 
     public Long getId() {
