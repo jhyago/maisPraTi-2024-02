@@ -1,5 +1,6 @@
 package com.example.api_user.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,6 +17,9 @@ public class Book {
         this.id = id;
         this.title = title;
         this.author = author;
+    }
+
+    public Book() {
     }
 
     public Long getId() {
