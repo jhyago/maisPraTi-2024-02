@@ -1,7 +1,15 @@
 package com.example.api_user.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Book {
     @Id
@@ -12,33 +20,4 @@ public class Book {
     @JoinColumn(name = "author_id")
     private Author author;
 
-    public Book(Long id, String title, Author author) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
 }
