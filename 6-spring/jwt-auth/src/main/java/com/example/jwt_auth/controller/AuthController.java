@@ -1,10 +1,14 @@
 package com.example.jwt_auth.controller;
 
-import com.example.jwt_auth.Repository.UserRepository;
+import com.example.jwt_auth.repository.UserRepository;
 import com.example.jwt_auth.model.User;
-import com.example.jwt_auth.security.JwtUtil;
-import org.springframework.beans.BeanUtils;
+import com.example.jwt_auth.service.UserService;
+import com.example.jwt_auth.util.JwtUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -12,35 +16,26 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-    private final UserRepository userRepository;
-    private final JwtUtil jwtUtil;
+    @Autowired
+    private AuthenticationManager authenticationManager;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private JwtUtil jwtUtil;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user){
-        User newUser = new User();
-        newUser.setUsername(user.getUsername());
-        newUser.setPassword(user.getPassword());
-        newUser.setEmail(user.getEmail());
-
-        userRepository.save(newUser);
-
-        return ResponseEntity.ok().build();
-    }
-
-    public AuthController(UserRepository userRepository, JwtUtil jwtUtil) {
-        this.userRepository = userRepository;
-        this.jwtUtil = jwtUtil;
+    public String registerUser(@RequestBody User user){
+        userService.saveUser(user);
+        return "Usuário registrado com sucesso!";
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody User user){
-        Optional<User> foundUser = userRepository.findByUsername(user.getUsername());
-        if(foundUser.isPresent() && foundUser.get().getPassword().equals(user.getPassword())){
-            String token = jwtUtil.generateToken(user.getUsername());
-            return ResponseEntity.ok().body("{\"accessToken:" + token);
-        }
-
-        return ResponseEntity.status(401).body("Credenciais inválidas.");
+    public String login(@RequestBody User user){
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+                return jwtUtil.generateToken(authentication.getName());
     }
 
 
