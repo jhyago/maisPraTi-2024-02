@@ -3,12 +3,15 @@ package com.example.jwt_auth.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;
+    @Column(unique = true, name = "email", nullable = false)
+    private String email;
 
     public String getUsername() {
         return username;
@@ -33,7 +36,4 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    @Column(unique = true)
-    private String email;
 }
