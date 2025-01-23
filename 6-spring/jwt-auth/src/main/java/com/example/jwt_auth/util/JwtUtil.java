@@ -39,6 +39,10 @@ public class JwtUtil {
         return token; // Retorna o token JWT gerado.
     }
 
+    public String generateRefreshToken(String username) {
+        return generateToken(username);
+    }
+
     // Extrai o nome de usuário (subject) de um token JWT.
     public String getUsernameFromToken(String token) {
         try {

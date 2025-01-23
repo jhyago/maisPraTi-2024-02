@@ -74,4 +74,20 @@ public class AuthController {
             return ResponseEntity.status(401).body("Usuário inexistente ou senha inválida");
         }
     }
+
+    @PostMapping("/refresh-token")
+    public ResponseEntity<String> refreshToken(@RequestBody String refreshToken) {
+        try {
+            String username = jwtUtil.getUsernameFromToken(refreshToken);
+
+            if(jwtUtil.isTokenValid(refreshToken, username)) {
+                String newAccessToken = jwtUtil.generateToken(username);
+                return ResponseEntity.ok(newAccessToken);
+            } else {
+                return ResponseEntity.status(401).body("Refresh Token Inválido!");
+            }
+        } catch(Exception error){
+            return ResponseEntity.status(401).body("Erro ao processar o Refresh Token!");
+        }
+    }
 }

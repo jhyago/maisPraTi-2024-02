@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration; // Indica que esta 
 import org.springframework.security.authentication.AuthenticationManager; // Gerencia a autenticação no Spring Security.
 import org.springframework.security.authentication.ProviderManager; // Gerencia provedores de autenticação.
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider; // Provedor de autenticação que utiliza um banco de dados.
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder; // Configura o AuthenticationManager.
 import org.springframework.security.config.annotation.web.builders.HttpSecurity; // Configura a segurança de requisições HTTP.
 import org.springframework.security.core.userdetails.UserDetailsService; // Serviço para carregar detalhes do usuário.
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Implementação de encoder de senha com BCrypt.
