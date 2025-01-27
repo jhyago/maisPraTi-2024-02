@@ -2,17 +2,25 @@
 package com.example.jwt_auth.controller;
 
 // Importa as classes necessárias para manipular requisições e serviços.
+import com.example.jwt_auth.dto.UserDTO;
 import com.example.jwt_auth.model.User; // Representa o modelo de usuário.
 import com.example.jwt_auth.service.UserService; // Serviço para lógica relacionada a usuários.
 import com.example.jwt_auth.util.JwtUtil; // Classe utilitária para manipulação de tokens JWT.
+import org.hibernate.query.Page;
 import org.springframework.beans.factory.annotation.Autowired; // Permite injeção de dependência automática.
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity; // Representa as respostas HTTP.
+import org.springframework.http.client.reactive.ClientHttpResponseDecorator;
 import org.springframework.security.authentication.AuthenticationManager; // Gerencia o processo de autenticação.
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken; // Representa o token de autenticação.
 import org.springframework.security.core.Authentication; // Representa o contexto de autenticação.
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*; // Fornece suporte para anotações REST.
 
-import java.util.Optional; // Classe para valores opcionais.
 
 // Marca esta classe como um controlador REST, gerenciando endpoints relacionados à autenticação.
 @RestController
@@ -31,12 +39,30 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @GetMapping
+    public ResponseEntity<Page<UserDTO>> getAllUsers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String sortDirection
+    ) {
+        Sort.Direction direction = sortDirection.equalsIgnoreCase("desc") ? Sort.Direction.DESC : Sort.Direction.ASC;
+        Pageable pageable = PageRequest.of(page, size, Sort.by(direction));
+        Page<UserDTO> users = userService.getAllUsers(pageable);
+        return ResponseEntity.ok(users);
+    }
+
+    // /users?page=1&size=7&sortBy=id&sortDirection=asc
+
     // Endpoint para registrar um novo usuário.
     @PostMapping("/register") // Define o método HTTP POST para a URL "/auth/register".
     public ResponseEntity<String> registerUser(@RequestBody User user) {
         // Validação: Verifica se o nome de usuário já está em uso.
         if (userService.findByUsername(user.getUsername()) != null) {
-            return ResponseEntity.badRequest().body("Erro: Nome de usuário já está em uso!"); // Retorna erro 400.
+            throw new IllegalArgumentException("Erro: Nome de Usuário já está em uso!");
         }
 
         // Salva o usuário com a senha criptografada.
@@ -68,26 +94,26 @@ public class AuthController {
             // Retorna o token no corpo da resposta.
             return ResponseEntity.ok(token);
 
-        } catch (Exception e) {
+        } catch (AuthenticationException e) {
             // Exibe o erro no console e retorna uma resposta de erro 401.
-            System.out.println("Erro ao autenticar: " + e.getMessage());
-            return ResponseEntity.status(401).body("Usuário inexistente ou senha inválida");
+            throw new AuthenticationException("Usuário ou senha Inválidos") {};
+            }
         }
-    }
 
-    @PostMapping("/refresh-token")
-    public ResponseEntity<String> refreshToken(@RequestBody String refreshToken) {
+    public ResponseEntity<String> refreshToken(@RequestBody RefreshTokenDTO refreshToken) {
         try {
-            String username = jwtUtil.getUsernameFromToken(refreshToken);
+            String username = jwtUtil.getUsernameFromToken(refreshToken.getRefreshToken());
 
-            if(jwtUtil.isTokenValid(refreshToken, username)) {
+            UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+
+            if (jwtUtil.isTokenValid(refreshToken.getRefreshToken(), userDetails)) {
                 String newAccessToken = jwtUtil.generateToken(username);
                 return ResponseEntity.ok(newAccessToken);
             } else {
                 return ResponseEntity.status(401).body("Refresh Token Inválido!");
             }
-        } catch(Exception error){
-            return ResponseEntity.status(401).body("Erro ao processar o Refresh Token!");
+        } catch (Exception error) {
+
         }
     }
 }

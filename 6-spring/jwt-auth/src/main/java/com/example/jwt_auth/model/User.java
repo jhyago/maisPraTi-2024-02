@@ -4,6 +4,9 @@ package com.example.jwt_auth.model;
 // Importa as anotações do Jakarta Persistence (JPA) para mapeamento ORM (Object-Relational Mapping).
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Indica que esta classe é uma entidade JPA, ou seja, será mapeada para uma tabela no banco de dados.
 @Entity
 // Especifica o nome da tabela no banco de dados associada a esta entidade.
@@ -27,6 +30,14 @@ public class User {
     // O nome da coluna no banco de dados será "email".
     @Column(unique = true, name = "email", nullable = false)
     private String email;
+    private List<Post> posts = new ArrayList<>();
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 
     // Método getter para o campo "id". Permite obter o valor do identificador da entidade.
     public Long getId() {

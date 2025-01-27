@@ -2,15 +2,19 @@
 package com.example.jwt_auth.service;
 
 // Importa a classe User, que representa o modelo de usuário.
+import com.example.jwt_auth.dto.UserDTO;
 import com.example.jwt_auth.model.User;
 // Importa o repositório de usuários, usado para acessar o banco de dados.
 import com.example.jwt_auth.repository.UserRepository;
 // Importa a anotação @Autowired para injeção de dependências.
+import org.hibernate.query.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 // Importa a interface PasswordEncoder, usada para criptografar senhas.
 import org.springframework.security.crypto.password.PasswordEncoder;
 // Importa a anotação @Service, que marca esta classe como um serviço gerenciado pelo Spring.
 import org.springframework.stereotype.Service;
+
+import java.awt.print.Pageable;
 
 // Marca esta classe como um serviço, permitindo que o Spring gerencie sua criação e injeção.
 @Service
@@ -36,6 +40,14 @@ public class UserService {
         user.setPassword(hashedPassword);
         // Salva o usuário no banco de dados e retorna o objeto salvo.
         return userRepository.save(user);
+    }
+
+    public Page<UserDTO> getAllUsers(Pageable pageable) {
+        return userRepository.findAll(pageable).map(user -> new UserDTO(
+                        user.getId(),
+                        user.getUsername(),
+                        user.getEmail()
+                ));
     }
 
     // Método responsável por buscar um usuário pelo nome de usuário (username).
