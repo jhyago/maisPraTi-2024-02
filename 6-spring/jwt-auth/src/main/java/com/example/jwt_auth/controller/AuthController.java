@@ -19,6 +19,7 @@ import org.springframework.security.core.Authentication; // Representa o context
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*; // Fornece suporte para anotações REST.
 
 
@@ -59,7 +60,7 @@ public class AuthController {
 
     // Endpoint para registrar um novo usuário.
     @PostMapping("/register") // Define o método HTTP POST para a URL "/auth/register".
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
+    public ResponseEntity<String> registerUser(@Validated @RequestBody User user) {
         // Validação: Verifica se o nome de usuário já está em uso.
         if (userService.findByUsername(user.getUsername()) != null) {
             throw new IllegalArgumentException("Erro: Nome de Usuário já está em uso!");

@@ -31,6 +31,16 @@ public class User {
     @Column(unique = true, name = "email", nullable = false)
     private String email;
     private List<Post> posts = new ArrayList<>();
+
+    public User() {}
+
+    public User(Long id, String username, String password, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
     public List<Post> getPosts() {
         return posts;
     }
