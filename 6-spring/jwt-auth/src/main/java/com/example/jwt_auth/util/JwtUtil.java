@@ -21,11 +21,11 @@ public class JwtUtil {
 
     // Injeta o segredo usado para assinar os tokens JWT a partir do arquivo de configuração.
     @Value("${jwt.secret}")
-    private String secret;
+    public String secret;
 
     // Injeta o tempo de expiração do token (em milissegundos) a partir do arquivo de configuração.
     @Value("${jwt.expiration}")
-    private long expirationTime;
+    public long expirationTime;
 
     // Gera um token JWT para o nome de usuário fornecido.
     public String generateToken(String username) {

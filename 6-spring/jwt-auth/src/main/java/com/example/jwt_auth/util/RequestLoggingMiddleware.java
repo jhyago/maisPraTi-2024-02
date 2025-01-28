@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Component
 public class RequestLoggingMiddleware extends OncePerRequestFilter {
     @Override
-    public void doFilterInternal(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, jakarta.servlet.FilterChain filterChain) throws ServletException, IOException {
         System.out.println("===============================");
         System.out.println("Requisição Recebida:");
         System.out.println("Método: " + request.getMethod());
