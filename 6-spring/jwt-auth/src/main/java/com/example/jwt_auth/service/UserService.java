@@ -7,14 +7,14 @@ import com.example.jwt_auth.model.User;
 // Importa o repositório de usuários, usado para acessar o banco de dados.
 import com.example.jwt_auth.repository.UserRepository;
 // Importa a anotação @Autowired para injeção de dependências.
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 // Importa a interface PasswordEncoder, usada para criptografar senhas.
 import org.springframework.security.crypto.password.PasswordEncoder;
 // Importa a anotação @Service, que marca esta classe como um serviço gerenciado pelo Spring.
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 
 // Marca esta classe como um serviço, permitindo que o Spring gerencie sua criação e injeção.
 @Service
@@ -43,7 +43,7 @@ public class UserService {
     }
 
     public Page<UserDTO> getAllUsers(Pageable pageable) {
-        return userRepository.findAll(pageable).map(user -> new UserDTO(
+        return userRepository.findAll((org.springframework.data.domain.Pageable) pageable).map(user -> new UserDTO(
                         user.getId(),
                         user.getUsername(),
                         user.getEmail()
