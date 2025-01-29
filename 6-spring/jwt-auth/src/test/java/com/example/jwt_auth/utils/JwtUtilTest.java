@@ -20,7 +20,7 @@ public class JwtUtilTest {
     @BeforeEach
     void setUp() {
         jwtUtil = new JwtUtil();
-        jwtUtil.secret = "test_secret";
+        jwtUtil.secret = "fb566c617b919d486c4835e922b637c91e5e8e83c975e0cc0a8d78cea81dbe1b";
         jwtUtil.expirationTime = 1000 * 60 * 60; // 1 hora
         System.out.println("Inicializando o teste com o segredo e tempo de expiração: " + jwtUtil.secret + ", " + jwtUtil.expirationTime + " ms");
     }
