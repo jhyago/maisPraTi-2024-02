@@ -51,8 +51,6 @@ public class AuthController {
     @Autowired
     private UserDetailsService userDetailsService;
 
-
-
     // /users?page=1&size=7&sortBy=id&sortDirection=asc
 
     // Endpoint para registrar um novo usuário.
