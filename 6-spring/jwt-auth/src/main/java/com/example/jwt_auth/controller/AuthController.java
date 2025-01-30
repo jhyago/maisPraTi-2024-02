@@ -4,7 +4,9 @@ package com.example.jwt_auth.controller;
 // Importa as classes necessárias para manipular requisições e serviços.
 import com.example.jwt_auth.dto.RefreshTokenDTO;
 import com.example.jwt_auth.dto.UserDTO;
+import com.example.jwt_auth.model.RefreshToken;
 import com.example.jwt_auth.model.User; // Representa o modelo de usuário.
+import com.example.jwt_auth.service.RefreshTokenService;
 import com.example.jwt_auth.service.UserService; // Serviço para lógica relacionada a usuários.
 import com.example.jwt_auth.util.JwtUtil; // Classe utilitária para manipulação de tokens JWT.
 import org.springframework.data.domain.Page;
@@ -21,6 +23,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*; // Fornece suporte para anotações REST.
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 // Marca esta classe como um controlador REST, gerenciando endpoints relacionados à autenticação.
@@ -79,10 +84,15 @@ public class AuthController {
             System.out.println("Usuário autenticado com sucesso: " + authentication.getName());
 
             // Gera um token JWT para o usuário autenticado.
-            String token = jwtUtil.generateToken(authentication.getName());
+            String accessToken = jwtUtil.generateToken(authentication.getName());
+            RefreshToken refreshToken = refreshTokenService.createRefreshToken(authentication.getName());
+
+            Map<String, String> tokens = new HashMap<>();
+            tokens.put("accessToken", accessToken);
+            tokens.put("refreshToken", refreshToken.getToken());
 
             // Retorna o token no corpo da resposta.
-            return ResponseEntity.ok(token);
+            return ResponseEntity.ok(tokens);
 
         } catch (AuthenticationException e) {
             // Exibe o erro no console e retorna uma resposta de erro 401.

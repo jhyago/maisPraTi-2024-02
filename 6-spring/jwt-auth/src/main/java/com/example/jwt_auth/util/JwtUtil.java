@@ -7,6 +7,7 @@ import io.jsonwebtoken.Jwts; // Classe principal para criar e analisar tokens JW
 import io.jsonwebtoken.SignatureAlgorithm; // Define o algoritmo de assinatura do token.
 
 // Importa as anotações e classes do Spring.
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value; // Para injetar valores de configuração.
 import org.springframework.security.core.userdetails.UserDetails; // Representa os detalhes do usuário autenticado.
 import org.springframework.stereotype.Component; // Marca a classe como um componente gerenciado pelo Spring.
@@ -18,6 +19,9 @@ import java.util.function.Function; // Interface funcional usada para processame
 // Marca esta classe como um componente gerenciado pelo Spring, permitindo sua injeção em outros lugares.
 @Component
 public class JwtUtil {
+
+    @Autowired
+    private RsaKeyProvider rsaKeyProvider;
 
     // Injeta o segredo usado para assinar os tokens JWT a partir do arquivo de configuração.
     @Value("${jwt.secret}")
@@ -33,7 +37,7 @@ public class JwtUtil {
                 .setSubject(username) // Define o "assunto" (usuário) do token.
                 .setIssuedAt(new Date()) // Define a data e hora de emissão do token.
                 .setExpiration(new Date(System.currentTimeMillis() + expirationTime)) // Define a data de expiração do token.
-                .signWith(SignatureAlgorithm.HS256, secret) // Assina o token usando o algoritmo HS256 e o segredo.
+                .signWith(rsaKeyProvider.getPrivateKey(), SignatureAlgorithm.RS256)
                 .compact(); // Constrói o token JWT.
         System.out.println(token); // Exibe o token gerado no console (usado para depuração).
         return token; // Retorna o token JWT gerado.
@@ -82,7 +86,7 @@ public class JwtUtil {
     // Extrai todas as claims de um token.
     private Claims extractAllClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(secret) // Configura o segredo usado para validar o token.
+                .setSigningKey(rsaKeyProvider.getPublicKey()) // Configura o segredo usado para validar o token.
                 .parseClaimsJws(token) // Analisa o token e retorna suas informações.
                 .getBody(); // Obtém o corpo do token (as claims).
     }

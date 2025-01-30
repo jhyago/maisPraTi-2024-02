@@ -2,7 +2,6 @@
 package com.example.jwt_auth.config;
 
 // Importa os serviços, filtros e utilitários necessários para a configuração de segurança.
-import com.example.jwt_auth.service.UserService; // Serviço responsável pela lógica de usuários.
 import com.example.jwt_auth.util.JwtAuthenticationFilter; // Filtro JWT personalizado para autenticação.
 import org.springframework.beans.factory.annotation.Autowired; // Permite injeção de dependência automática.
 import org.springframework.context.annotation.Bean; // Marca métodos como produtores de beans gerenciados pelo Spring.
@@ -12,7 +11,7 @@ import org.springframework.security.authentication.ProviderManager; // Gerencia 
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider; // Provedor de autenticação que utiliza um banco de dados.
 import org.springframework.security.config.annotation.web.builders.HttpSecurity; // Configura a segurança de requisições HTTP.
 import org.springframework.security.core.userdetails.UserDetailsService; // Serviço para carregar detalhes do usuário.
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Implementação de encoder de senha com BCrypt.
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder; // Interface para codificadores de senha.
 import org.springframework.security.web.SecurityFilterChain; // Configura a cadeia de filtros de segurança.
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter; // Filtro padrão de autenticação por nome de usuário e senha.
@@ -26,9 +25,12 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     // Define o codificador de senha como um bean gerenciado pelo Spring.
+
+    //openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_key_gen_bits:2048
+    //openssl rsa -pubout -in private.pem -out public.pem
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(); // Utiliza BCrypt para codificar as senhas.
+        return new Argon2PasswordEncoder(16, 32, 1, 65536, 3);
     }
 
     // Configura o gerenciador de autenticação como um bean.
