@@ -16,7 +16,7 @@ public class SwaggerConfig {
                         .title("API de autenticação com JWT")
                         .version("1.0")
                         .description("API para autenticação.")
-                        .license(new License().name("Apache 2.0").url("https://springdoc.org.com")));
+                        .license(new License().name("Apache 2.0").url("https://springdoc.org")));
     }
 
     @Bean

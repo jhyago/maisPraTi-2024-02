@@ -9,11 +9,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.net.http.HttpResponse;
 import java.time.Instant;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Filter;
+import jakarta.servlet.Filter;
 
 @Component
 public class LoginRateLimiter implements Filter {
@@ -28,10 +27,10 @@ public class LoginRateLimiter implements Filter {
                 if(httpRequest.getRequestURI().equals("/auth/login") && httpRequest.getMethod().equalsIgnoreCase("POST")) {
                     String ip = request.getRemoteAddr();
 
-                    LoginAttempt loginAttempt = attempts.getOrDefault(ip, new LoginAttempt);
+                    LoginAttempt loginAttempt = attempts.getOrDefault(ip, new LoginAttempt());
 
                     if(loginAttempt.isBlocked()) {
-                        httpResponse.setStatus(HttpServletResponse.SC_TOO_MANY_REQUESTS);
+                        httpResponse.setStatus(429);
                         httpResponse.getWriter().write("Muitas tentativas de login.");
                     }
 

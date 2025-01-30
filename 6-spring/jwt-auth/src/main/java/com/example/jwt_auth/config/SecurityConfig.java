@@ -3,6 +3,7 @@ package com.example.jwt_auth.config;
 
 // Importa os serviços, filtros e utilitários necessários para a configuração de segurança.
 import com.example.jwt_auth.util.JwtAuthenticationFilter; // Filtro JWT personalizado para autenticação.
+import com.example.jwt_auth.util.LoginRateLimiter;
 import org.springframework.beans.factory.annotation.Autowired; // Permite injeção de dependência automática.
 import org.springframework.context.annotation.Bean; // Marca métodos como produtores de beans gerenciados pelo Spring.
 import org.springframework.context.annotation.Configuration; // Indica que esta classe contém configurações de Spring.
@@ -24,13 +25,16 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
+    @Autowired
+    private LoginRateLimiter loginRateLimiter;
+
     // Define o codificador de senha como um bean gerenciado pelo Spring.
 
     //openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_key_gen_bits:2048
     //openssl rsa -pubout -in private.pem -out public.pem
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new Argon2PasswordEncoder(16, 32, 1, 65536, 3);
+                return new Argon2PasswordEncoder(16, 32, 1, 65536, 3);
     }
 
     // Configura o gerenciador de autenticação como um bean.
@@ -58,7 +62,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/protected").hasAuthority("ROLE_USER") // Restringe acesso às rotas "/api/protected" para usuários com a role "ROLE_USER".
                         .anyRequest().authenticated() // Exige autenticação para todas as outras requisições.
                 )
-                .addFilterBefore(loginRateLimiter, jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Adiciona o filtro de autenticação JWT antes do filtro padrão de autenticação.
+                .addFilterBefore(loginRateLimiter, JwtAuthenticationFilter.class)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Adiciona o filtro de autenticação JWT antes do filtro padrão de autenticação.
                 .build(); // Constrói e retorna a configuração de segurança.
     }
 }
