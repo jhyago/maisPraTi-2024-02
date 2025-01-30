@@ -58,7 +58,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/protected").hasAuthority("ROLE_USER") // Restringe acesso às rotas "/api/protected" para usuários com a role "ROLE_USER".
                         .anyRequest().authenticated() // Exige autenticação para todas as outras requisições.
                 )
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Adiciona o filtro de autenticação JWT antes do filtro padrão de autenticação.
+                .addFilterBefore(loginRateLimiter, jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Adiciona o filtro de autenticação JWT antes do filtro padrão de autenticação.
                 .build(); // Constrói e retorna a configuração de segurança.
     }
 }
