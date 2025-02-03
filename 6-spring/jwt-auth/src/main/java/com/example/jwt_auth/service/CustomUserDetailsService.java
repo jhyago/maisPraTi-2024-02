@@ -10,13 +10,13 @@ import com.example.jwt_auth.repository.UserRepository;
 // Importa a anotação @Autowired para injeção de dependência automática.
 import org.springframework.beans.factory.annotation.Autowired;
 // Importa a interface UserDetails, usada pelo Spring Security para representar os detalhes do usuário autenticado.
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-// Importa a interface UserDetailsService, que deve ser implementada para integrar o Spring Security.
+// Importa a interface UserDetailsService, que deve ser implementada para integração com o Spring Security.
 import org.springframework.security.core.userdetails.UserDetailsService;
 // Importa a exceção UsernameNotFoundException, lançada quando um usuário não é encontrado.
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+// Importa a classe SimpleGrantedAuthority, usada para definir as permissões (roles) do usuário.
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 // Importa a anotação @Service, que marca esta classe como um serviço gerenciado pelo Spring.
 import org.springframework.stereotype.Service;
 
@@ -26,7 +26,7 @@ import java.util.List; // Importa a classe List para criar uma lista de permiss�
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    // Injeta automaticamente o repositório de usuários.
+    // Injeta automaticamente o repositório de usuários para buscar dados do banco de dados.
     @Autowired
     private UserRepository userRepository;
 
@@ -35,7 +35,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // Busca o usuário no banco de dados pelo nome de usuário.
-        // Lança uma exceção se o usuário não for encontrado.
+        // Caso o usuário não seja encontrado, lança uma exceção UsernameNotFoundException.
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + username));
 
@@ -44,11 +44,11 @@ public class CustomUserDetailsService implements UserDetailsService {
         System.out.println("Senha carregada: " + user.getPassword());
         System.out.println("Roles atribuídas: " + List.of(new SimpleGrantedAuthority("ROLE_USER")));
 
-        // Retorna uma instância de CustomUserDetails com as informações do usuário.
+        // Retorna uma instância de CustomUserDetails com as informações do usuário autenticado.
         return new CustomUserDetails(
                 user.getUsername(), // Nome de usuário.
                 user.getPassword(), // Senha do usuário (criptografada).
-                List.of(new SimpleGrantedAuthority("ROLE_USER")) // Lista de permissões/roles (neste caso, apenas "ROLE_USER").
+                List.of(new SimpleGrantedAuthority("ROLE_USER")) // Lista de permissões (neste caso, apenas "ROLE_USER").
         );
     }
 }
