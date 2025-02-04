@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://locahost:3000")
+@CrossOrigin(origins = "http://locahost:5173")
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
