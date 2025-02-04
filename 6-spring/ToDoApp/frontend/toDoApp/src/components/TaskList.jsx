@@ -32,7 +32,7 @@ const TaskList = () => {
             <h2>Lista de Tarefas</h2>
 
             <Form className="d-flex mb-3">
-                <Form.control
+                <Form.Control
                     type="text"
                     placeholder="Nova tarefa"
                     value={newTask}
