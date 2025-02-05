@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import api from "../services/api";
 
-const Register = () => {
+const AddCourse = () => {
   const [nome, setNome] = useState("");
   const [success, setSuccess] = useState(false);
 
-  const handleRegister = async (e) => {
+  const handleAddCourse = async (e) => {
     e.preventDefault();
     try {
-      await api.post("/usuarios", { nome });
+      await api.post("/cursos", { nome });
       setSuccess(true);
       setNome("");
     } catch (error) {
-      console.error("Erro ao cadastrar usuário", error);
+      console.error("Erro ao cadastrar curso", error);
     }
   };
 
   return (
     <div className="container">
-      <h2>Cadastro de Usuário</h2>
-      {success && <p className="text-success">Usuário cadastrado com sucesso!</p>}
-      <form onSubmit={handleRegister}>
+      <h2>Cadastro de Curso</h2>
+      {success && <p className="text-success">Curso cadastrado com sucesso!</p>}
+      <form onSubmit={handleAddCourse}>
         <div className="mb-3">
-          <label>Nome</label>
+          <label>Nome do Curso</label>
           <input
             type="text"
             className="form-control"
@@ -31,10 +31,10 @@ const Register = () => {
             required
           />
         </div>
-        <button className="btn btn-primary">Cadastrar</button>
+        <button className="btn btn-primary">Adicionar Curso</button>
       </form>
     </div>
   );
 };
 
-export default Register;
+export default AddCourse;
