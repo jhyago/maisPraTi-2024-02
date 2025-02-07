@@ -33,7 +33,7 @@
 </head>
 <body>
     <div id="chat">
-        <h2>Chat Simples</h2>
+        <h2>Converse com a IA</h2>
         <div id="messageArea">
             <form id="messageForm" onsubmit="sendMessage(event)">
                 <input type="text" id="sender" placeholder="Seu nome" required>
@@ -54,7 +54,7 @@
 
             stompClient.connect({}, function(frame) {
                 console.log('Conectado: ' + frame)
-                stompClient.subscribe('/topic/public', function(messageOutput) {
+                stompClient.subscribe('/user/queue/reply', function(messageOutput) {
                     showMessage(JSON.parse(messageOutput.body))
                 })
             })
@@ -72,7 +72,7 @@
                     content: content
                 }
 
-                stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage))
+                stompClient.send("/app/chat.asl", {}, JSON.stringify(chatMessage))
 
                 document.getElementById('content').value = ''
             }
